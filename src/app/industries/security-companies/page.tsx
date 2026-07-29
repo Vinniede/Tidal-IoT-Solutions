@@ -1,0 +1,377 @@
+﻿"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { Eye, Globe2, Lock, ShieldAlert, ShieldCheck, Wifi } from "lucide-react";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { SectionHeading } from "@/components/SectionHeading";
+import { Button } from "@/components/Button";
+
+const challenges = [
+  "Remote site visibility gaps for patrol teams",
+  "Secure communications across officers and command",
+  "Incident response coordination under pressure",
+  "Managing access and alarm data across locations",
+  "Protecting evidence and operational telemetry",
+  "Ensuring consistent coverage in distributed territories",
+];
+
+const trends = [
+  "Connected security operations centers",
+  "Encrypted mobile communications for patrols",
+  "Edge monitoring across sites and assets",
+  "Coordinated incident response with real-time alerts",
+  "Integrated access control and network monitoring",
+];
+
+const supportAreas = [
+  "Secure command-center connectivity",
+  "Remote monitoring for critical sites",
+  "Encrypted communications for mobile teams",
+  "Incident-ready operational visibility",
+];
+
+const solutions = [
+  { title: "Operational Networks", icon: ShieldCheck },
+  { title: "Mobile Connectivity", icon: Wifi },
+  { title: "Edge Monitoring", icon: Eye },
+  { title: "Secure Access", icon: Lock },
+];
+
+const benefits = [
+  { value: "Faster", label: "incident response" },
+  { value: "Safer", label: "field teams" },
+  { value: "Stronger", label: "site visibility" },
+  { value: "Better", label: "response coordination" },
+  { value: "More", label: "operational confidence" },
+  { value: "Lower", label: "security risk" },
+];
+
+const workflow = [
+  { label: "Patrol Teams", icon: ShieldAlert },
+  { label: "Site Sensors", icon: Eye },
+  { label: "Command Center", icon: Globe2 },
+  { label: "Secure Communications", icon: Wifi },
+  { label: "Access Control", icon: Lock },
+];
+
+const faqItems = [
+  {
+    question: "Can Tidal support encrypted communications for security teams?",
+    answer: "Yes. We deploy secure voice and data paths that protect communication between officers and control rooms.",
+  },
+  {
+    question: "How do you help coordinate remote patrol operations?",
+    answer: "Our systems provide visibility and alerting so command teams can keep mobile units aligned and responsive.",
+  },
+  {
+    question: "Can you secure remote surveillance and access control data?",
+    answer: "We protect remote site telemetry and access systems with resilient networks and operational monitoring.",
+  },
+];
+
+const relatedIndustries = [
+  { title: "Government", href: "/industries/government" },
+  { title: "Logistics & Transport", href: "/industries/logistics-transport" },
+  { title: "Utilities", href: "/industries/utilities" },
+];
+
+export default function SecurityCompaniesPage() {
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
+
+  return (
+    <div className="min-h-screen bg-[#F8FBFC] text-slate-700">
+      <Navbar />
+      <main>
+        <section className="bg-white px-6 py-24 sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[0.95fr_1.05fr] items-center">
+            <div className="space-y-6">
+              <SectionHeading
+                eyebrow="Industry"
+                title="Security Companies"
+                description="Always-on systems for remote operations, rapid response coordination, and field readiness."
+              />
+              <p className="max-w-2xl text-slate-600">
+                Tidal delivers secure operational networks and connectivity that help security teams act faster and stay coordinated.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button href="/contact">Get a briefing</Button>
+                <Button href="/industries" variant="secondary">Back to industries</Button>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <div className="relative min-h-[280px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[340px]"><Image src="/images/industry-security.jfif" alt="Security operations" fill className="object-cover" priority /></div>
+              <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+                <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-[#E8FFF9] text-[#00a999]">
+                  <ShieldCheck className="h-6 w-6" />
+                </div>
+                <h2 className="mt-6 text-3xl font-semibold text-[#071A2F]">Secure coordination for field teams.</h2>
+                <p className="mt-4 text-slate-600">Support fast response with dependable connectivity and encrypted communications.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 py-24 sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-start">
+            <div>
+              <SectionHeading
+                eyebrow="Industry Overview"
+                title="Security operations need visibility, coordination, and secure remote connectivity."
+                description="Teams must stay connected across sites, vehicles, and command centers so incidents resolve quickly."
+              />
+              <p className="mt-6 text-slate-600">
+                Our solutions help security providers monitor remote locations, protect communications, and improve response readiness.
+              </p>
+            </div>
+            <div className="rounded-[2rem] border border-slate-200 bg-white p-10 shadow-sm">
+              <p className="text-sm uppercase tracking-[0.3em] text-[#00C4B3]">Security focus</p>
+              <p className="mt-6 text-slate-600">
+                We build secure connectivity and monitoring so security teams can manage incidents confidently and securely.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#F8FBFC] px-6 py-24 sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeading
+              eyebrow="Industry Challenges"
+              title="Security companies struggle with remote visibility and secure incident coordination."
+              description="These gaps can slow response times and increase operational risk."
+            />
+            <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+              {challenges.map((challenge) => (
+                <div key={challenge} className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+                  <p className="text-slate-700">{challenge}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 py-24 sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeading
+              eyebrow="Industry Trends"
+              title="Security operations are evolving toward connected command and field intelligence."
+              description="Real-time visibility and encrypted mobile communications are becoming essential."
+            />
+            <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+              {trends.map((trend) => (
+                <div key={trend} className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+                  <p className="font-semibold text-[#071A2F]">{trend}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white px-6 py-24 sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[0.95fr_1.05fr] items-start">
+            <div>
+              <SectionHeading
+                eyebrow="How Tidal Supports Your Industry"
+                title="We deliver secure operations and real-time awareness for security teams."
+                description="Our platforms help teams stay connected, monitor remote sites, and respond quickly to incidents."
+              />
+              <div className="mt-10 space-y-4 text-slate-600">
+                {supportAreas.map((item) => (
+                  <div key={item} className="rounded-[2rem] border border-slate-200 bg-[#F8FBFC] p-6 shadow-sm">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-[2rem] border border-slate-200 bg-[#071A2F] p-10 text-white shadow-xl">
+              <div className="rounded-[1.75rem] bg-[#0e2b47] p-8">
+                <p className="text-sm uppercase tracking-[0.3em] text-[#5DE6D6]">Recommended solutions</p>
+                <div className="mt-8 grid gap-4">
+                  {solutions.map((solution) => {
+                    const Icon = solution.icon;
+                    return (
+                      <div key={solution.title} className="flex items-center gap-4 rounded-[1.75rem] border border-white/10 bg-white/10 p-4">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-[#E8FFF9] text-[#00C4B3]">
+                          <Icon className="h-6 w-6" />
+                        </div>
+                        <p className="font-semibold">{solution.title}</p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#071A2F] px-6 py-24 text-white sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
+            <div className="space-y-6">
+              <SectionHeading
+                eyebrow="Benefits"
+                title="The security outcomes that matter most."
+                description="Faster response, safer teams, and stronger site assurance help companies stay ahead of threats."
+              />
+              <p className="max-w-2xl text-slate-300">
+                Secure communications and operational visibility reduce risk, improve coverage, and build confidence across teams. 
+              </p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {benefits.map((item) => (
+                <div key={item.label} className="rounded-[2rem] bg-white/10 p-8 text-slate-100 shadow-sm">
+                  <p className="text-3xl font-semibold">{item.value}</p>
+                  <p className="mt-3 text-slate-300">{item.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 py-24 sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
+            <div>
+              <SectionHeading
+                eyebrow="Technology in Action"
+                title="A security workflow built around awareness and response."
+                description="We connect patrols, sites, and command centers through secure, reliable infrastructure."
+              />
+              <div className="mt-10 grid gap-6 md:grid-cols-5">
+                {workflow.map((step) => {
+                  const Icon = step.icon;
+                  return (
+                    <div key={step.label} className="rounded-[2rem] border border-slate-200 bg-white p-8 text-center shadow-sm">
+                      <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-3xl bg-[#E8FFF9] text-[#00C4B3]">
+                        <Icon className="h-6 w-6" />
+                      </div>
+                      <p className="mt-6 font-semibold text-[#071A2F]">{step.label}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <div className="rounded-[2rem] border border-slate-200 bg-[#F8FBFC] p-10 shadow-sm">
+              <Image src="/images/industry-security.jfif" alt="Security technology" width={640} height={520} className="rounded-[1.75rem] object-cover" priority />
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white px-6 py-24 sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
+            <div className="rounded-[2rem] border border-slate-200 bg-[#071A2F] p-10 text-white shadow-xl">
+              <p className="text-sm uppercase tracking-[0.3em] text-[#5DE6D6]">Featured success story</p>
+              <h2 className="mt-5 text-3xl font-semibold">Patrol coordination for a private security provider.</h2>
+              <div className="mt-8 space-y-6 text-slate-300">
+                <div>
+                  <p className="font-semibold text-white">Challenge</p>
+                  <p className="mt-3">The firm needed better remote visibility and secure communications for patrol and response teams.</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-white">Solution</p>
+                  <p className="mt-3">We implemented secure network pathways, mobile connectivity, and command center monitoring.</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-white">Results</p>
+                  <p className="mt-3">Response coordination improved, and remote coverage became more consistent across sites.</p>
+                </div>
+              </div>
+            </div>
+            <div className="rounded-[2rem] border border-slate-200 bg-white p-10 shadow-sm">
+              <Image src="/images/deployment-photo.png" alt="Security deployment" width={640} height={520} className="rounded-[1.75rem] object-cover" priority />
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#F8FBFC] px-6 py-24 sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeading
+              eyebrow="Our Implementation Approach"
+              title="A secure security deployment path built for field readiness."
+              description="We deliver reliable infrastructure, training, and support for remote operations."
+            />
+            <div className="mt-12 grid gap-6 md:grid-cols-5">
+              {[
+                "Assessment",
+                "Deployment",
+                "Configuration",
+                "Training",
+                "Support",
+              ].map((step) => (
+                <div key={step} className="rounded-[2rem] border border-slate-200 bg-white p-8 text-center shadow-sm">
+                  <p className="font-semibold text-[#071A2F]">{step}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white px-6 py-24 sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeading
+              eyebrow="Frequently Asked Questions"
+              title="Security company questions answered."
+              description="Answers for teams planning secure operations, remote monitoring, and response coordination."
+            />
+            <div className="mt-12 space-y-4">
+              {faqItems.map((faq, index) => (
+                <div key={faq.question} className="overflow-hidden rounded-[2rem] border border-slate-200 bg-[#F8FBFC] shadow-sm">
+                  <button
+                    type="button"
+                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                    className="flex w-full items-center justify-between gap-4 px-6 py-6 text-left text-lg font-semibold text-[#071A2F]"
+                  >
+                    <span>{faq.question}</span>
+                    <span className="text-slate-500">{openFaq === index ? "−" : "+"}</span>
+                  </button>
+                  {openFaq === index ? (
+                    <div className="border-t border-slate-200 bg-white px-6 py-6 text-slate-600">
+                      {faq.answer}
+                    </div>
+                  ) : null}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 py-24 sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeading
+              eyebrow="Related Industries"
+              title="Other sectors that rely on secure operations and visibility."
+              description="These industries also benefit from connected teams, remote monitoring, and resilient infrastructure."
+            />
+            <div className="mt-12 grid gap-6 md:grid-cols-3">
+              {relatedIndustries.map((industry) => (
+                <Link
+                  key={industry.title}
+                  href={industry.href}
+                  className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition hover:border-[#00C4B3] hover:bg-[#F8FBFC]"
+                >
+                  <p className="font-semibold text-[#071A2F]">{industry.title}</p>
+                  <p className="mt-4 text-slate-600">Explore how Tidal supports related operational environments.</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#071A2F] px-6 py-24 text-white sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[#102A45] p-14 text-center shadow-[0_30px_80px_rgba(7,26,47,0.22)]">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#5DE6D6]">Ready for action</p>
+            <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">Coordinate your security operations with Tidal.</h2>
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+              Talk to our team about a secure, connected approach for your security workforce.
+            </p>
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <Button href="/contact">Get a briefing</Button>
+              <Button href="/industries" variant="secondary">Back to industries</Button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+}
