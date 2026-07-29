@@ -131,7 +131,7 @@ export default function IntelligentTelematicsPage() {
             </div>
 
             <div className="space-y-4">
-              <div className="relative min-h-[280px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[340px]"><Image src="/images/solution-telematics-illustration.png" alt="Fleet telematics dashboard" fill className="object-cover" priority /></div>
+              <div className="relative min-h-[280px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[340px]"><Image src="/images/solution-telematics-illustration.png" alt="Fleet telematics dashboard" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" priority /></div>
               <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
                 <p className="text-sm uppercase tracking-[0.3em] text-[#00a999]">Fleet visibility</p>
                 <h2 className="mt-5 text-3xl font-semibold text-[#071A2F]">Live tracking, route insight, and control center clarity.</h2>

@@ -44,7 +44,7 @@ export default function Home() {
         />
 
         <section className="relative isolate overflow-hidden border-b border-slate-200 bg-[#eaf5f6] px-6 py-12 sm:px-8 lg:px-12">
-          <Image src="/images/home-why-choose-panel-pattern.jfif" alt="" fill className="object-cover opacity-25" />
+          <Image src="/images/home-why-choose-panel-pattern.jfif" alt="" fill sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-[#eaf5f6]/75 to-white/55" />
           <div className="relative mx-auto grid max-w-7xl gap-7 lg:grid-cols-[0.72fr_1.28fr] lg:items-center">
             <div>
@@ -54,7 +54,7 @@ export default function Home() {
             <div className="flex flex-wrap items-center gap-3 lg:justify-end">
               {partnerNames.map((name) => (
                 <div key={name} className="flex h-14 min-w-[132px] items-center justify-center rounded-2xl border border-white/90 bg-white/85 px-4 shadow-[0_10px_24px_rgba(7,26,47,0.08)] backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[#00C4B3]/50 hover:shadow-md">
-                  <Image src={partnerLogos[name]} alt={name} width={110} height={30} className="max-h-8 object-contain" />
+                  <Image src={partnerLogos[name]} alt={name} width={110} height={30} className="h-auto max-h-8 w-auto object-contain" />
                 </div>
               ))}
             </div>
@@ -135,18 +135,24 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="industries" className="px-6 py-16 sm:px-8 sm:py-20 lg:px-12">
-          <div className="mx-auto max-w-7xl">
-            <SectionHeading
-              eyebrow="Industries"
-              title="Trusted across sectors where reliability is non-negotiable."
-              description="We support organizations with complex operations, distributed teams, and high expectations for continuity."
-            />
+        <section id="industries" className="relative isolate overflow-hidden px-6 py-16 sm:px-8 sm:py-20 lg:px-12">
+          <div className="pointer-events-none absolute inset-0 z-0">
+            <Image src="/images/solutions-featured-approach-background.jpg" alt="" fill sizes="100vw" className="object-cover" />
+          </div>
+          <div className="pointer-events-none absolute inset-0 z-0 bg-white/5" />
+          <div className="relative z-10 mx-auto max-w-7xl">
+            <div className="inline-block rounded-[2rem] bg-white/85 p-6 shadow-sm backdrop-blur-sm">
+              <SectionHeading
+                eyebrow="Industries"
+                title="Trusted across sectors where reliability is non-negotiable."
+                description="We support organizations with complex operations, distributed teams, and high expectations for continuity."
+              />
+            </div>
             <div className="relative">
-              <div className="pointer-events-none absolute inset-0 -z-10 flex items-start justify-end">
-                <Image src="/images/home-industries-hero-accent.png" alt="Industries accent" width={520} height={420} className="object-contain opacity-10" />
+              <div className="pointer-events-none absolute inset-0 z-0 flex items-start justify-end">
+                <Image src="/images/home-industries-hero-accent.png" alt="Industries accent" width={520} height={420} className="h-auto w-full max-w-[520px] object-contain" />
               </div>
-              <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+              <div className="relative z-10 mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {industries.map((industry) => {
                 const Icon = industry.icon;
                 return (
@@ -175,7 +181,7 @@ export default function Home() {
                 We bring together systems thinking, secure architecture, and business alignment so every deployment supports long-term resilience.
               </p>
               <div className="relative mt-10 aspect-[16/9] overflow-hidden rounded-[1.75rem] border border-white/15 bg-[#103B56] shadow-2xl">
-                <Image src="/images/home-hero-foreground-accent.jpg" alt="Connected infrastructure visual" fill className="object-cover" />
+                <Image src="/images/home-hero-foreground-accent.jpg" alt="Connected infrastructure visual" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#071A2F]/70 via-transparent to-transparent" />
                 <p className="absolute bottom-5 left-5 text-sm font-semibold tracking-wide text-white">Designed for dependable operations</p>
               </div>
@@ -219,7 +225,8 @@ export default function Home() {
                 ))}
               </div>
               <div className="relative isolate min-h-[340px] overflow-hidden rounded-[2rem] bg-[#071A2F] p-3 shadow-[0_24px_60px_rgba(7,26,47,0.22)] sm:p-5">
-                <Image src="/images/home-process-graphic.jpg" alt="Tidal's delivery process from discovery through support" fill className="object-cover opacity-95" />
+                <Image src="/images/home-process-graphic.jpg" alt="Tidal's delivery process from discovery through support" fill sizes="(min-width: 640px) 55vw, 100vw" className="hidden object-cover sm:block" />
+                <Image src="/images/home-process-graphic.jfif" alt="Tidal's delivery process stages" fill sizes="100vw" className="object-cover sm:hidden" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#071A2F]/65 via-transparent to-transparent" />
                 <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4 text-white sm:bottom-7 sm:left-7 sm:right-7">
                   <div>
@@ -233,9 +240,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="technology" className="bg-[#F8FBFC] px-6 py-16 sm:px-8 sm:py-20 lg:px-12">
-          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1.05fr] items-center">
-            <div>
+        <section id="technology" className="relative isolate overflow-hidden bg-[#F8FBFC] px-6 py-16 sm:px-8 sm:py-20 lg:px-12">
+          <div className="pointer-events-none absolute inset-0 z-0">
+            <Image src="/images/home-technology-panel-visual.jpg" alt="" fill sizes="100vw" className="object-cover" />
+          </div>
+          <div className="pointer-events-none absolute inset-0 z-0 bg-[#F8FBFC]/5" />
+          <div className="relative z-10 mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1.05fr] items-center">
+            <div className="rounded-[2rem] bg-white/85 p-6 shadow-sm backdrop-blur-sm">
               <SectionHeading
                 eyebrow="Technology & innovation"
                 title="Practical capabilities built for real-world operations."
@@ -250,11 +261,8 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <div className="rounded-[2rem] border border-slate-200 bg-white p-10 shadow-xl relative overflow-hidden">
-              <div className="pointer-events-none absolute right-0 top-0 -z-10">
-                <Image src="/images/home-technology-panel-visual.jpg" alt="Technology visual" width={520} height={420} className="object-cover opacity-10" />
-              </div>
-              <div className="rounded-[1.75rem] bg-[#071A2F] p-8 text-white">
+            <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-10 shadow-xl">
+              <div className="relative z-10 rounded-[1.75rem] bg-[#071A2F] p-8 text-white">
                 <p className="text-sm uppercase tracking-[0.3em] text-[#5DE6D6]">Platform overview</p>
                 <h2 className="mt-5 text-3xl font-semibold">Connected systems that keep teams informed and secure.</h2>
                 <p className="mt-6 text-slate-300">
@@ -277,8 +285,17 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="case-studies" className="bg-white px-6 py-16 sm:px-8 sm:py-20 lg:px-12">
-          <div className="mx-auto max-w-7xl">
+        <section id="case-studies" className="relative isolate overflow-hidden bg-white px-6 py-16 sm:px-8 sm:py-20 lg:px-12">
+          <div className="pointer-events-none absolute inset-0 z-0">
+            <Image src="/images/insights-featured-content-pattern.jpg" alt="" fill className="object-cover opacity-100" />
+            <div className="absolute inset-0 bg-white/25" />
+          </div>
+          <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,_rgba(7,26,47,0.10),_transparent_50%)]" />
+          <div className="pointer-events-none absolute inset-0 z-0">
+            <Image src="/images/industries-final-cta-background.jpg" alt="" fill className="object-cover opacity-100" />
+            <div className="absolute inset-0 bg-white/20" />
+          </div>
+          <div className="relative z-10 mx-auto max-w-7xl">
             <SectionHeading
               eyebrow="Featured case studies"
               title="Outcomes that strengthen operations and trust."
@@ -303,9 +320,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="insights" className="px-6 py-16 sm:px-8 sm:py-20 lg:px-12">
-          <div className="mx-auto max-w-7xl">
-            <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <section id="insights" className="relative isolate overflow-hidden px-6 py-16 sm:px-8 sm:py-20 lg:px-12">
+          <Image src="/images/insights-featured-content-pattern.jpg" alt="" fill sizes="100vw" className="object-cover" />
+          <div className="absolute inset-0 bg-white/5" />
+          <div className="relative z-10 mx-auto max-w-7xl">
+            <div className="flex flex-col gap-6 rounded-[2rem] bg-white/85 p-6 shadow-sm backdrop-blur-sm md:flex-row md:items-end md:justify-between">
               <SectionHeading
                 eyebrow="Latest insights"
                 title="Thoughtful perspectives on modern infrastructure."

@@ -31,6 +31,17 @@ export default function InsightsResourcesPage() {
                   </div>
                 ))}
               </div>
+              <div className="grid gap-3 sm:grid-cols-3">
+                {[
+                  ["/images/networking-article.png", "Network guide"],
+                  ["/images/whitepaper-cover.jfif", "Whitepaper"],
+                ].map(([src, label]) => (
+                  <div key={label} className="group relative min-h-32 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+                    <Image src={src} alt={label} fill className="object-cover transition duration-300 group-hover:scale-105" />
+                    <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#071A2F]/85 to-transparent px-3 pb-3 pt-8 text-sm font-semibold text-white">{label}</span>
+                  </div>
+                ))}
+              </div>
               <Button href="/contact">Request a resource briefing</Button>
             </div>
             <div className="space-y-4">

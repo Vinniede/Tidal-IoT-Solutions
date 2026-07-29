@@ -34,20 +34,24 @@ export default function InsightsPage() {
     <div className="min-h-screen bg-[#F8FBFC] text-slate-700">
       <Navbar />
       <main>
-        <section className="bg-white px-6 py-24 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[0.95fr_1.05fr] items-center">
+        <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:px-8 lg:px-12">
+          <Image src="/images/insights-hero-background.jfif" alt="" fill sizes="100vw" className="object-cover opacity-100" />
+          <div className="absolute inset-0 bg-[linear-gradient(120deg,_rgba(255,255,255,0.35)_0%,_rgba(255,255,255,0.12)_45%,_rgba(7,26,47,0.15)_100%)]" />
+          <div className="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="space-y-6">
-              <SectionHeading
-                eyebrow="Insights"
-                title="Thought leadership for modern infrastructure decisions."
-                description="Ideas, resources, and case learnings for enterprise teams building resilient systems."
-              />
-              <p className="max-w-2xl text-slate-600">
-                Discover perspectives and practical guidance that help enterprise teams deploy systems with confidence and clarity.
-              </p>
-              <div className="rounded-[2rem] border border-slate-200 bg-[#F8FBFC] p-6">
-                <p className="text-sm uppercase tracking-[0.3em] text-[#00C4B3]">Featured content</p>
-                <p className="mt-4 text-slate-600">
+              <div className="rounded-[2rem] border border-white/70 bg-white/80 p-8 shadow-[0_24px_60px_rgba(7,26,47,0.14)] backdrop-blur-xl">
+                <SectionHeading
+                  eyebrow="Insights"
+                  title="Thought leadership for modern infrastructure decisions."
+                  description="Ideas, resources, and case learnings for enterprise teams building resilient systems."
+                />
+                <p className="mt-5 max-w-2xl text-slate-700">
+                  Discover perspectives and practical guidance that help enterprise teams deploy systems with confidence and clarity.
+                </p>
+              </div>
+              <div className="rounded-[2rem] border border-white/70 bg-slate-950/80 p-6 text-white shadow-[0_20px_45px_rgba(7,26,47,0.2)] backdrop-blur-md">
+                <p className="text-sm uppercase tracking-[0.3em] text-[#8cf7ec]">Featured content</p>
+                <p className="mt-4 text-sm leading-7 text-slate-100">
                   From strategic briefs to field case studies, our insights provide a clear view of modern infrastructure choices.
                 </p>
               </div>
@@ -73,12 +77,15 @@ export default function InsightsPage() {
           </div>
         </section>
 
-        <section className="px-6 pb-24 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl grid gap-6 lg:grid-cols-3">
+        <section className="relative isolate overflow-hidden px-6 pb-24 sm:px-8 lg:px-12">
+          <Image src="/images/insights-featured-content-pattern.jpg" alt="" fill sizes="100vw" className="object-cover opacity-100" />
+          <div className="absolute inset-0 bg-white/20" />
+          <div className="relative mx-auto max-w-7xl grid gap-6 lg:grid-cols-3">
             {insights.map((item) => (
               <article key={item.title} className="group relative min-h-[310px] overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-xl">
-                <Image src={item.image} alt="" fill className="object-cover opacity-[0.08] transition duration-500 group-hover:scale-105 group-hover:opacity-[0.15]" />
-                <div className="relative">
+                <Image src="/images/insight-card-illustration.png" alt="" fill sizes="(min-width: 1024px) 30vw, 100vw" className="object-cover object-right opacity-100" />
+                <Image src={item.image} alt="" fill sizes="(min-width: 1024px) 30vw, 100vw" className="object-cover opacity-100 transition duration-500 group-hover:scale-105" />
+                <div className="relative rounded-[1.5rem] bg-white/90 p-5 backdrop-blur-sm">
                   <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#00C4B3]">{item.category}</p>
                 <h2 className="mt-4 text-2xl font-semibold text-[#071A2F]">{item.title}</h2>
                 <p className="mt-3 text-slate-600">{item.description}</p>

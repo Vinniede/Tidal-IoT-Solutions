@@ -111,7 +111,7 @@ export default function IntegratedCybersecurityPage() {
         <section className="bg-white px-6 py-24 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
             <div className="space-y-4">
-              <div className="relative min-h-[280px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[340px]"><Image src="/images/solution-cybersecurity-illustration.jfif" alt="Cybersecurity monitoring" fill className="object-cover" priority /></div>
+              <div className="relative min-h-[280px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[340px]"><Image src="/images/solution-cybersecurity-illustration.jfif" alt="Cybersecurity monitoring" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" priority /></div>
               <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
                 <p className="text-sm uppercase tracking-[0.3em] text-[#00a999]">Security operations</p>
                 <h2 className="mt-5 text-3xl font-semibold text-[#071A2F]">Modern cybersecurity designed for enterprise continuity.</h2>

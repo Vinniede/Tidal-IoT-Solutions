@@ -63,17 +63,21 @@ export default function IndustriesPage() {
               {industries.map((industry) => {
                 const Icon = industry.icon;
                 return (
-                  <article key={industry.title} className="group relative min-h-[280px] overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-                    <Image src={industry.image} alt="" fill className="object-cover opacity-[0.10] transition duration-500 group-hover:scale-105 group-hover:opacity-[0.18]" />
-                    <div className="relative">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#071A2F] text-white">
-                      <Icon className="h-6 w-6" />
+                  <article key={industry.title} className="group relative min-h-[320px] overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+                    <div className="absolute inset-0">
+                      <Image src="/images/industry-sector-card-accent.png" alt="" fill sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 100vw" className="object-cover opacity-100" />
+                      <Image src={industry.image} alt="" fill sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 100vw" className="object-cover opacity-100 transition duration-500 group-hover:scale-105" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-900/50 to-transparent" />
                     </div>
-                    <h2 className="mt-6 text-xl font-semibold text-[#071A2F]">{industry.title}</h2>
-                    <p className="mt-3 text-slate-600">{industry.description}</p>
-                    <Link href={`/industries/${industry.slug}`} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#071A2F]">
-                      Learn more <ArrowRight className="h-4 w-4" />
-                    </Link>
+                    <div className="relative flex h-full flex-col justify-end p-6 sm:p-8">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/25 bg-white/20 text-white shadow-[0_0_0_1px_rgba(255,255,255,0.15)] backdrop-blur-md">
+                        <Icon className="h-6 w-6" />
+                      </div>
+                      <h2 className="mt-4 text-xl font-semibold text-white">{industry.title}</h2>
+                      <p className="mt-2 text-sm leading-6 text-slate-50">{industry.description}</p>
+                      <Link href={`/industries/${industry.slug}`} className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#fef3c7]">
+                        Learn more <ArrowRight className="h-4 w-4" />
+                      </Link>
                     </div>
                   </article>
                 );
@@ -84,7 +88,8 @@ export default function IndustriesPage() {
 
         <section className="px-6 pb-24 sm:px-8 lg:px-12">
           <div className="relative mx-auto flex max-w-7xl flex-col gap-8 overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-10 lg:flex-row lg:items-end lg:justify-between lg:p-14">
-            <Image src="/images/industries-final-cta-background.jpg" alt="" fill className="object-cover opacity-[0.10]" />
+            <Image src="/images/industries-final-cta-background.jpg" alt="" fill sizes="100vw" className="object-cover opacity-100" />
+            <div className="absolute inset-0 bg-white/20" />
             <div className="relative">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#00C4B3]">Industry fit</p>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#071A2F] sm:text-4xl">We tailor architecture to the realities of your environment and operating model.</h2>

@@ -201,8 +201,8 @@ export default function AboutPage() {
       <Navbar />
       <main>
         <section className="relative isolate overflow-hidden bg-white px-6 py-8 sm:px-8 sm:py-10 lg:px-12">
-          <Image src="/images/about-hero-background.jfif" alt="" fill className="object-cover" priority />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#071A2F]/20" />
+          <Image src="/images/about-hero-background.jfif" alt="" fill className="object-cover opacity-100" priority />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/20 via-transparent to-[#071A2F]/20" />
           <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
             <div className="flex h-full flex-col justify-center space-y-5 rounded-[2rem] border border-white/70 bg-white/82 p-6 shadow-xl backdrop-blur-sm">
               <SectionHeading
@@ -469,8 +469,10 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="bg-white px-6 py-16 sm:px-8 sm:py-20 lg:px-12">
-          <div className="mx-auto max-w-7xl">
+        <section className="relative isolate overflow-hidden bg-white px-6 py-16 sm:px-8 sm:py-20 lg:px-12">
+          <Image src="/images/about-faq-background-pattern.jpg" alt="" fill sizes="100vw" className="object-cover opacity-100" />
+          <div className="absolute inset-0 bg-white/20" />
+          <div className="relative mx-auto max-w-7xl">
             <SectionHeading
               eyebrow="Frequently asked questions"
               title="Answers to the questions we hear most often."

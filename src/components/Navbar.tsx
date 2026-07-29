@@ -22,7 +22,9 @@ export function Navbar() {
     <header className={`sticky top-0 z-50 border-b transition duration-300 ${scrolled ? "border-slate-200/80 bg-white/90 backdrop-blur-xl shadow-sm" : "border-transparent bg-transparent"}`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-8 sm:py-4 lg:px-12">
         <Link href="/" className="flex min-w-0 items-center gap-2 sm:gap-3">
-          <Image src="/images/Company%20Logo.jpeg" alt="Tidal IoT Solutions" width={40} height={40} className="h-9 w-9 shrink-0 rounded-full object-cover sm:h-10 sm:w-10" />
+          <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-slate-200 bg-white shadow-sm sm:h-14 sm:w-14">
+            <Image src="/images/Company%20Logo.jpeg" alt="Tidal IoT Solutions" width={56} height={56} className="h-full w-full object-contain p-1" />
+          </div>
           <div>
             <p className="brand-color-flow text-base font-black tracking-tight min-[380px]:text-lg sm:text-xl">Tidal IoT Solutions</p>
             <p className="hidden text-xs uppercase tracking-[0.3em] text-slate-500 min-[380px]:block">Intelligent infrastructure</p>

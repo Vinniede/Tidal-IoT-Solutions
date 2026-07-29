@@ -20,10 +20,17 @@ export default function ContactPage() {
               <p className="mt-6 max-w-2xl text-slate-600">
                 Share your priorities, constraints, and performance expectations so we can propose the right architecture for your operations.
               </p>
+              <div className="relative mt-6 flex items-center gap-4 overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                <Image src="/images/brochure-cover.jfif" alt="Tidal IoT Solutions company brochure" width={72} height={56} className="h-14 w-16 rounded-xl object-cover" />
+                <div>
+                  <p className="text-sm font-semibold text-[#071A2F]">Company brochure</p>
+                  <p className="mt-1 text-sm text-slate-600">A quick introduction to Tidal&apos;s capabilities and delivery approach.</p>
+                </div>
+              </div>
             </div>
 
             <div className="relative isolate overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-950 p-8 text-white shadow-xl">
-              <Image src="/images/deployment-photo.png" alt="Tidal infrastructure deployment" fill className="object-cover opacity-40" priority />
+              <Image src="/images/deployment-photo.png" alt="Tidal infrastructure deployment" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" priority />
               <div className="absolute inset-0 bg-gradient-to-tr from-slate-950 via-slate-950/85 to-transparent" />
               <div className="relative rounded-[2rem] border border-white/10 bg-slate-950/90 p-8">
                 <div className="space-y-6">

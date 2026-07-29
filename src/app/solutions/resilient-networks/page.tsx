@@ -131,7 +131,7 @@ export default function ResilientNetworksPage() {
             </div>
 
             <div className="space-y-4">
-              <div className="relative min-h-[280px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[340px]"><Image src="/images/solution-network-infrastructure-illustration.jfif" alt="Resilient network infrastructure" fill className="object-cover" priority /></div>
+              <div className="relative min-h-[280px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[340px]"><Image src="/images/solution-network-infrastructure-illustration.jfif" alt="Resilient network infrastructure" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" priority /></div>
               <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
                 <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-[#E8FFF9] text-[#00a999]">
                   <Server className="h-6 w-6" />

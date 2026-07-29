@@ -46,31 +46,43 @@ export default function SolutionsPage() {
     <div className="min-h-screen bg-[#F8FBFC] text-slate-700">
       <Navbar />
       <main>
-        <section className="bg-white px-6 py-24 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[0.95fr_1.05fr] items-center">
+        <section className="relative isolate overflow-hidden bg-[linear-gradient(135deg,_#f7fcfe_0%,_#eefaf7_45%,_#fdfdf8_100%)] px-6 py-24 sm:px-8 lg:px-12">
+          <Image src="/images/solutions-hero-background.jfif" alt="" fill sizes="100vw" className="object-cover opacity-100" />
+          <div className="absolute inset-0 bg-[linear-gradient(120deg,_rgba(255,255,255,0.28)_0%,_rgba(255,255,255,0.08)_45%,_rgba(7,26,47,0.12)_100%)]" />
+          <div className="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="space-y-6">
-              <SectionHeading
-                eyebrow="Solutions"
-                title="Purpose-built infrastructure for intelligent operations."
-                description="Every solution is designed to combine secure performance, measurable business value, and long-term scalability."
-              />
-              <p className="max-w-2xl text-slate-600">
-                From fleet telemetry to secure communications, our solutions create operational clarity and resilience for demanding enterprise environments.
-              </p>
-              <div className="rounded-[2rem] border border-slate-200 bg-[#F8FBFC] p-6">
-                <p className="text-sm uppercase tracking-[0.3em] text-[#00C4B3]">Featured approach</p>
-                <p className="mt-4 text-slate-600">
-                  We design systems with visibility, security, and reliability at the center so teams can move faster without compromising continuity.
+              <div className="rounded-[2rem] border border-white/60 bg-white/80 p-8 shadow-[0_24px_60px_rgba(7,26,47,0.12)] backdrop-blur-xl">
+                <SectionHeading
+                  eyebrow="Solutions"
+                  title="Purpose-built infrastructure for intelligent operations."
+                  description="Every solution is designed to combine secure performance, measurable business value, and long-term scalability."
+                />
+                <p className="mt-5 max-w-2xl text-slate-600">
+                  From fleet telemetry to secure communications, our solutions create operational clarity and resilience for demanding enterprise environments.
                 </p>
+              </div>
+              <div className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-gradient-to-br from-[#071A2F] via-[#0e3d63] to-[#00C4B3] p-6 text-white shadow-[0_22px_50px_rgba(0,196,179,0.22)]">
+                <div className="absolute -right-6 -top-8 h-28 w-28 rounded-full bg-[#00C4B3]/35 blur-3xl" />
+                <div className="absolute -bottom-10 -left-12 h-32 w-32 rounded-full bg-white/20 blur-3xl" />
+                <Image src="/images/solutions-featured-approach-background.jpg" alt="" fill sizes="(min-width: 1024px) 32rem, 100vw" className="object-cover opacity-100" />
+                <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(7,26,47,0.4)_0%,rgba(0,196,179,0.2)_100%)]" />
+                <div className="relative z-10 rounded-[1.5rem] border border-white/20 bg-slate-950/75 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.15)] backdrop-blur-md">
+                  <div className="inline-flex rounded-full border border-white/20 bg-white/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.3em] text-[#f0fffe] shadow-[inset_0_1px_2px_rgba(255,255,255,0.2)]">
+                    Featured approach
+                  </div>
+                  <p className="mt-4 max-w-xl text-base leading-7 text-slate-100">
+                    We design systems with visibility, security, and reliability at the center so teams can move faster without compromising continuity.
+                  </p>
+                </div>
               </div>
             </div>
 
             <div className="space-y-4">
-              <div className="relative isolate min-h-[280px] overflow-hidden rounded-[2rem] border border-slate-200 bg-[#071A2F] shadow-xl sm:min-h-[340px]">
-                <Image src="/images/solutions-hero-foreground-visual.jpg" alt="Connected infrastructure visual" fill className="object-cover" priority />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#071A2F]/35 to-transparent" />
+              <div className="relative isolate min-h-[280px] overflow-hidden rounded-[2rem] border border-white/70 bg-gradient-to-br from-[#071A2F] via-[#0b2d4c] to-[#00C4B3] shadow-[0_24px_60px_rgba(7,26,47,0.18)] sm:min-h-[340px]">
+                <Image src="/images/solutions-hero-foreground-visual.jpg" alt="Connected infrastructure visual" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" priority />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#071A2F]/45 via-transparent to-[#00C4B3]/20" />
               </div>
-              <div className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-[0_16px_34px_rgba(7,26,47,0.12)] sm:p-8">
+              <div className="rounded-[2rem] border border-slate-200 bg-gradient-to-br from-white via-[#f7fffe] to-[#eafcf9] p-7 shadow-[0_18px_40px_rgba(7,26,47,0.12)] sm:p-8">
                 <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#00a999]">Secure communication</p>
                 <h2 className="mt-3 text-2xl font-semibold text-[#071A2F] sm:text-3xl">Solutions built for continuity</h2>
                 <p className="mt-3 text-slate-600">Reliable connectivity for teams that must stay in contact.</p>
@@ -94,26 +106,29 @@ export default function SolutionsPage() {
                   <article
                     key={solution.slug}
                     id={solution.slug}
-                    className="group relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+                    className="group relative overflow-hidden rounded-[2rem] border border-slate-200 bg-gradient-to-br from-white via-[#f8fdfc] to-[#eafcf8] shadow-[0_12px_30px_rgba(7,26,47,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_44px_rgba(0,196,179,0.16)]"
                   >
-                    <Image src={solution.image} alt="" fill className="object-cover opacity-[0.08] transition duration-500 group-hover:scale-105 group-hover:opacity-[0.14]" />
-                    <div className="relative">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#E8FFF9] text-[#00C4B3]">
-                      <Icon className="h-6 w-6" />
-                    </div>
-                    <h2 className="mt-6 text-2xl font-semibold text-[#071A2F]">{solution.title}</h2>
-                    <p className="mt-3 text-slate-600">{solution.description}</p>
-                    <ul className="mt-6 space-y-3 text-sm text-slate-600">
-                      {solution.points.map((point) => (
-                        <li key={point} className="flex items-start gap-2">
-                          <span className="mt-2 h-2.5 w-2.5 rounded-full bg-[#00C4B3]" />
-                          {point}
-                        </li>
-                      ))}
-                    </ul>
-                    <Link href={`/solutions/${solution.slug}`} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#071A2F]">
-                      Learn more about this solution <ArrowRight className="h-4 w-4" />
-                    </Link>
+                    <div className="relative h-[360px] sm:h-[420px]">
+                      <Image src={solution.image} alt="" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover transition duration-500 group-hover:scale-105" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-900/50 to-transparent" />
+                      <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8">
+                        <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-white/25 bg-white/20 text-white shadow-[0_0_0_1px_rgba(255,255,255,0.15)] backdrop-blur-md">
+                          <Icon className="h-6 w-6" />
+                        </div>
+                        <h2 className="mt-4 text-2xl font-semibold text-white">{solution.title}</h2>
+                        <p className="mt-2 text-sm leading-6 text-slate-50">{solution.description}</p>
+                        <ul className="mt-5 space-y-2 text-sm text-slate-100">
+                          {solution.points.map((point) => (
+                            <li key={point} className="flex items-start gap-2">
+                              <span className="mt-2 h-2.5 w-2.5 rounded-full bg-[#00C4B3]" />
+                              {point}
+                            </li>
+                          ))}
+                        </ul>
+                        <Link href={`/solutions/${solution.slug}`} className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#fef3c7]">
+                          Learn more about this solution <ArrowRight className="h-4 w-4" />
+                        </Link>
+                      </div>
                     </div>
                   </article>
                 );

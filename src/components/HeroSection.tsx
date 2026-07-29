@@ -33,13 +33,13 @@ export function HeroSection({
     <section id="home" className="relative isolate overflow-hidden bg-[#eaf5f6] px-4 py-0 sm:px-8 lg:px-12">
       {bgSrc ? (
         <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-          <Image src={bgSrc} alt="" fill className="object-cover opacity-80" priority quality={85} />
-          <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(90deg,rgba(248,251,252,.92)_0%,rgba(248,251,252,.72)_42%,rgba(248,251,252,.12)_100%)]" />
+          <Image src={bgSrc} alt="" fill sizes="100vw" className="object-cover opacity-100" priority quality={100} />
+          <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(90deg,rgba(248,251,252,.75)_0%,rgba(248,251,252,.55)_45%,rgba(248,251,252,.2)_100%)]" />
         </div>
       ) : null}
       {fgSrc ? (
         <div className="pointer-events-none absolute right-0 top-0 hidden h-full w-[48%] lg:block">
-          <Image src={fgSrc} alt="" fill className="object-cover object-center opacity-65 mix-blend-multiply" />
+          <Image src={fgSrc} alt="" fill sizes="48vw" className="object-cover object-center opacity-100" />
         </div>
       ) : null}
       <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
