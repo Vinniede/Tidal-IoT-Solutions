@@ -11,8 +11,8 @@ type ButtonProps = {
 export function Button({ href, children, variant = "primary", className = "" }: ButtonProps) {
   const shared = "inline-flex min-h-11 items-center justify-center rounded-full px-5 py-3 text-center text-sm font-semibold transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2";
   const variants = {
-    primary: `${shared} bg-[#071A2F] text-white hover:bg-[#103B56] focus-visible:outline-[#071A2F]`,
-    secondary: `${shared} border border-slate-200 bg-white text-slate-700 hover:border-[#00C4B3] hover:text-[#071A2F] focus-visible:outline-[#00C4B3]`,
+    primary: `${shared} bg-[#2563EB] text-white hover:bg-[#F97316] focus-visible:outline-[#2563EB] shadow-[0_12px_30px_rgba(37,99,235,0.18)]`,
+    secondary: `${shared} border border-[#2563EB]/20 bg-white text-[#0B1F3A] hover:border-[#06B6D4] hover:bg-[#eef6ff] hover:text-[#0B1F3A] focus-visible:outline-[#06B6D4]`,
   };
 
   return (

@@ -50,9 +50,7 @@ const features = [
 const benefits = [
   { value: "Reduced", label: "Cyber risk" },
   { value: "Stronger", label: "Data protection" },
-  { value: "Better", label: "Regulatory posture" },
   { value: "Faster", label: "Incident response" },
-  { value: "More", label: "Operational trust" },
   { value: "Improved", label: "Resilience" },
 ];
 
@@ -109,18 +107,11 @@ export default function IntegratedCybersecurityPage() {
       <Navbar />
       <main>
         <section className="bg-white px-6 py-24 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
-            <div className="space-y-4">
-              <div className="relative min-h-[280px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[340px]"><Image src="/images/solution-cybersecurity-illustration.jfif" alt="Cybersecurity monitoring" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" priority /></div>
-              <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
-                <p className="text-sm uppercase tracking-[0.3em] text-[#00a999]">Security operations</p>
-                <h2 className="mt-5 text-3xl font-semibold text-[#071A2F]">Modern cybersecurity designed for enterprise continuity.</h2>
-                <p className="mt-4 text-slate-600">
-                  Protect systems, detect threats, and recover faster with an integrated security program built for your infrastructure. 
-                </p>
-              </div>
+          <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-stretch">
+            <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-50 shadow-xl h-full sm:min-h-[640px]">
+              <Image src="/images/solution-cybersecurity-illustration.jfif" alt="Cybersecurity monitoring" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover object-center" priority />
             </div>
-            <div className="space-y-6">
+            <div className="space-y-6 h-full">
               <SectionHeading
                 eyebrow="Solution"
                 title="Integrated Cybersecurity for the systems that matter most."
@@ -141,6 +132,13 @@ export default function IntegratedCybersecurityPage() {
                   </li>
                 ))}
               </ul>
+              <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+                <p className="text-sm uppercase tracking-[0.3em] text-[#00a999]">Security operations</p>
+                <h2 className="mt-5 text-3xl font-semibold text-[#071A2F]">Modern cybersecurity designed for enterprise continuity.</h2>
+                <p className="mt-4 text-slate-600">
+                  Protect systems, detect threats, and recover faster with an integrated security program built for your infrastructure.
+                </p>
+              </div>
               <div className="flex flex-wrap gap-4">
                 <Button href="/contact">Protect your business today</Button>
                 <Button href="/solutions" variant="secondary">Back to solutions</Button>
@@ -149,55 +147,73 @@ export default function IntegratedCybersecurityPage() {
           </div>
         </section>
 
-        <section className="px-6 py-24 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[0.95fr_1.05fr] items-start">
-            <div>
+        <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
+          <div className="absolute inset-0 -z-10">
+            <Image src="/images/Integrated Cybersecurity/Cybersecurity dashboard.jfif" alt="" fill sizes="100vw" className="object-cover object-center" quality={100} />
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-900/55 to-slate-950/80" />
+          </div>
+          <div className="relative mx-auto max-w-7xl grid gap-10 lg:grid-cols-[0.95fr_1.05fr] items-start">
+            <div className="text-white">
               <SectionHeading
                 eyebrow="Overview"
                 title="Security designed around people, systems, and risk."
                 description="We help enterprises move beyond point tools to a cohesive cybersecurity program that protects mission-critical operations."
               />
-              <p className="mt-6 max-w-2xl text-slate-600">
-                Our integrated approach brings together assessments, protection, monitoring, and response so security is part of how your organization operates. 
+              <p className="mt-6 max-w-2xl text-slate-200 font-semibold">
+                Our integrated approach brings together assessments, protection, monitoring, and response so security is part of how your organization operates.
               </p>
             </div>
-            <div className="rounded-[2rem] border border-slate-200 bg-white p-10 shadow-sm">
-              <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#00C4B3]">
-                <span className="h-2.5 w-2.5 rounded-full bg-[#00C4B3]" />
+            <div className="rounded-[2rem] border border-white/15 bg-slate-950/80 p-10 text-white shadow-2xl shadow-slate-950/25 backdrop-blur-sm">
+              <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#5CE3D0]">
+                <span className="h-2.5 w-2.5 rounded-full bg-[#5CE3D0]" />
                 Solution overview
               </div>
-              <p className="mt-6 text-slate-600">
+              <p className="mt-6 text-slate-300">
                 We embed security controls into infrastructure operations with clear risk management, monitoring, and response practices. 
               </p>
+              <div className="mt-8 overflow-hidden rounded-[1.75rem] border border-white/15">
+                <Image src="/images/Integrated Cybersecurity/Threat monitoring.jfif" alt="Cybersecurity overview" width={640} height={420} className="h-56 w-full object-cover" />
+              </div>
             </div>
           </div>
         </section>
 
         <section className="bg-[#F8FBFC] px-6 py-24 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl">
-            <SectionHeading
-              eyebrow="Business Challenges"
-              title="Cyber risks that put operations, data, and compliance at stake."
-              description="These security gaps are what our integrated cybersecurity services are designed to address."
-            />
-            <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {challenges.map((challenge) => (
-                <div key={challenge} className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
-                  <p className="text-slate-700">{challenge}</p>
-                </div>
-              ))}
+          <div className="mx-auto max-w-7xl grid gap-8 lg:grid-cols-[0.95fr_1.05fr] items-stretch">
+            <div>
+              <SectionHeading
+                eyebrow="Business Challenges"
+                title="Cyber risks that put operations, data, and compliance at stake."
+                description="These security gaps are what our integrated cybersecurity services are designed to address."
+              />
+              <div className="mt-12 grid gap-6 md:grid-cols-2">
+                {challenges.map((challenge) => (
+                  <div key={challenge} className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+                    <p className="text-slate-700">{challenge}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative min-h-[560px] h-full overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[680px]">
+              <Image src="/images/Integrated Cybersecurity/Digital security shield.jfif" alt="Security challenges visual" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
             </div>
           </div>
         </section>
 
-        <section className="px-6 py-24 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl">
+        <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
+          <div className="absolute inset-0 -z-10">
+            <Image src="/images/Integrated Cybersecurity/Firewall visualization.jfif" alt="" fill sizes="100vw" className="object-cover object-center" quality={100} />
+          </div>
+          <div className="relative mx-auto max-w-7xl text-white">
             <SectionHeading
               eyebrow="Security Framework"
               title="A practical progression from prevention to improvement."
               description="Our security lifecycle supports defense, detection, response, recovery, and continuous improvement."
+              align="left"
+              titleClassName="lg:text-5xl"
+              descriptionClassName="text-lg sm:text-xl"
             />
-            <div className="mt-12 grid gap-6 md:grid-cols-5">
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
               {workflow.map((step) => {
                 const Icon = step.icon;
                 return (
@@ -214,24 +230,29 @@ export default function IntegratedCybersecurityPage() {
         </section>
 
         <section className="bg-white px-6 py-24 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl">
-            <SectionHeading
-              eyebrow="Security Services"
-              title="Capabilities that protect risks across infrastructure layers."
-              description="These services cover assessment, protection, monitoring, and response for enterprise systems."
-            />
-            <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-              {features.map((feature) => (
-                <div key={feature} className="rounded-[2rem] border border-slate-200 bg-[#F8FBFC] p-8 shadow-sm">
-                  <p className="font-semibold text-[#071A2F]">{feature}</p>
-                </div>
-              ))}
+          <div className="mx-auto max-w-7xl grid gap-8 lg:grid-cols-[0.95fr_1.05fr] items-stretch">
+            <div>
+              <SectionHeading
+                eyebrow="Security Services"
+                title="Capabilities that protect risks across infrastructure layers."
+                description="These services cover assessment, protection, monitoring, and response for enterprise systems."
+              />
+              <div className="mt-12 grid gap-6 md:grid-cols-2">
+                {features.map((feature) => (
+                  <div key={feature} className="rounded-[2rem] border border-slate-200 bg-[#F8FBFC] p-8 shadow-sm">
+                    <p className="font-semibold text-[#071A2F]">{feature}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative min-h-[520px] h-full overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[640px]">
+              <Image src="/images/Integrated Cybersecurity/Security operations center.jfif" alt="Security services visual" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover object-center" />
             </div>
           </div>
         </section>
 
         <section className="bg-[#071A2F] px-6 py-24 text-white sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
+          <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-stretch">
             <div className="space-y-6">
               <SectionHeading
                 eyebrow="Benefits"
@@ -239,12 +260,12 @@ export default function IntegratedCybersecurityPage() {
                 description="Protecting your systems means less disruption, better compliance, and higher confidence for stakeholders."
               />
               <p className="max-w-2xl text-slate-300">
-                Our customers strengthen resilience, reduce exposure, and make security a stable part of their operations. 
+                Our customers strengthen resilience, reduce exposure, and make security a stable part of their operations.
               </p>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2 h-full items-stretch">
               {benefits.map((item) => (
-                <div key={item.label} className="rounded-[2rem] bg-white/10 p-8 text-slate-100 shadow-sm">
+                <div key={item.label} className="rounded-[2rem] bg-white/10 p-8 text-slate-100 shadow-sm h-full">
                   <p className="text-3xl font-semibold">{item.value}</p>
                   <p className="mt-3 text-slate-300">{item.label}</p>
                 </div>
@@ -284,12 +305,17 @@ export default function IntegratedCybersecurityPage() {
           </div>
         </section>
 
-        <section className="bg-[#F8FBFC] px-6 py-24 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl">
+        <section className="relative isolate overflow-hidden bg-[#F8FBFC] px-6 py-24 sm:px-8 lg:px-12">
+          <div className="absolute inset-0 -z-10">
+            <Image src="/images/Integrated Cybersecurity/Threat monitoring.jfif" alt="" fill sizes="100vw" className="object-cover object-center" quality={100} />
+          </div>
+          <div className="relative mx-auto max-w-7xl text-white">
             <SectionHeading
               eyebrow="Industries"
               title="Cybersecurity for regulated and high-risk environments."
               description="We support organizations that cannot tolerate breaches, downtime, or compliance failures."
+              titleClassName="text-white"
+              descriptionClassName="text-slate-200"
             />
             <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {industriesServed.map((industry) => {
@@ -308,30 +334,41 @@ export default function IntegratedCybersecurityPage() {
         </section>
 
         <section className="px-6 py-24 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl">
-            <SectionHeading
-              eyebrow="Compliance"
-              title="Supporting security controls with clear process and documentation."
-              description="Our work is built to reduce audit risk and make compliance more practical for your teams."
-            />
-            <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <div className="mx-auto max-w-7xl grid gap-8 lg:grid-cols-[0.95fr_1.05fr] items-center">
+            <div>
+              <SectionHeading
+                eyebrow="Compliance"
+                title="Supporting security controls with clear process and documentation."
+                description="Our work is built to reduce audit risk and make compliance more practical for your teams."
+              />
+              <div className="mt-12 grid gap-6 md:grid-cols-2">
               {compliance.map((item) => (
                 <div key={item} className="rounded-[2rem] border border-slate-200 bg-[#F8FBFC] p-8 shadow-sm">
                   <p className="font-semibold text-[#071A2F]">{item}</p>
                 </div>
               ))}
             </div>
+            </div>
+            <div className="relative min-h-[360px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
+              <Image src="/images/Integrated Cybersecurity/Threat monitoring.jfif" alt="Compliance visual" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
+            </div>
           </div>
         </section>
 
-        <section className="bg-white px-6 py-24 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl">
+        <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:px-8 lg:px-12">
+          <div className="absolute inset-0 -z-10">
+            <Image src="/images/Integrated Cybersecurity/Cybersecurity dashboard.jfif" alt="" fill sizes="100vw" className="object-cover object-center" quality={100} />
+            <div className="absolute inset-0 bg-slate-950/70" />
+          </div>
+          <div className="relative mx-auto max-w-7xl text-white">
             <SectionHeading
               eyebrow="Implementation Process"
               title="A disciplined security program from discovery to continuous improvement."
               description="Our cybersecurity approach keeps capabilities aligned with your risk and operational needs."
+              titleClassName="text-white"
+              descriptionClassName="text-slate-200"
             />
-            <div className="mt-12 grid gap-6 md:grid-cols-5">
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
               {processSteps.map((step) => (
                 <div key={step} className="rounded-[2rem] border border-slate-200 bg-[#F8FBFC] p-8 text-center shadow-sm">
                   <p className="text-lg font-semibold text-[#071A2F]">{step}</p>
@@ -367,26 +404,28 @@ export default function IntegratedCybersecurityPage() {
           </div>
         </section>
 
-        <section className="bg-[#F8FBFC] px-6 py-24 sm:px-8 lg:px-12">
+        <section className="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 px-6 py-24 sm:px-8 lg:px-12 text-white">
           <div className="mx-auto max-w-7xl">
             <SectionHeading
               eyebrow="Frequently asked questions"
               title="Cybersecurity questions answered for enterprise leaders."
               description="Practical guidance on threat protection, monitoring, and compliance."
+              titleClassName="text-white"
+              descriptionClassName="text-slate-300"
             />
             <div className="mt-12 space-y-4">
               {faqs.map((faq, index) => (
-                <div key={faq.question} className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm">
+                <div key={faq.question} className="overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-950 shadow-[0_20px_60px_rgba(15,23,42,0.35)]">
                   <button
                     type="button"
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                    className="flex w-full items-center justify-between gap-4 px-6 py-6 text-left text-lg font-semibold text-[#071A2F]"
+                    className="flex w-full items-center justify-between gap-4 px-6 py-6 text-left text-lg font-semibold text-white"
                   >
                     <span>{faq.question}</span>
-                    <span className="text-slate-500">{openFaq === index ? "−" : "+"}</span>
+                    <span className="text-cyan-300">{openFaq === index ? "−" : "+"}</span>
                   </button>
                   {openFaq === index ? (
-                    <div className="border-t border-slate-200 bg-[#F8FBFC] px-6 py-6 text-slate-600">
+                    <div className="border-t border-slate-800 bg-slate-900 px-6 py-6 text-slate-300">
                       {faq.answer}
                     </div>
                   ) : null}
@@ -402,17 +441,19 @@ export default function IntegratedCybersecurityPage() {
               eyebrow="Related Solutions"
               title="Security should be part of every infrastructure deployment."
               description="These solutions strengthen your control plane across network and communications."
+              titleClassName="text-slate-950"
+              descriptionClassName="text-slate-600"
             />
             <div className="mt-12 grid gap-6 md:grid-cols-3">
               {relatedSolutions.map((solution) => (
                 <Link
                   key={solution.title}
                   href={solution.href}
-                  className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition hover:border-[#00C4B3] hover:bg-[#F8FBFC]"
+                  className="rounded-[2rem] bg-gradient-to-br from-white via-slate-50 to-slate-100 p-8 shadow-[0_25px_50px_rgba(15,23,42,0.12)] transition-transform hover:-translate-y-1 hover:shadow-[0_35px_80px_rgba(15,23,42,0.18)]"
                 >
-                  <p className="font-semibold text-[#071A2F]">{solution.title}</p>
-                  <p className="mt-4 text-slate-600">Explore the infrastructure capabilities that help secure your enterprise. </p>
-                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#071A2F]">
+                  <p className="font-semibold text-slate-950">{solution.title}</p>
+                  <p className="mt-4 text-slate-600">Explore the infrastructure capabilities that help secure your enterprise.</p>
+                  <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan-700">
                     View solution
                     <ArrowRight className="h-4 w-4" />
                   </div>

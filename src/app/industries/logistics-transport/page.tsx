@@ -58,6 +58,29 @@ const workflow = [
   { label: "Operations Team", icon: ShieldCheck },
 ];
 
+const galleryImages = [
+  {
+    src: "/images/Logistics/Connected warehouse.jfif",
+    title: "Connected warehouse",
+    description: "Operational visibility that supports modern logistics and inventory flow.",
+  },
+  {
+    src: "/images/Logistics/Distribution center.jfif",
+    title: "Distribution center",
+    description: "A high-clarity view of the movement and coordination behind fulfillment.",
+  },
+  {
+    src: "/images/Logistics/Logistics dashboard.jfif",
+    title: "Logistics dashboard",
+    description: "Real-time data that helps teams make faster, smarter decisions.",
+  },
+  {
+    src: "/images/Logistics/Route optimization.jfif",
+    title: "Route optimization",
+    description: "Smarter routing and planning for stronger service performance.",
+  },
+];
+
 const faqItems = [
   {
     question: "Can Tidal support mixed fleet types?",
@@ -87,76 +110,105 @@ export default function LogisticsTransportPage() {
       <Navbar />
       <main>
         <section className="bg-white px-6 py-24 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[0.95fr_1.05fr] items-center">
-            <div className="space-y-6">
-              <SectionHeading
-                eyebrow="Industry"
-                title="Logistics & Transport"
-                description="Improve fleet visibility, asset management, and delivery performance with connected, secure operations."
-              />
-              <p className="max-w-2xl text-slate-600">
-                Tidal helps logistics teams monitor vehicles, secure shipments, and optimize routes through integrated telematics, communications, and network resilience.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button href="/contact">Optimize Your Fleet</Button>
-                <Button href="/industries" variant="secondary">Back to industries</Button>
+          <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[0.95fr_1.05fr] items-stretch">
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <SectionHeading
+                  eyebrow="Industry"
+                  title="Logistics & Transport"
+                  description="Improve fleet visibility, asset management, and delivery performance with connected, secure operations."
+                />
+                <p className="max-w-2xl text-slate-600">
+                  Tidal helps logistics teams monitor vehicles, secure shipments, and optimize routes through integrated telematics, communications, and network resilience.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Button href="/contact">Optimize Your Fleet</Button>
+                  <Button href="/industries" variant="secondary">Back to industries</Button>
+                </div>
               </div>
-            </div>
-            <div className="space-y-4">
-              <div className="relative min-h-[280px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[340px]"><Image src="/images/industry-logistics.jfif" alt="Logistics operations" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" priority /></div>
               <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
                 <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-[#E8FFF9] text-[#00a999]">
                   <CarFront className="h-6 w-6" />
                 </div>
                 <h2 className="mt-6 text-3xl font-semibold text-[#071A2F]">Connected logistics that keep deliveries moving.</h2>
                 <p className="mt-4 text-slate-600">
-                  A vivid operational view of fleet status, route performance, and cargo security for faster decisions. 
+                  A vivid operational view of fleet status, route performance, and cargo security for faster decisions.
                 </p>
               </div>
             </div>
+            <div className="relative h-full min-h-[420px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl"><Image src="/images/Logistics/Logistics fleet.jfif" alt="Logistics operations" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover object-center" quality={100} priority /></div>
           </div>
         </section>
 
-        <section className="px-6 py-24 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-start">
-            <div>
+        <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
+          <div className="absolute inset-0 -z-10">
+            <Image src="/images/Logistics/Fleet monitoring.jfif" alt="" fill sizes="100vw" className="object-cover object-center" quality={100} />
+            
+          </div>
+          <div className="relative mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-stretch">
+            <div className="rounded-[2rem] border border-white/10 bg-transparent p-10 text-white shadow-2xl flex flex-col gap-6">
               <SectionHeading
                 eyebrow="Industry Overview"
                 title="The modern logistics challenge is visibility across every mile."
                 description="Operators need connected systems for vehicles, cargo, and teams to deliver reliably and safely."
               />
-              <p className="mt-6 text-slate-600">
+              <p className="mt-2 text-white font-semibold">
                 Logistics organizations benefit from real-time fleet telemetry, secure communications, and route intelligence that reduce risk and improve customer satisfaction.
               </p>
+              <div className="w-full max-w-xs rounded-lg bg-white/5 p-4">
+                <p className="text-sm uppercase tracking-[0.3em] text-[#00C4B3]">Logistics focus</p>
+                <p className="mt-3 text-slate-200 text-sm">Data, connectivity, and operations aligned for resilient delivery.</p>
+              </div>
             </div>
-            <div className="rounded-[2rem] border border-slate-200 bg-white p-10 shadow-sm">
-              <p className="text-sm uppercase tracking-[0.3em] text-[#00C4B3]">Logistics focus</p>
-              <p className="mt-6 text-slate-600">
-                We align data, connectivity, and operations so your transport teams can respond to disruptions, manage resources, and keep services moving.
-              </p>
+            <div className="rounded-[2rem] border border-white/10 bg-transparent p-8 text-white shadow-xl flex h-full items-center">
+              <div className="w-full">
+                <div className="flex flex-col justify-center h-full gap-6">
+                  <div>
+                    <p className="text-2xl font-bold">100%</p>
+                    <p className="text-sm text-slate-200">Real-time visibility</p>
+                  </div>
+                  <div>
+                    <p className="text-2xl font-bold">30%+</p>
+                    <p className="text-sm text-slate-200">Faster deliveries</p>
+                  </div>
+                  <div>
+                    <p className="text-2xl font-bold">Predictive</p>
+                    <p className="text-sm text-slate-200">Maintenance & routing</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         <section className="bg-[#F8FBFC] px-6 py-24 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl">
-            <SectionHeading
-              eyebrow="Industry Challenges"
-              title="Logistics teams face visibility, cost, safety, and utilization pressures."
-              description="These challenges slow operations and create uncertainty across the supply chain."
-            />
-            <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {challenges.map((challenge) => (
-                <div key={challenge} className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
-                  <p className="text-slate-700">{challenge}</p>
-                </div>
-              ))}
+          <div className="mx-auto max-w-7xl grid gap-8 lg:grid-cols-[0.95fr_1.05fr] items-center">
+            <div>
+              <SectionHeading
+                eyebrow="Industry Challenges"
+                title="Logistics teams face visibility, cost, safety, and utilization pressures."
+                description="These challenges slow operations and create uncertainty across the supply chain."
+              />
+              <div className="mt-12 grid gap-6 md:grid-cols-2">
+                {challenges.slice(0,4).map((challenge) => (
+                  <div key={challenge} className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+                    <p className="text-slate-700">{challenge}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative min-h-[480px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
+              <Image src="/images/Logistics/Connected warehouse.jfif" alt="Logistics challenges visual" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover object-center" quality={100} />
             </div>
           </div>
         </section>
 
-        <section className="px-6 py-24 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl">
+        <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
+          <div className="absolute inset-0 -z-10">
+            <Image src="/images/Logistics/Fleet monitoring.jfif" alt="" fill sizes="100vw" className="object-cover object-center" quality={100} />
+            <div className="absolute inset-0 bg-slate-950/30" />
+          </div>
+          <div className="relative mx-auto max-w-7xl text-white">
             <SectionHeading
               eyebrow="Industry Trends"
               title="Logistics is moving toward connected, predictive, and automated operations."
@@ -164,8 +216,8 @@ export default function LogisticsTransportPage() {
             />
             <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {trends.map((trend) => (
-                <div key={trend} className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
-                  <p className="font-semibold text-[#071A2F]">{trend}</p>
+                <div key={trend} className="rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 text-white shadow-sm">
+                  <p className="font-bold text-white">{trend}</p>
                 </div>
               ))}
             </div>
@@ -173,63 +225,53 @@ export default function LogisticsTransportPage() {
         </section>
 
         <section className="bg-white px-6 py-24 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[0.95fr_1.05fr] items-start">
+          <div className="mx-auto max-w-7xl grid gap-8 lg:grid-cols-[0.95fr_1.05fr] items-center">
             <div>
               <SectionHeading
-                eyebrow="How Tidal Supports Your Industry"
+                eyebrow="Key Features"
                 title="We connect vehicles, people, and systems for clearer logistics outcomes."
                 description="Our approach combines telematics, secure communications, and reliable networks tailored to logistics workflows."
               />
-              <div className="mt-10 space-y-4 text-slate-600">
+              <div className="mt-8 space-y-4 text-slate-600 text-sm">
                 {supportAreas.map((item) => (
-                  <div key={item} className="rounded-[2rem] border border-slate-200 bg-[#F8FBFC] p-6 shadow-sm">
+                  <div key={item} className="rounded-[2rem] border border-slate-200 bg-[#F8FBFC] p-4 shadow-sm">
                     {item}
                   </div>
                 ))}
               </div>
             </div>
-            <div className="rounded-[2rem] border border-slate-200 bg-[#071A2F] p-10 text-white shadow-xl">
-              <div className="rounded-[1.75rem] bg-[#0e2b47] p-8">
-                <p className="text-sm uppercase tracking-[0.3em] text-[#5DE6D6]">Recommended solutions</p>
-                <div className="mt-8 grid gap-4">
-                  {solutions.map((solution) => {
-                    const Icon = solution.icon;
-                    return (
-                      <div key={solution.title} className="flex items-center gap-4 rounded-[1.75rem] border border-white/10 bg-white/10 p-4">
-                        <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-[#E8FFF9] text-[#00C4B3]">
-                          <Icon className="h-6 w-6" />
-                        </div>
-                        <div>
-                          <p className="font-semibold">{solution.title}</p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
+            <div className="relative h-full min-h-[420px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
+              <Image src="/images/Logistics/Route optimization.jfif" alt="Logistics key features visual" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover object-center" quality={100} />
             </div>
           </div>
         </section>
 
         <section className="bg-[#071A2F] px-6 py-24 text-white sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
-            <div className="space-y-6">
-              <SectionHeading
-                eyebrow="Benefits"
-                title="The logistics outcomes that matter most."
-                description="These business benefits reflect the real value delivered when operations are connected and visible."
-              />
-              <p className="max-w-2xl text-slate-300">
-                Better visibility, safer fleets, and faster delivery times help logistics teams meet customer expectations and reduce operational risk.
-              </p>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2">
-              {benefits.map((item) => (
-                <div key={item.label} className="rounded-[2rem] bg-white/10 p-8 text-slate-100 shadow-sm">
-                  <p className="text-3xl font-semibold">{item.value}</p>
-                  <p className="mt-3 text-slate-300">{item.label}</p>
+          <div className="mx-auto max-w-7xl grid gap-8 lg:grid-cols-[1.05fr_0.95fr] items-center">
+            <div>
+              <div className="space-y-6">
+                <SectionHeading
+                  eyebrow="Benefits"
+                  title="The logistics outcomes that matter most."
+                  description="These business benefits reflect the real value delivered when operations are connected and visible."
+                />
+                <p className="max-w-2xl text-slate-300">
+                  Better visibility, safer fleets, and faster delivery times help logistics teams meet customer expectations and reduce operational risk.
+                </p>
+              </div>
+              <div className="mt-8">
+                <div className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(220px,1fr))]">
+                  {benefits.map((item) => (
+                    <div key={item.label} className="min-w-0 rounded-[2rem] bg-white/10 p-6 text-slate-100 shadow-sm">
+                      <p className="text-2xl font-semibold">{item.value}</p>
+                      <p className="mt-2 text-slate-300 text-sm break-words">{item.label}</p>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+            </div>
+            <div className="relative h-full min-h-[420px] overflow-hidden rounded-[2rem] border border-white/10 shadow-xl">
+              <Image src="/images/Logistics/Fleet analytics.jfif" alt="Logistics benefits visual" fill className="object-cover object-center" />
             </div>
           </div>
         </section>
@@ -242,22 +284,22 @@ export default function LogisticsTransportPage() {
                 title="A workflow that maps logistics data to operational decisions."
                 description="Every stage ensures visibility for vehicles, cargo, and command teams."
               />
-              <div className="mt-10 grid gap-6 md:grid-cols-3 xl:grid-cols-6">
+              <div className="mt-8 grid gap-4 grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
                 {workflow.map((step) => {
                   const Icon = step.icon;
                   return (
-                    <div key={step.label} className="rounded-[2rem] border border-slate-200 bg-white p-6 text-center shadow-sm">
-                      <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-3xl bg-[#E8FFF9] text-[#00C4B3]">
-                        <Icon className="h-6 w-6" />
+                    <div key={step.label} className="rounded-[2rem] border border-slate-200 bg-white p-4 text-center shadow-sm min-w-0">
+                      <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-3xl bg-[#E8FFF9] text-[#00C4B3]">
+                        <Icon className="h-5 w-5" />
                       </div>
-                      <p className="mt-4 font-semibold text-[#071A2F]">{step.label}</p>
+                      <p className="mt-4 text-sm font-semibold text-[#071A2F] break-words">{step.label}</p>
                     </div>
                   );
                 })}
               </div>
             </div>
-            <div className="rounded-[2rem] border border-slate-200 bg-[#F8FBFC] p-10 shadow-sm">
-              <Image src="/images/industry-logistics.jfif" alt="Logistics technology" width={640} height={520} className="rounded-[1.75rem] object-cover" priority />
+            <div className="rounded-[2rem] border border-slate-200 bg-[#F8FBFC] p-10 shadow-sm h-full min-h-[420px]">
+                <Image src="/images/Logistics/Logistics dashboard.jfif" alt="Logistics technology" width={640} height={520} className="rounded-[1.75rem] object-cover" priority />
             </div>
           </div>
         </section>
@@ -288,14 +330,19 @@ export default function LogisticsTransportPage() {
           </div>
         </section>
 
-        <section className="bg-[#F8FBFC] px-6 py-24 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl">
+        <section className="relative isolate overflow-hidden bg-[#F8FBFC] px-6 py-24 sm:px-8 lg:px-12">
+          <div className="absolute inset-0 -z-10">
+            <Image src="/images/Logistics/Distribution center.jfif" alt="" fill sizes="100vw" className="object-cover object-center" quality={100} />
+          </div>
+          <div className="relative mx-auto max-w-7xl">
             <SectionHeading
               eyebrow="Our Implementation Approach"
               title="A logistics deployment path designed for clear rollout and support."
               description="We move from assessment to training and ongoing support with minimal disruption."
+              titleClassName="text-[#071A2F] font-bold"
+              descriptionClassName="text-[#071A2F] font-semibold"
             />
-            <div className="mt-12 grid gap-6 md:grid-cols-5">
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
               {[
                 "Assessment",
                 "Device Installation",
@@ -303,8 +350,8 @@ export default function LogisticsTransportPage() {
                 "Training",
                 "Support",
               ].map((step) => (
-                <div key={step} className="rounded-[2rem] border border-slate-200 bg-white p-8 text-center shadow-sm">
-                  <p className="font-semibold text-[#071A2F]">{step}</p>
+                <div key={step} className="rounded-[2rem] border border-white/10 bg-slate-900/70 p-6 text-center text-white shadow-sm">
+                  <p className="text-[#00C4B3] font-bold text-lg">{step}</p>
                 </div>
               ))}
             </div>
@@ -340,8 +387,12 @@ export default function LogisticsTransportPage() {
           </div>
         </section>
 
-        <section className="px-6 py-24 sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl">
+        <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
+          <div className="absolute inset-0 -z-10">
+            <Image src="/images/Logistics/Route optimization.jfif" alt="" fill sizes="100vw" className="object-cover object-center" quality={100} />
+            <div className="absolute inset-0 bg-slate-950/40" />
+          </div>
+          <div className="relative mx-auto max-w-7xl">
             <SectionHeading
               eyebrow="Related Industries"
               title="Other sectors with similar infrastructure needs."
@@ -352,10 +403,10 @@ export default function LogisticsTransportPage() {
                 <Link
                   key={industry.title}
                   href={industry.href}
-                  className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm transition hover:border-[#00C4B3] hover:bg-[#F8FBFC]"
+                  className="rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 text-white shadow-sm transition hover:border-[#00C4B3] hover:bg-slate-900/90"
                 >
-                  <p className="font-semibold text-[#071A2F]">{industry.title}</p>
-                  <p className="mt-4 text-slate-600">Explore how Tidal supports related operational needs.</p>
+                  <p className="font-bold text-white text-lg transition-colors hover:text-[#00C4B3]">{industry.title}</p>
+                  <p className="mt-4 text-slate-200 font-medium">Explore how Tidal supports related operational needs.</p>
                 </Link>
               ))}
             </div>

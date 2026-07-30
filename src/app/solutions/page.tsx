@@ -47,8 +47,8 @@ export default function SolutionsPage() {
       <Navbar />
       <main>
         <section className="relative isolate overflow-hidden bg-[linear-gradient(135deg,_#f7fcfe_0%,_#eefaf7_45%,_#fdfdf8_100%)] px-6 py-24 sm:px-8 lg:px-12">
-          <Image src="/images/solutions-hero-background.jfif" alt="" fill sizes="100vw" className="object-cover opacity-100" />
-          <div className="absolute inset-0 bg-[linear-gradient(120deg,_rgba(255,255,255,0.28)_0%,_rgba(255,255,255,0.08)_45%,_rgba(7,26,47,0.12)_100%)]" />
+          <Image src="/images/solutions-hero-background.jfif" alt="" fill sizes="100vw" className="object-cover" />
+          <div className="absolute inset-0 bg-[linear-gradient(120deg,_rgba(255,255,255,0.34)_0%,_rgba(255,255,255,0.12)_45%,_rgba(7,26,47,0.12)_100%)]" />
           <div className="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.95fr_1.05fr]">
             <div className="space-y-6">
               <div className="rounded-[2rem] border border-white/60 bg-white/80 p-8 shadow-[0_24px_60px_rgba(7,26,47,0.12)] backdrop-blur-xl">
@@ -64,8 +64,8 @@ export default function SolutionsPage() {
               <div className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-gradient-to-br from-[#071A2F] via-[#0e3d63] to-[#00C4B3] p-6 text-white shadow-[0_22px_50px_rgba(0,196,179,0.22)]">
                 <div className="absolute -right-6 -top-8 h-28 w-28 rounded-full bg-[#00C4B3]/35 blur-3xl" />
                 <div className="absolute -bottom-10 -left-12 h-32 w-32 rounded-full bg-white/20 blur-3xl" />
-                <Image src="/images/solutions-featured-approach-background.jpg" alt="" fill sizes="(min-width: 1024px) 32rem, 100vw" className="object-cover opacity-100" />
-                <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(7,26,47,0.4)_0%,rgba(0,196,179,0.2)_100%)]" />
+                <Image src="/images/solutions-featured-approach-background.jpg" alt="" fill sizes="(min-width: 1024px) 32rem, 100vw" className="object-cover" />
+                <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(7,26,47,0.18)_0%,rgba(0,196,179,0.16)_100%)]" />
                 <div className="relative z-10 rounded-[1.5rem] border border-white/20 bg-slate-950/75 p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.15)] backdrop-blur-md">
                   <div className="inline-flex rounded-full border border-white/20 bg-white/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.3em] text-[#f0fffe] shadow-[inset_0_1px_2px_rgba(255,255,255,0.2)]">
                     Featured approach

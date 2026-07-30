@@ -40,7 +40,7 @@ export default function IndustriesPage() {
             </div>
 
             <div className="space-y-4">
-              <div className="relative min-h-[280px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[340px]"><Image src="/images/industries-hero-background.jfif" alt="Industry operations visual" fill className="object-cover" priority /></div>
+              <div className="relative h-full min-h-[420px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl"><Image src="/images/industries-hero-background.jfif" alt="Industry operations visual" fill className="object-cover object-center" quality={100} priority /></div>
               <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
                 <h2 className="text-3xl font-semibold text-[#071A2F]">Built for the industries that require trust.</h2>
                 <p className="mt-4 text-slate-600">
@@ -65,9 +65,9 @@ export default function IndustriesPage() {
                 return (
                   <article key={industry.title} className="group relative min-h-[320px] overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
                     <div className="absolute inset-0">
-                      <Image src="/images/industry-sector-card-accent.png" alt="" fill sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 100vw" className="object-cover opacity-100" />
-                      <Image src={industry.image} alt="" fill sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 100vw" className="object-cover opacity-100 transition duration-500 group-hover:scale-105" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-900/50 to-transparent" />
+                      <Image src="/images/industry-sector-card-accent.png" alt="" fill sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 100vw" className="object-cover object-center" quality={100} />
+                      <Image src={industry.image} alt="" fill sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 100vw" className="object-cover object-center transition duration-500 group-hover:scale-105" quality={100} />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/10 via-slate-900/6 to-transparent" />
                     </div>
                     <div className="relative flex h-full flex-col justify-end p-6 sm:p-8">
                       <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/25 bg-white/20 text-white shadow-[0_0_0_1px_rgba(255,255,255,0.15)] backdrop-blur-md">
@@ -88,8 +88,8 @@ export default function IndustriesPage() {
 
         <section className="px-6 pb-24 sm:px-8 lg:px-12">
           <div className="relative mx-auto flex max-w-7xl flex-col gap-8 overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-10 lg:flex-row lg:items-end lg:justify-between lg:p-14">
-            <Image src="/images/industries-final-cta-background.jpg" alt="" fill sizes="100vw" className="object-cover opacity-100" />
-            <div className="absolute inset-0 bg-white/20" />
+            <Image src="/images/industries-final-cta-background.jpg" alt="" fill sizes="100vw" className="object-cover object-center" quality={100} />
+            <div className="absolute inset-0 bg-white/10" />
             <div className="relative">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#00C4B3]">Industry fit</p>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#071A2F] sm:text-4xl">We tailor architecture to the realities of your environment and operating model.</h2>

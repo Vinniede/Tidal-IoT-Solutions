@@ -30,16 +30,17 @@ export function HeroSection({
   fgSrc,
 }: HeroSectionProps) {
   return (
-    <section id="home" className="relative isolate overflow-hidden bg-[#eaf5f6] px-4 py-0 sm:px-8 lg:px-12">
+    <section id="home" className="relative isolate overflow-hidden bg-[linear-gradient(135deg,#0B1F3A_0%,#1E3A8A_45%,#2563EB_100%)] px-4 py-0 sm:px-8 lg:px-12">
       {bgSrc ? (
         <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-          <Image src={bgSrc} alt="" fill sizes="100vw" className="object-cover opacity-100" priority quality={100} />
-          <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(90deg,rgba(248,251,252,.75)_0%,rgba(248,251,252,.55)_45%,rgba(248,251,252,.2)_100%)]" />
+          <Image src={bgSrc} alt="" fill sizes="100vw" className="object-cover" priority quality={100} />
+          <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(95deg,rgba(11,31,58,0.9)_0%,rgba(11,31,58,0.75)_35%,rgba(37,99,235,0.2)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(6,182,212,0.14),_transparent_35%)]" />
         </div>
       ) : null}
       {fgSrc ? (
         <div className="pointer-events-none absolute right-0 top-0 hidden h-full w-[48%] lg:block">
-          <Image src={fgSrc} alt="" fill sizes="48vw" className="object-cover object-center opacity-100" />
+          <Image src={fgSrc} alt="" fill sizes="48vw" className="object-cover object-center" />
         </div>
       ) : null}
       <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
@@ -49,14 +50,14 @@ export function HeroSection({
           transition={{ duration: 0.45 }}
           className="max-w-2xl lg:py-0"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#00C4B3]/30 bg-white/80 px-4 py-2 text-sm font-medium text-[#103B56] shadow-sm">
-            <span className="h-2.5 w-2.5 rounded-full bg-[#00C4B3]" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/15 px-4 py-2 text-sm font-medium text-white shadow-sm backdrop-blur-md">
+            <span className="h-2.5 w-2.5 rounded-full bg-[#06B6D4]" />
             {eyebrow}
           </div>
-          <h1 className="hero-copy-effect mt-5 text-3xl font-semibold tracking-tight text-[#071A2F] min-[420px]:text-4xl sm:text-5xl lg:text-6xl">
+          <h1 className="hero-copy-effect mt-5 text-3xl font-semibold tracking-tight text-white min-[420px]:text-4xl sm:text-5xl lg:text-6xl">
             {title}
           </h1>
-          <p className="hero-description-effect mt-6 text-lg font-medium leading-8 text-slate-700 sm:text-xl">
+          <p className="hero-description-effect mt-6 text-lg font-medium leading-8 text-slate-100 sm:text-xl">
             {description}
           </p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -74,7 +75,7 @@ export function HeroSection({
               "Security-first delivery",
               "Scalable by design",
             ].map((item) => (
-              <span key={item} className="rounded-full border border-slate-200 bg-white/80 px-3 py-2 text-xs text-slate-600 shadow-sm sm:px-4 sm:text-sm">
+              <span key={item} className="rounded-full border border-white/20 bg-white/10 px-3 py-2 text-xs text-slate-100 shadow-sm sm:px-4 sm:text-sm">
                 {item}
               </span>
             ))}
@@ -87,7 +88,7 @@ export function HeroSection({
           transition={{ duration: 0.5, delay: 0.1 }}
           className="relative hidden lg:block"
         >
-          <div className="rounded-[2rem] border border-slate-200 bg-white p-4 shadow-[0_30px_80px_rgba(7,26,47,0.12)]">
+          <div className="rounded-[2rem] border border-white/20 bg-white/10 p-4 shadow-[0_30px_80px_rgba(7,26,47,0.2)] backdrop-blur-xl">
             <div className="rounded-[1.5rem] bg-[#071A2F] p-5 text-white">
               <div className="flex items-center justify-between rounded-full bg-white/10 px-4 py-2 text-sm">
                 <span>Operations intelligence</span>
