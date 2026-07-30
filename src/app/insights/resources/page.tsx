@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 
 export default function InsightsResourcesPage() {
   return (
-    <div className="min-h-screen bg-[#F8FBFC] text-slate-700">
+    <div className="min-h-screen bg-[#F5F6F8] text-slate-700">
       <Navbar />
       <main>
         <section className="bg-white px-6 py-24 sm:px-8 lg:px-12">
@@ -20,7 +20,7 @@ export default function InsightsResourcesPage() {
               <p className="max-w-2xl text-slate-600">
                 Access frameworks, checklists, and practical advice for deploying systems that are reliable, secure, and operationally fit.
               </p>
-              <div className="space-y-4 rounded-[2rem] border border-slate-200 bg-[#F8FBFC] p-8">
+              <div className="space-y-4 rounded-[2rem] border border-slate-200 bg-[#F5F6F8] p-8">
                 {[
                   "Network design checklist for resilient deployments",
                   "Operational guidance for secure field connectivity",
@@ -38,7 +38,7 @@ export default function InsightsResourcesPage() {
                 ].map(([src, label]) => (
                   <div key={label} className="group relative min-h-32 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
                     <Image src={src} alt={label} fill className="object-cover transition duration-300 group-hover:scale-105" />
-                    <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#071A2F]/85 to-transparent px-3 pb-3 pt-8 text-sm font-semibold text-white">{label}</span>
+                    <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0B1F3A]/85 to-transparent px-3 pb-3 pt-8 text-sm font-semibold text-white">{label}</span>
                   </div>
                 ))}
               </div>
@@ -47,7 +47,7 @@ export default function InsightsResourcesPage() {
             <div className="space-y-4">
               <div className="relative min-h-[280px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[340px]"><Image src="/images/technical-guide-cover.jfif" alt="Technical guide cover" fill className="object-cover" priority /></div>
               <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
-                <h2 className="text-3xl font-semibold text-[#071A2F]">Practical resources for infrastructure delivery.</h2>
+                <h2 className="text-3xl font-semibold text-[#0B1F3A]">Practical resources for infrastructure delivery.</h2>
                 <p className="mt-4 text-slate-600">Tools and guidance to make your next deployment more predictable and secure.</p>
               </div>
             </div>

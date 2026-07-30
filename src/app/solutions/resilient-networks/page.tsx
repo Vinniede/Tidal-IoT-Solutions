@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -74,29 +74,38 @@ const processSteps = [
 const faqs = [
   {
     question: "How do you improve network resilience?",
-    answer: "We build redundant paths, failover logic, and proactive monitoring so network services stay available during disruptions.",
+    answer:
+      "We build redundant paths, failover logic, and proactive monitoring so network services stay available during disruptions.",
   },
   {
     question: "Can you integrate with cloud services and edge sites?",
-    answer: "Yes. Our network designs support hybrid infrastructure, connecting cloud, data center, and remote edge deployments.",
+    answer:
+      "Yes. Our network designs support hybrid infrastructure, connecting cloud, data center, and remote edge deployments.",
   },
   {
     question: "What kinds of monitoring do you provide?",
-    answer: "We provide active performance monitoring, traffic visibility, and alerting for latency, packet loss, and availability.",
+    answer:
+      "We provide active performance monitoring, traffic visibility, and alerting for latency, packet loss, and availability.",
   },
 ];
 
 const relatedSolutions = [
-  { title: "Integrated Cybersecurity", href: "/solutions/integrated-cybersecurity" },
+  {
+    title: "Integrated Cybersecurity",
+    href: "/solutions/integrated-cybersecurity",
+  },
   { title: "Secure Communications", href: "/solutions/secure-communications" },
-  { title: "Intelligent Telematics", href: "/solutions/intelligent-telematics" },
+  {
+    title: "Intelligent Telematics",
+    href: "/solutions/intelligent-telematics",
+  },
 ];
 
 export default function ResilientNetworksPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   return (
-    <div className="min-h-screen bg-[#F8FBFC] text-slate-700">
+    <div className="min-h-screen bg-[#F5F6F8] text-slate-700">
       <Navbar />
       <main>
         <section className="bg-white px-6 py-24 sm:px-8 lg:px-12">
@@ -108,7 +117,9 @@ export default function ResilientNetworksPage() {
                 description="We build enterprise-grade architectures that keep people, applications, and services connected under any condition."
               />
               <p className="max-w-2xl text-slate-600">
-                From campus networks to distributed edge sites, our resilient network services reduce outages, improve throughput, and create predictable performance.
+                From campus networks to distributed edge sites, our resilient
+                network services reduce outages, improve throughput, and create
+                predictable performance.
               </p>
               <div className="grid gap-4 sm:grid-cols-2">
                 {[
@@ -117,35 +128,57 @@ export default function ResilientNetworksPage() {
                   "Performance monitoring",
                   "Scalable design",
                 ].map((point) => (
-                  <div key={point} className="rounded-[1.75rem] border border-slate-200 bg-[#F8FBFC] p-5">
-                    <p className="font-semibold text-[#071A2F]">{point}</p>
+                  <div
+                    key={point}
+                    className="rounded-[1.75rem] border border-slate-200 bg-[#F5F6F8] p-5"
+                  >
+                    <p className="font-semibold text-[#0B1F3A]">{point}</p>
                   </div>
                 ))}
               </div>
               <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
-                <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-[#E8FFF9] text-[#00a999]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-[#F5F6F8] text-[#00A651]">
                   <Server className="h-6 w-6" />
                 </div>
-                <h2 className="mt-6 text-3xl font-semibold text-[#071A2F]">Network architecture made to withstand interruptions.</h2>
+                <h2 className="mt-6 text-3xl font-semibold text-[#0B1F3A]">
+                  Network architecture made to withstand interruptions.
+                </h2>
                 <p className="mt-4 text-slate-600">
-                  We design connectivity with redundancy, visibility, and predictable failover so your services stay online.
+                  We design connectivity with redundancy, visibility, and
+                  predictable failover so your services stay online.
                 </p>
               </div>
               <div className="flex flex-wrap gap-4">
                 <Button href="/contact">Build a stronger network</Button>
-                <Button href="/solutions" variant="secondary">Back to solutions</Button>
+                <Button href="/solutions" variant="secondary">
+                  Back to solutions
+                </Button>
               </div>
             </div>
 
             <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-50 shadow-xl h-full sm:min-h-[640px]">
-              <Image src="/images/solution-network-infrastructure-illustration.jfif" alt="Resilient network infrastructure" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover object-center" priority />
+              <Image
+                src="/images/solution-network-infrastructure-illustration.jfif"
+                alt="Resilient network infrastructure"
+                fill
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                className="object-cover object-center"
+                priority
+              />
             </div>
           </div>
         </section>
 
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
-            <Image src="/images/Resilient Networks/Fiber optic network.jfif" alt="" fill sizes="100vw" className="object-cover object-center" quality={100} />
+            <Image
+              src="/images/Resilient Networks/Fiber optic network.jfif"
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover object-center"
+              quality={100}
+            />
             <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-900/55 to-slate-950/80" />
           </div>
           <div className="relative mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-start text-white">
@@ -156,25 +189,35 @@ export default function ResilientNetworksPage() {
                 description="We design and deploy resilient networking for the full stack from transport to access and monitoring."
               />
               <p className="mt-6 max-w-2xl text-slate-200 font-semibold">
-                Our approach balances redundancy, performance, and security so teams can rely on critical systems and scale safely as demand grows.
+                Our approach balances redundancy, performance, and security so
+                teams can rely on critical systems and scale safely as demand
+                grows.
               </p>
             </div>
             <div className="rounded-[2rem] border border-slate-200 bg-white p-10 shadow-sm">
-              <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#00C4B3]">
-                <span className="h-2.5 w-2.5 rounded-full bg-[#00C4B3]" />
+              <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#00A651]">
+                <span className="h-2.5 w-2.5 rounded-full bg-[#00A651]" />
                 Solution overview
               </div>
               <p className="mt-6 text-slate-600">
-                We combine high-availability routing, edge resilience, and proactive monitoring to support both real-time services and long-term growth. 
+                We combine high-availability routing, edge resilience, and
+                proactive monitoring to support both real-time services and
+                long-term growth.
               </p>
               <div className="mt-8 overflow-hidden rounded-[1.75rem] border border-slate-200">
-                <Image src="/images/Resilient Networks/Network infrastructure.jfif" alt="Network overview" width={640} height={420} className="h-56 w-full object-cover" />
+                <Image
+                  src="/images/Resilient Networks/Network infrastructure.jfif"
+                  alt="Network overview"
+                  width={640}
+                  height={420}
+                  className="h-56 w-full object-cover"
+                />
               </div>
             </div>
           </div>
         </section>
 
-        <section className="bg-[#F8FBFC] px-6 py-24 sm:px-8 lg:px-12">
+        <section className="bg-[#F5F6F8] px-6 py-24 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-7xl grid gap-8 lg:grid-cols-[0.95fr_1.05fr] items-stretch">
             <div>
               <SectionHeading
@@ -184,21 +227,37 @@ export default function ResilientNetworksPage() {
               />
               <div className="mt-12 grid gap-6 md:grid-cols-2">
                 {challenges.map((challenge) => (
-                  <div key={challenge} className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+                  <div
+                    key={challenge}
+                    className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm"
+                  >
                     <p className="text-slate-700">{challenge}</p>
                   </div>
                 ))}
               </div>
             </div>
             <div className="relative min-h-[560px] h-full overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[680px]">
-              <Image src="/images/Resilient Networks/Cloud networking.jfif" alt="Resilient network visual" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
+              <Image
+                src="/images/Resilient Networks/Cloud networking.jfif"
+                alt="Resilient network visual"
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover"
+              />
             </div>
           </div>
         </section>
 
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
-            <Image src="/images/Resilient Networks/Enterprise data center.jfif" alt="" fill sizes="100vw" className="object-cover object-center" quality={100} />
+            <Image
+              src="/images/Resilient Networks/Enterprise data center.jfif"
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover object-center"
+              quality={100}
+            />
           </div>
           <div className="relative mx-auto max-w-7xl text-white">
             <SectionHeading
@@ -213,11 +272,16 @@ export default function ResilientNetworksPage() {
               {workflow.map((step) => {
                 const Icon = step.icon;
                 return (
-                  <div key={step.label} className="rounded-[2rem] border border-slate-200 bg-white p-8 text-center shadow-sm">
-                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-3xl bg-[#E8FFF9] text-[#00C4B3]">
+                  <div
+                    key={step.label}
+                    className="rounded-[2rem] border border-slate-200 bg-white p-8 text-center shadow-sm"
+                  >
+                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-3xl bg-[#F5F6F8] text-[#00A651]">
                       <Icon className="h-6 w-6" />
                     </div>
-                    <p className="mt-6 font-semibold text-[#071A2F]">{step.label}</p>
+                    <p className="mt-6 font-semibold text-[#0B1F3A]">
+                      {step.label}
+                    </p>
                   </div>
                 );
               })}
@@ -235,19 +299,28 @@ export default function ResilientNetworksPage() {
               />
               <div className="mt-12 grid gap-6 md:grid-cols-2">
                 {features.map((feature) => (
-                  <div key={feature} className="rounded-[2rem] border border-slate-200 bg-[#F8FBFC] p-8 shadow-sm">
-                    <p className="font-semibold text-[#071A2F]">{feature}</p>
+                  <div
+                    key={feature}
+                    className="rounded-[2rem] border border-slate-200 bg-[#F5F6F8] p-8 shadow-sm"
+                  >
+                    <p className="font-semibold text-[#0B1F3A]">{feature}</p>
                   </div>
                 ))}
               </div>
             </div>
             <div className="relative min-h-[520px] h-full overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[640px]">
-              <Image src="/images/Resilient Networks/Server racks.jfif" alt="Data center services visual" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
+              <Image
+                src="/images/Resilient Networks/Server racks.jfif"
+                alt="Data center services visual"
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover"
+              />
             </div>
           </div>
         </section>
 
-        <section className="bg-[#071A2F] px-6 py-24 text-white sm:px-8 lg:px-12">
+        <section className="bg-[#0B1F3A] px-6 py-24 text-white sm:px-8 lg:px-12">
           <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
             <div className="space-y-6">
               <SectionHeading
@@ -256,12 +329,16 @@ export default function ResilientNetworksPage() {
                 description="We focus on availability, performance, and infrastructure that supports enterprise growth."
               />
               <p className="max-w-2xl text-slate-300">
-                Teams gain confidence in their network, with fewer outages, faster recovery, and better capacity for new applications. 
+                Teams gain confidence in their network, with fewer outages,
+                faster recovery, and better capacity for new applications.
               </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 h-full items-stretch">
               {benefits.map((item) => (
-                <div key={item.label} className="rounded-[2rem] bg-white/10 p-8 text-slate-100 shadow-sm h-full">
+                <div
+                  key={item.label}
+                  className="rounded-[2rem] bg-white/10 p-8 text-slate-100 shadow-sm h-full"
+                >
                   <p className="text-3xl font-semibold">{item.value}</p>
                   <p className="mt-3 text-slate-300">{item.label}</p>
                 </div>
@@ -272,14 +349,17 @@ export default function ResilientNetworksPage() {
 
         <section className="px-6 py-24 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[0.95fr_1.05fr] items-center">
-            <div className="rounded-[2rem] border border-slate-200 bg-[#F8FBFC] p-10 shadow-sm">
-              <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#00C4B3]">
-                <span className="h-2.5 w-2.5 rounded-full bg-[#00C4B3]" />
+            <div className="rounded-[2rem] border border-slate-200 bg-[#F5F6F8] p-10 shadow-sm">
+              <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#00A651]">
+                <span className="h-2.5 w-2.5 rounded-full bg-[#00A651]" />
                 Technology ecosystem
               </div>
-              <h3 className="mt-6 text-3xl font-semibold text-[#071A2F]">Topology and tools for a stronger network foundation.</h3>
+              <h3 className="mt-6 text-3xl font-semibold text-[#0B1F3A]">
+                Topology and tools for a stronger network foundation.
+              </h3>
               <p className="mt-4 text-slate-600">
-                We align transport, core services, edge connectivity, and user access so every layer contributes to reliable operations.
+                We align transport, core services, edge connectivity, and user
+                access so every layer contributes to reliable operations.
               </p>
               <ul className="mt-8 space-y-4 text-slate-600">
                 {[
@@ -289,21 +369,35 @@ export default function ResilientNetworksPage() {
                   "Monitoring and failover automation",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#00C4B3]" />
+                    <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#00A651]" />
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
             <div className="rounded-[2rem] border border-slate-200 bg-white p-10 shadow-sm">
-              <Image src="/images/solution-network-infrastructure-illustration.jfif" alt="Network topology" width={640} height={520} className="rounded-[1.75rem] object-cover" priority />
+              <Image
+                src="/images/solution-network-infrastructure-illustration.jfif"
+                alt="Network topology"
+                width={640}
+                height={520}
+                className="rounded-[1.75rem] object-cover"
+                priority
+              />
             </div>
           </div>
         </section>
 
-        <section className="relative isolate overflow-hidden bg-[#F8FBFC] px-6 py-24 sm:px-8 lg:px-12">
+        <section className="relative isolate overflow-hidden bg-[#F5F6F8] px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
-            <Image src="/images/Resilient Networks/Network infrastructure.jfif" alt="" fill sizes="100vw" className="object-cover object-center" quality={100} />
+            <Image
+              src="/images/Resilient Networks/Network infrastructure.jfif"
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover object-center"
+              quality={100}
+            />
           </div>
           <div className="relative mx-auto max-w-7xl text-white">
             <SectionHeading
@@ -317,11 +411,16 @@ export default function ResilientNetworksPage() {
               {industriesServed.map((industry) => {
                 const Icon = industry.icon;
                 return (
-                  <div key={industry.title} className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-[#E8FFF9] text-[#00C4B3]">
+                  <div
+                    key={industry.title}
+                    className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm"
+                  >
+                    <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-[#F5F6F8] text-[#00A651]">
                       <Icon className="h-6 w-6" />
                     </div>
-                    <h3 className="mt-6 text-xl font-semibold text-[#071A2F]">{industry.title}</h3>
+                    <h3 className="mt-6 text-xl font-semibold text-[#0B1F3A]">
+                      {industry.title}
+                    </h3>
                   </div>
                 );
               })}
@@ -338,27 +437,43 @@ export default function ResilientNetworksPage() {
                 description="We combine design, deployment, and support so network infrastructure drives performance and resilience."
               />
               <div className="mt-12 grid gap-6 md:grid-cols-2">
-              {[
-                "Availability-focused architecture",
-                "Scalable design for future growth",
-                "Monitoring and service readiness",
-                "Security-aware infrastructure",
-              ].map((item) => (
-                <div key={item} className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
-                  <p className="font-semibold text-[#071A2F]">{item}</p>
-                </div>
-              ))}
-            </div>
+                {[
+                  "Availability-focused architecture",
+                  "Scalable design for future growth",
+                  "Monitoring and service readiness",
+                  "Security-aware infrastructure",
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm"
+                  >
+                    <p className="font-semibold text-[#0B1F3A]">{item}</p>
+                  </div>
+                ))}
+              </div>
             </div>
             <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
-              <Image src="/images/Resilient Networks/Fiber optic network.jfif" alt="Why choose Tidal visual" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
+              <Image
+                src="/images/Resilient Networks/Fiber optic network.jfif"
+                alt="Why choose Tidal visual"
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover"
+              />
             </div>
           </div>
         </section>
 
         <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
-            <Image src="/images/Resilient Networks/Cloud networking.jfif" alt="" fill sizes="100vw" className="object-cover object-center" quality={100} />
+            <Image
+              src="/images/Resilient Networks/Cloud networking.jfif"
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover object-center"
+              quality={100}
+            />
             <div className="absolute inset-0 bg-slate-950/70" />
           </div>
           <div className="relative mx-auto max-w-7xl text-white">
@@ -371,8 +486,11 @@ export default function ResilientNetworksPage() {
             />
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
               {processSteps.map((step) => (
-                <div key={step} className="rounded-[2rem] border border-slate-200 bg-[#F8FBFC] p-8 text-center shadow-sm">
-                  <p className="text-lg font-semibold text-[#071A2F]">{step}</p>
+                <div
+                  key={step}
+                  className="rounded-[2rem] border border-slate-200 bg-[#F5F6F8] p-8 text-center shadow-sm"
+                >
+                  <p className="text-lg font-semibold text-[#0B1F3A]">{step}</p>
                 </div>
               ))}
             </div>
@@ -381,26 +499,46 @@ export default function ResilientNetworksPage() {
 
         <section className="px-6 py-24 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
-            <div className="rounded-[2rem] border border-slate-200 bg-[#071A2F] p-10 text-white shadow-xl">
-              <p className="text-sm uppercase tracking-[0.3em] text-[#5DE6D6]">Featured case study</p>
-              <h2 className="mt-5 text-3xl font-semibold">High-availability networking for a regional bank.</h2>
+            <div className="rounded-[2rem] border border-slate-200 bg-[#0B1F3A] p-10 text-white shadow-xl">
+              <p className="text-sm uppercase tracking-[0.3em] text-[#00A651]">
+                Featured case study
+              </p>
+              <h2 className="mt-5 text-3xl font-semibold">
+                High-availability networking for a regional bank.
+              </h2>
               <div className="mt-8 space-y-6 text-slate-300">
                 <div>
                   <p className="font-semibold text-white">Challenge</p>
-                  <p className="mt-3">A banking network needed reliable branch connectivity without service interruptions during peak loads.</p>
+                  <p className="mt-3">
+                    A banking network needed reliable branch connectivity
+                    without service interruptions during peak loads.
+                  </p>
                 </div>
                 <div>
                   <p className="font-semibold text-white">Solution</p>
-                  <p className="mt-3">We implemented redundant WAN paths, performance monitoring, and local failover for critical services.</p>
+                  <p className="mt-3">
+                    We implemented redundant WAN paths, performance monitoring,
+                    and local failover for critical services.
+                  </p>
                 </div>
                 <div>
                   <p className="font-semibold text-white">Results</p>
-                  <p className="mt-3">The bank reduced network outages and delivered a more predictable service experience for branch users.</p>
+                  <p className="mt-3">
+                    The bank reduced network outages and delivered a more
+                    predictable service experience for branch users.
+                  </p>
                 </div>
               </div>
             </div>
             <div className="rounded-[2rem] border border-slate-200 bg-white p-10 shadow-sm">
-              <Image src="/images/deployment-photo.png" alt="Network deployment" width={640} height={520} className="rounded-[1.75rem] object-cover" priority />
+              <Image
+                src="/images/deployment-photo.png"
+                alt="Network deployment"
+                width={640}
+                height={520}
+                className="rounded-[1.75rem] object-cover"
+                priority
+              />
             </div>
           </div>
         </section>
@@ -416,14 +554,19 @@ export default function ResilientNetworksPage() {
             />
             <div className="mt-12 space-y-4">
               {faqs.map((faq, index) => (
-                <div key={faq.question} className="overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-950 shadow-[0_20px_60px_rgba(15,23,42,0.35)]">
+                <div
+                  key={faq.question}
+                  className="overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-950 shadow-[0_20px_60px_rgba(15,23,42,0.35)]"
+                >
                   <button
                     type="button"
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
                     className="flex w-full items-center justify-between gap-4 px-6 py-6 text-left text-lg font-semibold text-white"
                   >
                     <span>{faq.question}</span>
-                    <span className="text-cyan-300">{openFaq === index ? "−" : "+"}</span>
+                    <span className="text-cyan-300">
+                      {openFaq === index ? "−" : "+"}
+                    </span>
                   </button>
                   {openFaq === index ? (
                     <div className="border-t border-slate-800 bg-slate-900 px-6 py-6 text-slate-300">
@@ -452,8 +595,13 @@ export default function ResilientNetworksPage() {
                   href={solution.href}
                   className="rounded-[2rem] bg-gradient-to-br from-white via-slate-50 to-slate-100 p-8 shadow-[0_25px_50px_rgba(15,23,42,0.12)] transition-transform hover:-translate-y-1 hover:shadow-[0_35px_80px_rgba(15,23,42,0.18)]"
                 >
-                  <p className="font-semibold text-slate-950">{solution.title}</p>
-                  <p className="mt-4 text-slate-600">Explore the services that reinforce your resilient network strategy.</p>
+                  <p className="font-semibold text-slate-950">
+                    {solution.title}
+                  </p>
+                  <p className="mt-4 text-slate-600">
+                    Explore the services that reinforce your resilient network
+                    strategy.
+                  </p>
                   <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan-700">
                     View solution
                     <ArrowRight className="h-4 w-4" />
@@ -464,16 +612,23 @@ export default function ResilientNetworksPage() {
           </div>
         </section>
 
-        <section className="bg-[#071A2F] px-6 py-24 text-white sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[#102A45] p-14 text-center shadow-[0_30px_80px_rgba(7,26,47,0.22)]">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#5DE6D6]">Ready to strengthen</p>
-            <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">Build a stronger network foundation today.</h2>
+        <section className="bg-[#0B1F3A] px-6 py-24 text-white sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[#6E1E2D] p-14 text-center shadow-[0_30px_80px_rgba(7,26,47,0.22)]">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#00A651]">
+              Ready to strengthen
+            </p>
+            <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+              Build a stronger network foundation today.
+            </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-              Our team can assess your network, design a resilient architecture, and deliver a deployment that keeps operations online. 
+              Our team can assess your network, design a resilient architecture,
+              and deliver a deployment that keeps operations online.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button href="/contact">Build a stronger network</Button>
-              <Button href="/solutions" variant="secondary">Explore other solutions</Button>
+              <Button href="/solutions" variant="secondary">
+                Explore other solutions
+              </Button>
             </div>
           </div>
         </section>

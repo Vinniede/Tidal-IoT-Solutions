@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-[#F8FBFC] text-slate-700">
+    <div className="min-h-screen bg-[#F5F6F8] text-slate-700">
       <Navbar />
       <main>
         <section className="bg-white px-6 py-24 sm:px-8 lg:px-12">
@@ -23,7 +23,7 @@ export default function ContactPage() {
               <div className="relative mt-6 flex items-center gap-4 overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
                 <Image src="/images/brochure-cover.jfif" alt="Tidal IoT Solutions company brochure" width={72} height={56} className="h-14 w-16 rounded-xl object-cover" />
                 <div>
-                  <p className="text-sm font-semibold text-[#071A2F]">Company brochure</p>
+                  <p className="text-sm font-semibold text-[#0B1F3A]">Company brochure</p>
                   <p className="mt-1 text-sm text-slate-600">A quick introduction to Tidal&apos;s capabilities and delivery approach.</p>
                 </div>
               </div>
@@ -35,7 +35,7 @@ export default function ContactPage() {
               <div className="relative rounded-[2rem] border border-white/10 bg-slate-950/90 p-8">
                 <div className="space-y-6">
                   <div className="flex items-start gap-3">
-                    <div className="rounded-full bg-[#E8FFF9] p-2 text-[#00C4B3]">
+                    <div className="rounded-full bg-[#F5F6F8] p-2 text-[#00A651]">
                       <Mail className="h-5 w-5" />
                     </div>
                     <div>
@@ -44,7 +44,7 @@ export default function ContactPage() {
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="rounded-full bg-[#E8FFF9] p-2 text-[#00C4B3]">
+                    <div className="rounded-full bg-[#F5F6F8] p-2 text-[#00A651]">
                       <Phone className="h-5 w-5" />
                     </div>
                     <div>
@@ -53,7 +53,7 @@ export default function ContactPage() {
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <div className="rounded-full bg-[#E8FFF9] p-2 text-[#00C4B3]">
+                    <div className="rounded-full bg-[#F5F6F8] p-2 text-[#00A651]">
                       <MapPin className="h-5 w-5" />
                     </div>
                     <div>

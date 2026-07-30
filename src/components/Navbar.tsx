@@ -21,38 +21,63 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className={`sticky top-0 z-50 border-b transition duration-300 ${scrolled ? "border-slate-200/80 bg-white/90 backdrop-blur-xl shadow-sm" : "border-transparent bg-transparent"}`}>
+    <header
+      className={`sticky top-0 z-50 border-b transition duration-300 ${scrolled ? "border-slate-200/80 bg-white/90 backdrop-blur-xl shadow-sm" : "border-transparent bg-transparent"}`}
+    >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-3 lg:px-10">
         <Link href="/" className="flex min-w-0 items-center gap-2 sm:gap-3">
           <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-slate-200 bg-white shadow-sm sm:h-14 sm:w-14">
-            <Image src="/images/Company%20Logo.jpeg" alt="Tidal IoT Solutions" width={56} height={56} className="h-full w-full object-contain p-1" />
+            <Image
+              src="/images/Company%20Logo.jpeg"
+              alt="Tidal IoT Solutions"
+              width={56}
+              height={56}
+              className="h-full w-full object-contain p-1"
+            />
           </div>
           <div>
-            <p className="brand-color-flow text-lg font-black tracking-tight min-[380px]:text-2xl sm:text-3xl">Tidal IoT Solutions</p>
-            <p className="hidden text-xs uppercase tracking-[0.3em] text-slate-500 min-[380px]:block">Intelligent infrastructure</p>
+            <p className="brand-color-flow text-lg font-black tracking-tight min-[380px]:text-2xl sm:text-3xl">
+              Tidal IoT Solutions
+            </p>
+            <p className="hidden text-xs uppercase tracking-[0.3em] text-slate-500 min-[380px]:block">
+              Intelligent infrastructure
+            </p>
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-4 lg:flex" aria-label="Primary navigation">
+        <nav
+          className="hidden items-center gap-4 lg:flex"
+          aria-label="Primary navigation"
+        >
           {navItems.map((item) => {
-            const itemActive = item.href === "/"
-              ? pathname === "/"
-              : pathname?.startsWith(item.href) || item.subItems?.some((subItem) => pathname?.startsWith(subItem.href));
+            const itemActive =
+              item.href === "/"
+                ? pathname === "/"
+                : pathname?.startsWith(item.href) ||
+                  item.subItems?.some((subItem) =>
+                    pathname?.startsWith(subItem.href),
+                  );
 
             return (
               <div
                 key={item.href}
                 className="relative"
-                onMouseEnter={() => item.subItems && setHoveredDropdown(item.href)}
+                onMouseEnter={() =>
+                  item.subItems && setHoveredDropdown(item.href)
+                }
                 onMouseLeave={() => item.subItems && setHoveredDropdown(null)}
               >
                 <Link
                   href={item.href}
-                  className={`group relative inline-flex items-center gap-1 rounded-full px-2.5 py-1.5 text-sm font-medium transition duration-200 ${itemActive ? "text-[#071A2F]" : "text-slate-600 hover:text-[#071A2F]"} hover:bg-slate-100/80 hover:shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00C4B3]/50`}
+                  className={`group relative inline-flex items-center gap-1 rounded-full px-2.5 py-1.5 text-sm font-medium transition duration-200 ${itemActive ? "text-[var(--primary-navy)]" : "text-slate-600 hover:text-[var(--primary-navy)]"} hover:bg-slate-100/80 hover:shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--iot-green-accent)]/50`}
                 >
                   {item.label}
-                  {item.subItems ? <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:-rotate-180" /> : null}
-                  <span className={`absolute left-0 bottom-0 h-[2px] rounded-full bg-[#00C4B3] transition-all duration-200 ${itemActive ? "w-full" : "w-0 group-hover:w-full"}`} />
+                  {item.subItems ? (
+                    <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:-rotate-180" />
+                  ) : null}
+                  <span
+                    className={`absolute left-0 bottom-0 h-[2px] rounded-full bg-[var(--iot-green-accent)] transition-all duration-200 ${itemActive ? "w-full" : "w-0 group-hover:w-full"}`}
+                  />
                 </Link>
                 {item.subItems ? (
                   <div
@@ -62,7 +87,7 @@ export function Navbar() {
                       <Link
                         key={subItem.href}
                         href={subItem.href}
-                        className="block rounded-3xl px-4 py-3 text-sm text-slate-600 transition hover:bg-slate-50 hover:text-[#071A2F]"
+                        className="block rounded-3xl px-4 py-3 text-sm text-slate-600 transition hover:bg-slate-50 hover:text-[#0B1F3A]"
                       >
                         {subItem.label}
                       </Link>
@@ -77,7 +102,7 @@ export function Navbar() {
         <div className="hidden items-center gap-4 lg:flex">
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#0F4D64] to-[#071A2F] px-3 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00C4B3]/50"
+            className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#6E1E2D] to-[var(--primary-navy)] px-3 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--iot-green-accent)]/50"
           >
             Request consultation
             <ArrowRight className="ml-2 h-4 w-4" />
@@ -112,7 +137,7 @@ export function Navbar() {
                       <Link
                         key={subItem.href}
                         href={subItem.href}
-                        className="block rounded-2xl px-4 py-2 text-sm text-slate-600 transition hover:bg-white hover:text-[#071A2F]"
+                        className="block rounded-2xl px-4 py-2 text-sm text-slate-600 transition hover:bg-white hover:text-[#0B1F3A]"
                         onClick={() => setMenuOpen(false)}
                       >
                         {subItem.label}
@@ -124,7 +149,7 @@ export function Navbar() {
             ))}
             <Link
               href="/contact"
-              className="inline-flex w-full items-center justify-center rounded-full bg-[#071A2F] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#103B56]"
+              className="inline-flex w-full items-center justify-center rounded-full bg-[var(--primary-navy)] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#6E1E2D]"
               onClick={() => setMenuOpen(false)}
             >
               Contact us

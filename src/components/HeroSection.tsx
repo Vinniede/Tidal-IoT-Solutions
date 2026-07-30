@@ -30,17 +30,34 @@ export function HeroSection({
   fgSrc,
 }: HeroSectionProps) {
   return (
-    <section id="home" className="relative isolate overflow-hidden bg-[linear-gradient(135deg,#0B1F3A_0%,#1E3A8A_45%,#2563EB_100%)] px-4 py-0 sm:px-8 lg:px-12">
+    <section
+      id="home"
+      className="relative isolate overflow-hidden bg-[linear-gradient(135deg,#0B1F3A_0%,#D4AF37_45%,#D4AF37_100%)] px-4 py-0 sm:px-8 lg:px-12"
+    >
       {bgSrc ? (
         <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-          <Image src={bgSrc} alt="" fill sizes="100vw" className="object-cover" priority quality={100} />
+          <Image
+            src={bgSrc}
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
+            quality={100}
+          />
           <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(95deg,rgba(11,31,58,0.9)_0%,rgba(11,31,58,0.75)_35%,rgba(37,99,235,0.2)_100%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(6,182,212,0.14),_transparent_35%)]" />
         </div>
       ) : null}
       {fgSrc ? (
         <div className="pointer-events-none absolute right-0 top-0 hidden h-full w-[48%] lg:block">
-          <Image src={fgSrc} alt="" fill sizes="48vw" className="object-cover object-center" />
+          <Image
+            src={fgSrc}
+            alt=""
+            fill
+            sizes="48vw"
+            className="object-cover object-center"
+          />
         </div>
       ) : null}
       <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
@@ -51,7 +68,7 @@ export function HeroSection({
           className="max-w-2xl lg:py-0"
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/15 px-4 py-2 text-sm font-medium text-white shadow-sm backdrop-blur-md">
-            <span className="h-2.5 w-2.5 rounded-full bg-[#06B6D4]" />
+            <span className="h-2.5 w-2.5 rounded-full bg-[#00A651]" />
             {eyebrow}
           </div>
           <h1 className="hero-copy-effect mt-5 text-3xl font-semibold tracking-tight text-white min-[420px]:text-4xl sm:text-5xl lg:text-6xl">
@@ -63,7 +80,7 @@ export function HeroSection({
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <Button href={primaryCta.href}>{primaryCta.label}</Button>
             <Button href={secondaryCta.href} variant="secondary">
-              <span className="mr-2 inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#00C4B3]/15 text-[#00C4B3]">
+              <span className="mr-2 inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#00A651]/15 text-[#00A651]">
                 <Play className="h-4 w-4 fill-current" />
               </span>
               {secondaryCta.label}
@@ -75,7 +92,10 @@ export function HeroSection({
               "Security-first delivery",
               "Scalable by design",
             ].map((item) => (
-              <span key={item} className="rounded-full border border-white/20 bg-white/10 px-3 py-2 text-xs text-slate-100 shadow-sm sm:px-4 sm:text-sm">
+              <span
+                key={item}
+                className="rounded-full border border-white/20 bg-white/10 px-3 py-2 text-xs text-slate-100 shadow-sm sm:px-4 sm:text-sm"
+              >
                 {item}
               </span>
             ))}
@@ -89,18 +109,26 @@ export function HeroSection({
           className="relative hidden lg:block"
         >
           <div className="rounded-[2rem] border border-white/20 bg-white/10 p-4 shadow-[0_30px_80px_rgba(7,26,47,0.2)] backdrop-blur-xl">
-            <div className="rounded-[1.5rem] bg-[#071A2F] p-5 text-white">
+            <div className="rounded-[1.5rem] bg-[#0B1F3A] p-5 text-white">
               <div className="flex items-center justify-between rounded-full bg-white/10 px-4 py-2 text-sm">
                 <span>Operations intelligence</span>
-                <span className="rounded-full bg-[#00C4B3] px-3 py-1 text-xs font-semibold text-[#071A2F]">Live</span>
+                <span className="rounded-full bg-[#00A651] px-3 py-1 text-xs font-semibold text-[#0B1F3A]">
+                  Live
+                </span>
               </div>
               <div className="mt-6 grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
-                <div className="rounded-2xl bg-[#103B56] p-5">
-                  <p className="text-sm text-slate-300">Connected infrastructure</p>
-                  <div className="mt-4 h-28 rounded-2xl bg-gradient-to-br from-[#5DE6D6] to-[#00C4B3] p-4">
+                <div className="rounded-2xl bg-[#6E1E2D] p-5">
+                  <p className="text-sm text-slate-300">
+                    Connected infrastructure
+                  </p>
+                  <div className="mt-4 h-28 rounded-2xl bg-gradient-to-br from-[#00A651] to-[#00A651] p-4">
                     <div className="flex h-full items-end justify-between gap-2">
                       {[44, 68, 52, 80, 64].map((height) => (
-                        <div key={height} className="w-full rounded-t-xl bg-white/80" style={{ height: `${height}%` }} />
+                        <div
+                          key={height}
+                          className="w-full rounded-t-xl bg-white/80"
+                          style={{ height: `${height}%` }}
+                        />
                       ))}
                     </div>
                   </div>
@@ -120,12 +148,16 @@ export function HeroSection({
           </div>
           <div className="absolute -bottom-6 left-6 rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-lg">
             <div className="flex items-center gap-3">
-              <div className="rounded-full bg-[#E8FFF9] p-2 text-[#00C4B3]">
+              <div className="rounded-full bg-[#F5F6F8] p-2 text-[#00A651]">
                 <ArrowRight className="h-4 w-4" />
               </div>
               <div>
-                <p className="text-sm font-semibold text-[#071A2F]">Proactive operations</p>
-                <p className="text-sm text-slate-500">From field to command center</p>
+                <p className="text-sm font-semibold text-[#0B1F3A]">
+                  Proactive operations
+                </p>
+                <p className="text-sm text-slate-500">
+                  From field to command center
+                </p>
               </div>
             </div>
           </div>

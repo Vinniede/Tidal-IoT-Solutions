@@ -3,10 +3,10 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer id="contact" className="border-t border-slate-200 bg-[#071A2F] px-4 py-10 text-white sm:px-8 sm:py-12 lg:px-12">
+    <footer id="contact" className="border-t border-slate-200 bg-[#0B1F3A] px-4 py-10 text-white sm:px-8 sm:py-12 lg:px-12">
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#5DE6D6]">Tidal IoT Solutions</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#00A651]">Tidal IoT Solutions</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
             Build intelligent infrastructure with confidence.
           </h2>
@@ -18,21 +18,21 @@ export function Footer() {
           <h3 className="text-xl font-semibold">Let&apos;s talk about your next deployment</h3>
           <p className="mt-3 text-slate-300">Tell us about your environment, your challenges, and the outcomes you want to achieve.</p>
           <div className="mt-6 grid gap-3 sm:grid-cols-3">
-            <Link href="mailto:hello@tidal-iot.com" aria-label="Email Tidal IoT Solutions" className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-[#5DE6D6]/50 hover:bg-white/10">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#00C4B3]/15 text-[#5DE6D6] transition group-hover:bg-[#00C4B3] group-hover:text-[#071A2F]"><Mail className="h-4 w-4" /></span>
+            <Link href="mailto:hello@tidal-iot.com" aria-label="Email Tidal IoT Solutions" className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-[#00A651]/50 hover:bg-white/10">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#00A651]/15 text-[#00A651] transition group-hover:bg-[#00A651] group-hover:text-[#0B1F3A]"><Mail className="h-4 w-4" /></span>
               <span className="text-sm font-medium text-slate-200">Email us</span>
             </Link>
-            <Link href="tel:+254700000000" aria-label="Call Tidal IoT Solutions" className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-[#5DE6D6]/50 hover:bg-white/10">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#00C4B3]/15 text-[#5DE6D6] transition group-hover:bg-[#00C4B3] group-hover:text-[#071A2F]"><Phone className="h-4 w-4" /></span>
+            <Link href="tel:+254700000000" aria-label="Call Tidal IoT Solutions" className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-[#00A651]/50 hover:bg-white/10">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#00A651]/15 text-[#00A651] transition group-hover:bg-[#00A651] group-hover:text-[#0B1F3A]"><Phone className="h-4 w-4" /></span>
               <span className="text-sm font-medium text-slate-200">Call us</span>
             </Link>
-            <Link href="/contact" aria-label="Find Tidal IoT Solutions in Nairobi" className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-[#5DE6D6]/50 hover:bg-white/10">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#00C4B3]/15 text-[#5DE6D6] transition group-hover:bg-[#00C4B3] group-hover:text-[#071A2F]"><MapPin className="h-4 w-4" /></span>
+            <Link href="/contact" aria-label="Find Tidal IoT Solutions in Nairobi" className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-[#00A651]/50 hover:bg-white/10">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#00A651]/15 text-[#00A651] transition group-hover:bg-[#00A651] group-hover:text-[#0B1F3A]"><MapPin className="h-4 w-4" /></span>
               <span className="text-sm font-medium text-slate-200">Nairobi, KE</span>
             </Link>
           </div>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <Link href="mailto:hello@tidal-iot.com" className="inline-flex items-center justify-center break-all rounded-full bg-[#00C4B3] px-5 py-3 font-semibold text-[#071A2F] transition hover:bg-[#5DE6D6]">
+            <Link href="mailto:hello@tidal-iot.com" className="inline-flex items-center justify-center break-all rounded-full bg-[#00A651] px-5 py-3 font-semibold text-[#0B1F3A] transition hover:bg-[#00A651]">
               hello@tidal-iot.com
             </Link>
             <Link href="#home" className="inline-flex items-center justify-center rounded-full border border-white/20 px-5 py-3 font-semibold text-white transition hover:bg-white/10">

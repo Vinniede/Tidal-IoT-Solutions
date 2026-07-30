@@ -1,9 +1,16 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { Building2, Globe2, Landmark, ShieldCheck, Sparkles, Users } from "lucide-react";
+import {
+  Building2,
+  Globe2,
+  Landmark,
+  ShieldCheck,
+  Sparkles,
+  Users,
+} from "lucide-react";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -59,29 +66,35 @@ const workflow = [
 const faqItems = [
   {
     question: "Can Tidal support public-sector compliance requirements?",
-    answer: "Yes. We create government-grade systems with security, reporting, and governance aligned to public-sector mandates.",
+    answer:
+      "Yes. We create government-grade systems with security, reporting, and governance aligned to public-sector mandates.",
   },
   {
     question: "How do you support emergency response communications?",
-    answer: "We deliver redundant communications paths and monitoring to keep dispatch, field teams, and command units connected.",
+    answer:
+      "We deliver redundant communications paths and monitoring to keep dispatch, field teams, and command units connected.",
   },
   {
     question: "Do you help modernize legacy civic infrastructure?",
-    answer: "Our phased approach preserves service continuity while introducing resilient, modern infrastructure capabilities.",
+    answer:
+      "Our phased approach preserves service continuity while introducing resilient, modern infrastructure capabilities.",
   },
 ];
 
 const relatedIndustries = [
   { title: "Utilities", href: "/industries/utilities" },
   { title: "Security Companies", href: "/industries/security-companies" },
-  { title: "Banking & Financial Services", href: "/industries/banking-financial-services" },
+  {
+    title: "Banking & Financial Services",
+    href: "/industries/banking-financial-services",
+  },
 ];
 
 export default function GovernmentPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   return (
-    <div className="min-h-screen bg-[#F8FBFC] text-slate-700">
+    <div className="min-h-screen bg-[#F5F6F8] text-slate-700">
       <Navbar />
       <main>
         <section className="bg-white px-6 py-24 sm:px-8 lg:px-12">
@@ -94,29 +107,56 @@ export default function GovernmentPage() {
                   description="Secure, resilient infrastructure for public agencies, emergency response, and digital services."
                 />
                 <p className="max-w-2xl text-slate-600">
-                  Tidal helps agencies protect critical infrastructure, coordinate teams, and deliver citizen services with continuity and security.
+                  Tidal helps agencies protect critical infrastructure,
+                  coordinate teams, and deliver citizen services with continuity
+                  and security.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Button href="/contact">Modernize Public Infrastructure</Button>
-                  <Button href="/industries" variant="secondary">Back to industries</Button>
+                  <Button href="/contact">
+                    Modernize Public Infrastructure
+                  </Button>
+                  <Button href="/industries" variant="secondary">
+                    Back to industries
+                  </Button>
                 </div>
               </div>
               <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
-                <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-[#E8FFF9] text-[#00a999]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-[#F5F6F8] text-[#00A651]">
                   <Landmark className="h-6 w-6" />
                 </div>
-                <h2 className="mt-6 text-3xl font-semibold text-[#071A2F]">Trusted systems for public service delivery.</h2>
-                <p className="mt-4 text-slate-600">Enterprise-grade networks and secure coordination for government operations and emergency response.</p>
+                <h2 className="mt-6 text-3xl font-semibold text-[#0B1F3A]">
+                  Trusted systems for public service delivery.
+                </h2>
+                <p className="mt-4 text-slate-600">
+                  Enterprise-grade networks and secure coordination for
+                  government operations and emergency response.
+                </p>
               </div>
             </div>
-            <div className="relative h-full min-h-[420px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl"><Image src="/images/Government/Smart city.jfif" alt="Government operations" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover object-center" quality={100} priority /></div>
+            <div className="relative h-full min-h-[420px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
+              <Image
+                src="/images/Government/Smart city.jfif"
+                alt="Government operations"
+                fill
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                className="object-cover object-center"
+                quality={100}
+                priority
+              />
+            </div>
           </div>
         </section>
 
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
-            <Image src="/images/Government/Smart government.jfif" alt="" fill sizes="100vw" className="object-cover object-center" quality={100} />
-            
+            <Image
+              src="/images/Government/Smart government.jfif"
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover object-center"
+              quality={100}
+            />
           </div>
           <div className="relative mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-stretch">
             <div className="rounded-[2rem] border border-white/10 bg-transparent p-10 text-white shadow-2xl flex flex-col gap-6">
@@ -126,11 +166,18 @@ export default function GovernmentPage() {
                 description="Government agencies operate under pressure to deliver services and protect critical infrastructure simultaneously."
               />
               <p className="mt-2 text-white font-semibold">
-                Our solutions ensure secure connections between agencies, field teams, and citizens while maintaining availability for essential services.
+                Our solutions ensure secure connections between agencies, field
+                teams, and citizens while maintaining availability for essential
+                services.
               </p>
               <div className="w-full max-w-xs rounded-lg bg-white/5 p-4">
-                <p className="text-sm uppercase tracking-[0.3em] text-[#5CE3D0]">Public-sector focus</p>
-                <p className="mt-3 text-slate-200 text-sm">Modernize infrastructure, secure operations, and improve coordination for trusted civic delivery.</p>
+                <p className="text-sm uppercase tracking-[0.3em] text-[#00A651]">
+                  Public-sector focus
+                </p>
+                <p className="mt-3 text-slate-200 text-sm">
+                  Modernize infrastructure, secure operations, and improve
+                  coordination for trusted civic delivery.
+                </p>
               </div>
             </div>
             <div className="rounded-[2rem] border border-white/10 bg-transparent p-8 text-white shadow-xl flex h-full items-center">
@@ -142,11 +189,15 @@ export default function GovernmentPage() {
                   </div>
                   <div>
                     <p className="text-2xl font-bold">24/7</p>
-                    <p className="text-sm text-slate-200">Monitoring & support</p>
+                    <p className="text-sm text-slate-200">
+                      Monitoring & support
+                    </p>
                   </div>
                   <div>
                     <p className="text-2xl font-bold">Multi-site</p>
-                    <p className="text-sm text-slate-200">Distributed resilience</p>
+                    <p className="text-sm text-slate-200">
+                      Distributed resilience
+                    </p>
                   </div>
                 </div>
               </div>
@@ -154,7 +205,7 @@ export default function GovernmentPage() {
           </div>
         </section>
 
-        <section className="bg-[#F8FBFC] px-6 py-24 sm:px-8 lg:px-12">
+        <section className="bg-[#F5F6F8] px-6 py-24 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-7xl grid gap-8 lg:grid-cols-[0.95fr_1.05fr] items-center">
             <div>
               <SectionHeading
@@ -163,22 +214,39 @@ export default function GovernmentPage() {
                 description="The right infrastructure must address operations, readiness, and compliance simultaneously."
               />
               <div className="mt-12 grid gap-6 md:grid-cols-2">
-                {challenges.slice(0,4).map((challenge) => (
-                  <div key={challenge} className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+                {challenges.slice(0, 4).map((challenge) => (
+                  <div
+                    key={challenge}
+                    className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm"
+                  >
                     <p className="text-slate-700">{challenge}</p>
                   </div>
                 ))}
               </div>
             </div>
             <div className="relative min-h-[480px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
-              <Image src="/images/Government/Public safety.jfif" alt="Government challenges visual" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover object-center" quality={100} />
+              <Image
+                src="/images/Government/Public safety.jfif"
+                alt="Government challenges visual"
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover object-center"
+                quality={100}
+              />
             </div>
           </div>
         </section>
 
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
-            <Image src="/images/Government/Emergency operations center.jfif" alt="" fill sizes="100vw" className="object-cover object-center" quality={100} />
+            <Image
+              src="/images/Government/Emergency operations center.jfif"
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover object-center"
+              quality={100}
+            />
             <div className="absolute inset-0 bg-slate-950/30" />
           </div>
           <div className="relative mx-auto max-w-7xl text-white">
@@ -189,7 +257,10 @@ export default function GovernmentPage() {
             />
             <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {trends.map((trend) => (
-                <div key={trend} className="rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 text-white shadow-sm">
+                <div
+                  key={trend}
+                  className="rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 text-white shadow-sm"
+                >
                   <p className="font-bold text-white">{trend}</p>
                 </div>
               ))}
@@ -207,19 +278,29 @@ export default function GovernmentPage() {
               />
               <div className="mt-10 space-y-4 text-slate-600">
                 {supportAreas.map((item) => (
-                  <div key={item} className="rounded-[2rem] border border-slate-200 bg-[#F8FBFC] p-6 shadow-sm">
+                  <div
+                    key={item}
+                    className="rounded-[2rem] border border-slate-200 bg-[#F5F6F8] p-6 shadow-sm"
+                  >
                     {item}
                   </div>
                 ))}
               </div>
             </div>
             <div className="relative h-full min-h-[420px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
-              <Image src="/images/Government/Digital government.jfif" alt="Government key features visual" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover object-center" quality={100} />
+              <Image
+                src="/images/Government/Digital government.jfif"
+                alt="Government key features visual"
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover object-center"
+                quality={100}
+              />
             </div>
           </div>
         </section>
 
-        <section className="bg-[#071A2F] px-6 py-24 text-white sm:px-8 lg:px-12">
+        <section className="bg-[#0B1F3A] px-6 py-24 text-white sm:px-8 lg:px-12">
           <div className="mx-auto max-w-7xl grid gap-8 lg:grid-cols-[1.05fr_0.95fr] items-center">
             <div>
               <div className="space-y-6">
@@ -229,22 +310,34 @@ export default function GovernmentPage() {
                   description="Improved coordination, safer services, and stronger citizen trust are the outcomes we build toward."
                 />
                 <p className="max-w-2xl text-slate-300">
-                  Secure infrastructure and communications support reliable service delivery and faster incident response across government operations.
+                  Secure infrastructure and communications support reliable
+                  service delivery and faster incident response across
+                  government operations.
                 </p>
               </div>
-                <div className="mt-8">
-                  <div className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(220px,1fr))]">
-                    {benefits.map((item) => (
-                      <div key={item.label} className="min-w-0 rounded-[2rem] bg-white/10 p-6 text-slate-100 shadow-sm">
-                        <p className="text-2xl font-semibold">{item.value}</p>
-                        <p className="mt-2 text-slate-300 text-sm break-words">{item.label}</p>
-                      </div>
-                    ))}
-                  </div>
+              <div className="mt-8">
+                <div className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(220px,1fr))]">
+                  {benefits.map((item) => (
+                    <div
+                      key={item.label}
+                      className="min-w-0 rounded-[2rem] bg-white/10 p-6 text-slate-100 shadow-sm"
+                    >
+                      <p className="text-2xl font-semibold">{item.value}</p>
+                      <p className="mt-2 text-slate-300 text-sm break-words">
+                        {item.label}
+                      </p>
+                    </div>
+                  ))}
                 </div>
+              </div>
             </div>
             <div className="relative h-full min-h-[420px] overflow-hidden rounded-[2rem] border border-white/10 shadow-xl">
-              <Image src="/images/deployment-photo.png" alt="Public sector benefits visual" fill className="object-cover object-center" />
+              <Image
+                src="/images/deployment-photo.png"
+                alt="Public sector benefits visual"
+                fill
+                className="object-cover object-center"
+              />
             </div>
           </div>
         </section>
@@ -261,59 +354,98 @@ export default function GovernmentPage() {
                 {workflow.map((step) => {
                   const Icon = step.icon;
                   return (
-                    <div key={step.label} className="rounded-[2rem] border border-slate-200 bg-white p-4 text-center shadow-sm min-w-0">
-                      <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-3xl bg-[#E8FFF9] text-[#00C4B3]">
+                    <div
+                      key={step.label}
+                      className="rounded-[2rem] border border-slate-200 bg-white p-4 text-center shadow-sm min-w-0"
+                    >
+                      <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-3xl bg-[#F5F6F8] text-[#00A651]">
                         <Icon className="h-5 w-5" />
                       </div>
-                      <p className="mt-4 text-sm font-semibold text-[#071A2F] break-words">{step.label}</p>
+                      <p className="mt-4 text-sm font-semibold text-[#0B1F3A] break-words">
+                        {step.label}
+                      </p>
                     </div>
                   );
                 })}
               </div>
             </div>
-            <div className="rounded-[2rem] border border-slate-200 bg-[#F8FBFC] p-10 shadow-sm h-full min-h-[420px]">
-              <Image src="/images/Government/Smart city.jfif" alt="Government technology" width={640} height={520} className="rounded-[1.75rem] object-cover" priority />
+            <div className="rounded-[2rem] border border-slate-200 bg-[#F5F6F8] p-10 shadow-sm h-full min-h-[420px]">
+              <Image
+                src="/images/Government/Smart city.jfif"
+                alt="Government technology"
+                width={640}
+                height={520}
+                className="rounded-[1.75rem] object-cover"
+                priority
+              />
             </div>
           </div>
         </section>
 
         <section className="bg-white px-6 py-24 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
-            <div className="rounded-[2rem] border border-slate-200 bg-[#071A2F] p-10 text-white shadow-xl">
-              <p className="text-sm uppercase tracking-[0.3em] text-[#5DE6D6]">Featured success story</p>
-              <h2 className="mt-5 text-3xl font-semibold">Secure coordination for an emergency response agency.</h2>
+            <div className="rounded-[2rem] border border-slate-200 bg-[#0B1F3A] p-10 text-white shadow-xl">
+              <p className="text-sm uppercase tracking-[0.3em] text-[#00A651]">
+                Featured success story
+              </p>
+              <h2 className="mt-5 text-3xl font-semibold">
+                Secure coordination for an emergency response agency.
+              </h2>
               <div className="mt-8 space-y-6 text-slate-300">
                 <div>
                   <p className="font-semibold text-white">Challenge</p>
-                  <p className="mt-3">The agency needed dependable voice and data coordination across multiple teams during incidents.</p>
+                  <p className="mt-3">
+                    The agency needed dependable voice and data coordination
+                    across multiple teams during incidents.
+                  </p>
                 </div>
                 <div>
                   <p className="font-semibold text-white">Solution</p>
-                  <p className="mt-3">We implemented redundant communications and centralized monitoring to help teams stay connected.</p>
+                  <p className="mt-3">
+                    We implemented redundant communications and centralized
+                    monitoring to help teams stay connected.
+                  </p>
                 </div>
                 <div>
                   <p className="font-semibold text-white">Results</p>
-                  <p className="mt-3">Response times improved and cross-agency handoffs became more reliable.</p>
+                  <p className="mt-3">
+                    Response times improved and cross-agency handoffs became
+                    more reliable.
+                  </p>
                 </div>
               </div>
             </div>
             <div className="rounded-[2rem] border border-slate-200 bg-white p-10 shadow-sm">
-              <Image src="/images/deployment-photo.png" alt="Public sector deployment" width={640} height={520} className="rounded-[1.75rem] object-cover" priority />
+              <Image
+                src="/images/deployment-photo.png"
+                alt="Public sector deployment"
+                width={640}
+                height={520}
+                className="rounded-[1.75rem] object-cover"
+                priority
+              />
             </div>
           </div>
         </section>
 
-        <section className="relative isolate overflow-hidden bg-[#F8FBFC] px-6 py-24 sm:px-8 lg:px-12">
+        <section className="relative isolate overflow-hidden bg-[#F5F6F8] px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
-            <Image src="/images/Government/Smart government.jfif" alt="" fill sizes="100vw" className="object-cover object-center" quality={100} />
+            <Image
+              src="/images/Government/Smart government.jfif"
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover object-center"
+              quality={100}
+            />
           </div>
           <div className="relative mx-auto max-w-7xl">
             <SectionHeading
               eyebrow="Our Implementation Approach"
               title="A phased rollout for secure public-sector modernization."
               description="We move from assessment to deployment to long-term support with minimal disruption."
-              titleClassName="text-[#071A2F] font-bold"
-              descriptionClassName="text-[#071A2F] font-semibold"
+              titleClassName="text-[#0B1F3A] font-bold"
+              descriptionClassName="text-[#0B1F3A] font-semibold"
             />
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
               {[
@@ -323,8 +455,11 @@ export default function GovernmentPage() {
                 "Training",
                 "Support",
               ].map((step) => (
-                <div key={step} className="rounded-[2rem] border border-white/10 bg-slate-900/70 p-6 text-center text-white shadow-sm">
-                  <p className="text-[#00C4B3] font-bold text-lg">{step}</p>
+                <div
+                  key={step}
+                  className="rounded-[2rem] border border-white/10 bg-slate-900/70 p-6 text-center text-white shadow-sm"
+                >
+                  <p className="text-[#00A651] font-bold text-lg">{step}</p>
                 </div>
               ))}
             </div>
@@ -340,14 +475,19 @@ export default function GovernmentPage() {
             />
             <div className="mt-12 space-y-4">
               {faqItems.map((faq, index) => (
-                <div key={faq.question} className="overflow-hidden rounded-[2rem] border border-slate-200 bg-[#F8FBFC] shadow-sm">
+                <div
+                  key={faq.question}
+                  className="overflow-hidden rounded-[2rem] border border-slate-200 bg-[#F5F6F8] shadow-sm"
+                >
                   <button
                     type="button"
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                    className="flex w-full items-center justify-between gap-4 px-6 py-6 text-left text-lg font-semibold text-[#071A2F]"
+                    className="flex w-full items-center justify-between gap-4 px-6 py-6 text-left text-lg font-semibold text-[#0B1F3A]"
                   >
                     <span>{faq.question}</span>
-                    <span className="text-slate-500">{openFaq === index ? "−" : "+"}</span>
+                    <span className="text-slate-500">
+                      {openFaq === index ? "−" : "+"}
+                    </span>
                   </button>
                   {openFaq === index ? (
                     <div className="border-t border-slate-200 bg-white px-6 py-6 text-slate-600">
@@ -362,7 +502,14 @@ export default function GovernmentPage() {
 
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
-            <Image src="/images/Government/Public safety.jfif" alt="" fill sizes="100vw" className="object-cover object-center" quality={100} />
+            <Image
+              src="/images/Government/Public safety.jfif"
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover object-center"
+              quality={100}
+            />
             <div className="absolute inset-0 bg-slate-950/40" />
           </div>
           <div className="relative mx-auto max-w-7xl">
@@ -376,26 +523,37 @@ export default function GovernmentPage() {
                 <Link
                   key={industry.title}
                   href={industry.href}
-                  className="rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 text-white shadow-sm transition hover:border-[#00C4B3] hover:bg-slate-900/90"
+                  className="rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 text-white shadow-sm transition hover:border-[#00A651] hover:bg-slate-900/90"
                 >
-                  <p className="font-bold text-white text-lg transition-colors hover:text-[#00C4B3]">{industry.title}</p>
-                  <p className="mt-4 text-slate-200 font-medium">Explore how Tidal supports related operational environments.</p>
+                  <p className="font-bold text-white text-lg transition-colors hover:text-[#00A651]">
+                    {industry.title}
+                  </p>
+                  <p className="mt-4 text-slate-200 font-medium">
+                    Explore how Tidal supports related operational environments.
+                  </p>
                 </Link>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="bg-[#071A2F] px-6 py-24 text-white sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[#102A45] p-14 text-center shadow-[0_30px_80px_rgba(7,26,47,0.22)]">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#5DE6D6]">Ready to modernize</p>
-            <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">Modernize public infrastructure with confidence.</h2>
+        <section className="bg-[#0B1F3A] px-6 py-24 text-white sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[#6E1E2D] p-14 text-center shadow-[0_30px_80px_rgba(7,26,47,0.22)]">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#00A651]">
+              Ready to modernize
+            </p>
+            <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+              Modernize public infrastructure with confidence.
+            </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-              Discover how Tidal can help your agency build resilient services and secure critical operations.
+              Discover how Tidal can help your agency build resilient services
+              and secure critical operations.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button href="/contact">Modernize Public Infrastructure</Button>
-              <Button href="/industries" variant="secondary">Back to industries</Button>
+              <Button href="/industries" variant="secondary">
+                Back to industries
+              </Button>
             </div>
           </div>
         </section>

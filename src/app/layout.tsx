@@ -20,9 +20,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: "/Tidal Favicon.jpg",
+    shortcut: "/Tidal Favicon.jpg",
+    apple: "/Tidal Favicon.jpg",
+  },
   openGraph: {
     title: "Tidal IoT Solutions",
-    description: "Enterprise-grade intelligent infrastructure for secure, scalable growth.",
+    description:
+      "Enterprise-grade intelligent infrastructure for secure, scalable growth.",
     url: "https://tidal-iot.com",
     type: "website",
     locale: "en_US",
@@ -30,7 +36,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Tidal IoT Solutions",
-    description: "Enterprise-grade intelligent infrastructure for secure, scalable growth.",
+    description:
+      "Enterprise-grade intelligent infrastructure for secure, scalable growth.",
   },
 };
 
@@ -40,8 +47,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <body className="min-h-full bg-[#F8FBFC] text-slate-700">{children}</body>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full bg-[#F5F6F8] text-slate-700">{children}</body>
     </html>
   );
 }

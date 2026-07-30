@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 
 export default function InsightsBlogPage() {
   return (
-    <div className="min-h-screen bg-[#F8FBFC] text-slate-700">
+    <div className="min-h-screen bg-[#F5F6F8] text-slate-700">
       <Navbar />
       <main>
         <section className="bg-white px-6 py-24 sm:px-8 lg:px-12">
@@ -20,10 +20,10 @@ export default function InsightsBlogPage() {
               <p className="max-w-2xl text-slate-600">
                 Read the latest thinking on how modern organizations can turn connected systems into dependable outcomes.
               </p>
-              <div className="space-y-6 rounded-[2rem] border border-slate-200 bg-[#F8FBFC] p-8">
+              <div className="space-y-6 rounded-[2rem] border border-slate-200 bg-[#F5F6F8] p-8">
                 <article className="space-y-4">
-                  <p className="text-sm uppercase tracking-[0.3em] text-[#00C4B3]">Blog</p>
-                  <h2 className="text-2xl font-semibold text-[#071A2F]">The shift from connectivity to operational intelligence</h2>
+                  <p className="text-sm uppercase tracking-[0.3em] text-[#00A651]">Blog</p>
+                  <h2 className="text-2xl font-semibold text-[#0B1F3A]">The shift from connectivity to operational intelligence</h2>
                   <p className="text-slate-600">How teams are turning telemetry and analytics into dependable business outcomes.</p>
                   <Button href="/contact">Discuss this topic</Button>
                 </article>
@@ -32,7 +32,7 @@ export default function InsightsBlogPage() {
             <div className="space-y-4">
               <div className="relative min-h-[280px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[340px]"><Image src="/images/technology-article.jfif" alt="Technology article" fill className="object-cover" priority /></div>
               <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
-                <h2 className="text-3xl font-semibold text-[#071A2F]">Insights built for infrastructure leaders.</h2>
+                <h2 className="text-3xl font-semibold text-[#0B1F3A]">Insights built for infrastructure leaders.</h2>
                 <p className="mt-4 text-slate-600">Thoughtful, actionable articles that help you make smarter decisions.</p>
               </div>
             </div>

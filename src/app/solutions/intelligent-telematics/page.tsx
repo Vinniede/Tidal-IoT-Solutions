@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -74,29 +74,35 @@ const processSteps = [
 const faqs = [
   {
     question: "Can this platform support mixed vehicle fleets?",
-    answer: "Yes. Our telematics solution connects cars, trucks, vans, and specialty assets through a single unified dashboard.",
+    answer:
+      "Yes. Our telematics solution connects cars, trucks, vans, and specialty assets through a single unified dashboard.",
   },
   {
     question: "How quickly can we start monitoring assets?",
-    answer: "Most deployments begin generating location and health data within hours of installation and platform onboarding.",
+    answer:
+      "Most deployments begin generating location and health data within hours of installation and platform onboarding.",
   },
   {
     question: "Does this integrate with existing reporting systems?",
-    answer: "We can connect telematics data to your operations tools, ERP systems, and reporting workflows for better decision support.",
+    answer:
+      "We can connect telematics data to your operations tools, ERP systems, and reporting workflows for better decision support.",
   },
 ];
 
 const relatedSolutions = [
   { title: "Secure Communications", href: "/solutions/secure-communications" },
   { title: "Resilient Networks", href: "/solutions/resilient-networks" },
-  { title: "Integrated Cybersecurity", href: "/solutions/integrated-cybersecurity" },
+  {
+    title: "Integrated Cybersecurity",
+    href: "/solutions/integrated-cybersecurity",
+  },
 ];
 
 export default function IntelligentTelematicsPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   return (
-    <div className="min-h-screen bg-[#F8FBFC] text-slate-700">
+    <div className="min-h-screen bg-[#F5F6F8] text-slate-700">
       <Navbar />
       <main>
         <section className="bg-white px-6 py-24 sm:px-8 lg:px-12">
@@ -108,7 +114,9 @@ export default function IntelligentTelematicsPage() {
                 description="Turn vehicle data into operational visibility, safer driver behaviour, and predictable delivery outcomes across distributed operations."
               />
               <p className="max-w-2xl text-slate-600">
-                Our telematics platform connects vehicles, assets, and control centers so your teams can monitor movement, reduce waste, and make faster decisions with confidence.
+                Our telematics platform connects vehicles, assets, and control
+                centers so your teams can monitor movement, reduce waste, and
+                make faster decisions with confidence.
               </p>
               <div className="grid gap-4 sm:grid-cols-2">
                 {[
@@ -117,16 +125,24 @@ export default function IntelligentTelematicsPage() {
                   "Driver safety alerts",
                   "Route and maintenance automation",
                 ].map((point) => (
-                  <div key={point} className="rounded-[1.75rem] border border-slate-200 bg-[#F8FBFC] p-5">
-                    <p className="font-semibold text-[#071A2F]">{point}</p>
+                  <div
+                    key={point}
+                    className="rounded-[1.75rem] border border-slate-200 bg-[#F5F6F8] p-5"
+                  >
+                    <p className="font-semibold text-[#0B1F3A]">{point}</p>
                   </div>
                 ))}
               </div>
               <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm mt-8">
-                <p className="text-sm uppercase tracking-[0.3em] text-[#00a999]">Fleet visibility</p>
-                <h2 className="mt-5 text-3xl font-semibold text-[#071A2F]">Live tracking, route insight, and control center clarity.</h2>
+                <p className="text-sm uppercase tracking-[0.3em] text-[#00A651]">
+                  Fleet visibility
+                </p>
+                <h2 className="mt-5 text-3xl font-semibold text-[#0B1F3A]">
+                  Live tracking, route insight, and control center clarity.
+                </h2>
                 <p className="mt-4 text-slate-600">
-                  A modern telematics dashboard that brings maps, vehicles, alerts, and analytics into one operational workspace.
+                  A modern telematics dashboard that brings maps, vehicles,
+                  alerts, and analytics into one operational workspace.
                 </p>
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">
                   {[
@@ -135,7 +151,10 @@ export default function IntelligentTelematicsPage() {
                     "Route analytics",
                     "Real-time alerts",
                   ].map((tile) => (
-                    <div key={tile} className="rounded-[1.75rem] bg-[#F8FBFC] p-4 text-sm text-slate-700">
+                    <div
+                      key={tile}
+                      className="rounded-[1.75rem] bg-[#F5F6F8] p-4 text-sm text-slate-700"
+                    >
                       {tile}
                     </div>
                   ))}
@@ -143,19 +162,35 @@ export default function IntelligentTelematicsPage() {
               </div>
               <div className="flex flex-wrap gap-4">
                 <Button href="/contact">Request Fleet Consultation</Button>
-                <Button href="/solutions" variant="secondary">Back to solutions</Button>
+                <Button href="/solutions" variant="secondary">
+                  Back to solutions
+                </Button>
               </div>
             </div>
 
             <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] border border-slate-200 bg-slate-50 shadow-xl h-full sm:min-h-[640px]">
-              <Image src="/images/solution-telematics-illustration.png" alt="Fleet telematics dashboard" fill sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover object-center" priority />
+              <Image
+                src="/images/solution-telematics-illustration.png"
+                alt="Fleet telematics dashboard"
+                fill
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                className="object-cover object-center"
+                priority
+              />
             </div>
           </div>
         </section>
 
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
-            <Image src="/images/Intelligent Telematics/Fleet monitoring illustration.jfif" alt="" fill sizes="100vw" className="object-cover object-center" quality={100} />
+            <Image
+              src="/images/Intelligent Telematics/Fleet monitoring illustration.jfif"
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover object-center"
+              quality={100}
+            />
             <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-900/55 to-slate-950/80" />
           </div>
           <div className="relative mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-stretch">
@@ -166,25 +201,35 @@ export default function IntelligentTelematicsPage() {
                 description="We help businesses move from disconnected asset data to a single source of truth that improves uptime, safety, and customer performance."
               />
               <p className="mt-6 max-w-2xl text-slate-200 font-semibold">
-                Intelligent Telematics is built for fleets and field operations that need secure tracking, automated alerts, and analytics that support faster execution across every route.
+                Intelligent Telematics is built for fleets and field operations
+                that need secure tracking, automated alerts, and analytics that
+                support faster execution across every route.
               </p>
             </div>
             <div className="rounded-[2rem] border border-white/15 bg-slate-950/80 p-10 text-white shadow-2xl shadow-slate-950/25 backdrop-blur-sm">
-              <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#5CE3D0]">
-                <span className="h-2.5 w-2.5 rounded-full bg-[#5CE3D0]" />
+              <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#00A651]">
+                <span className="h-2.5 w-2.5 rounded-full bg-[#00A651]" />
                 Solution overview
               </div>
               <p className="mt-6 text-slate-300">
-                We combine vehicle telemetry, geofencing, driver monitoring, and intelligent routing in a secure platform that helps operators reduce risk and improve efficiency.
+                We combine vehicle telemetry, geofencing, driver monitoring, and
+                intelligent routing in a secure platform that helps operators
+                reduce risk and improve efficiency.
               </p>
               <div className="mt-8 overflow-hidden rounded-[1.75rem] border border-white/15">
-                <Image src="/images/Intelligent Telematics/Vehicle telematics.jfif" alt="Fleet monitoring overview" width={640} height={420} className="h-56 w-full object-cover" />
+                <Image
+                  src="/images/Intelligent Telematics/Vehicle telematics.jfif"
+                  alt="Fleet monitoring overview"
+                  width={640}
+                  height={420}
+                  className="h-56 w-full object-cover"
+                />
               </div>
             </div>
           </div>
         </section>
 
-        <section className="bg-[#F8FBFC] px-6 py-24 sm:px-8 lg:px-12">
+        <section className="bg-[#F5F6F8] px-6 py-24 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-7xl grid gap-8 lg:grid-cols-[0.95fr_1.05fr] items-center">
             <div>
               <SectionHeading
@@ -194,14 +239,23 @@ export default function IntelligentTelematicsPage() {
               />
               <div className="mt-12 grid gap-6 md:grid-cols-2">
                 {challenges.map((challenge) => (
-                  <div key={challenge} className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
+                  <div
+                    key={challenge}
+                    className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm"
+                  >
                     <p className="text-slate-700">{challenge}</p>
                   </div>
                 ))}
               </div>
             </div>
             <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl h-full sm:min-h-[620px]">
-              <Image src="/images/Intelligent Telematics/GPS fleet tracking.jfif" alt="Fleet management visual" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
+              <Image
+                src="/images/Intelligent Telematics/GPS fleet tracking.jfif"
+                alt="Fleet management visual"
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/25 via-transparent to-transparent" />
             </div>
           </div>
@@ -209,7 +263,14 @@ export default function IntelligentTelematicsPage() {
 
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
-            <Image src="/images/Intelligent Telematics/Connected logistics.jfif" alt="" fill sizes="100vw" className="object-cover object-center" quality={100} />
+            <Image
+              src="/images/Intelligent Telematics/Connected logistics.jfif"
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover object-center"
+              quality={100}
+            />
           </div>
           <div className="relative mx-auto max-w-7xl text-white">
             <SectionHeading
@@ -222,11 +283,16 @@ export default function IntelligentTelematicsPage() {
               {workflow.map((step) => {
                 const Icon = step.icon;
                 return (
-                  <div key={step.label} className="rounded-[2rem] border border-slate-200 bg-white p-8 text-center shadow-sm">
-                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-3xl bg-[#E8FFF9] text-[#00C4B3]">
+                  <div
+                    key={step.label}
+                    className="rounded-[2rem] border border-slate-200 bg-white p-8 text-center shadow-sm"
+                  >
+                    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-3xl bg-[#F5F6F8] text-[#00A651]">
                       <Icon className="h-6 w-6" />
                     </div>
-                    <p className="mt-6 font-semibold text-[#071A2F]">{step.label}</p>
+                    <p className="mt-6 font-semibold text-[#0B1F3A]">
+                      {step.label}
+                    </p>
                   </div>
                 );
               })}
@@ -244,19 +310,28 @@ export default function IntelligentTelematicsPage() {
               />
               <div className="mt-12 grid gap-6 md:grid-cols-2">
                 {features.map((feature) => (
-                  <div key={feature} className="rounded-[2rem] border border-slate-200 bg-[#F8FBFC] p-8 shadow-sm">
-                    <p className="font-semibold text-[#071A2F]">{feature}</p>
+                  <div
+                    key={feature}
+                    className="rounded-[2rem] border border-slate-200 bg-[#F5F6F8] p-8 shadow-sm"
+                  >
+                    <p className="font-semibold text-[#0B1F3A]">{feature}</p>
                   </div>
                 ))}
               </div>
             </div>
             <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl h-full sm:min-h-[620px]">
-              <Image src="/images/Intelligent Telematics/Fleet management dashboard.jfif" alt="Fleet dashboard visual" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
+              <Image
+                src="/images/Intelligent Telematics/Fleet management dashboard.jfif"
+                alt="Fleet dashboard visual"
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover"
+              />
             </div>
           </div>
         </section>
 
-        <section className="bg-[#071A2F] px-6 py-24 text-white sm:px-8 lg:px-12">
+        <section className="bg-[#0B1F3A] px-6 py-24 text-white sm:px-8 lg:px-12">
           <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
             <div className="space-y-6">
               <SectionHeading
@@ -266,12 +341,17 @@ export default function IntelligentTelematicsPage() {
                 align="left"
               />
               <p className="max-w-2xl text-slate-300">
-                Our customers see faster decision cycles, better cost control, and clearer accountability across every vehicle and asset in their operations.
+                Our customers see faster decision cycles, better cost control,
+                and clearer accountability across every vehicle and asset in
+                their operations.
               </p>
             </div>
-          <div className="mx-auto max-w-7xl grid gap-4 sm:grid-cols-2 h-full items-stretch">
+            <div className="mx-auto max-w-7xl grid gap-4 sm:grid-cols-2 h-full items-stretch">
               {benefits.map((item) => (
-                <div key={item.label} className="rounded-[2rem] bg-white/10 p-8 text-slate-100 shadow-sm h-full">
+                <div
+                  key={item.label}
+                  className="rounded-[2rem] bg-white/10 p-8 text-slate-100 shadow-sm h-full"
+                >
                   <p className="text-3xl font-semibold">{item.value}</p>
                   <p className="mt-3 text-slate-300">{item.label}</p>
                 </div>
@@ -282,14 +362,17 @@ export default function IntelligentTelematicsPage() {
 
         <section className="px-6 py-24 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[0.95fr_1.05fr] items-center">
-            <div className="rounded-[2rem] border border-slate-200 bg-[#F8FBFC] p-10 shadow-sm">
-              <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#00C4B3]">
-                <span className="h-2.5 w-2.5 rounded-full bg-[#00C4B3]" />
+            <div className="rounded-[2rem] border border-slate-200 bg-[#F5F6F8] p-10 shadow-sm">
+              <div className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#00A651]">
+                <span className="h-2.5 w-2.5 rounded-full bg-[#00A651]" />
                 Technology ecosystem
               </div>
-              <h3 className="mt-6 text-3xl font-semibold text-[#071A2F]">A connected flow from vehicles to business insight.</h3>
+              <h3 className="mt-6 text-3xl font-semibold text-[#0B1F3A]">
+                A connected flow from vehicles to business insight.
+              </h3>
               <p className="mt-4 text-slate-600">
-                Sensors and GPS devices feed secure cloud services that deliver analytics, dashboards, and alerts to operators and managers.
+                Sensors and GPS devices feed secure cloud services that deliver
+                analytics, dashboards, and alerts to operators and managers.
               </p>
               <ul className="mt-8 space-y-4 text-slate-600">
                 {[
@@ -299,21 +382,35 @@ export default function IntelligentTelematicsPage() {
                   "Reporting and alerts for operational teams",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#00C4B3]" />
+                    <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#00A651]" />
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
             <div className="rounded-[2rem] border border-slate-200 bg-white p-10 shadow-sm">
-              <Image src="/images/solution-telematics-illustration.png" alt="Telematics ecosystem" width={640} height={520} className="rounded-[1.75rem] object-cover" priority />
+              <Image
+                src="/images/solution-telematics-illustration.png"
+                alt="Telematics ecosystem"
+                width={640}
+                height={520}
+                className="rounded-[1.75rem] object-cover"
+                priority
+              />
             </div>
           </div>
         </section>
 
-        <section className="relative isolate overflow-hidden bg-[#F8FBFC] px-6 py-24 sm:px-8 lg:px-12">
+        <section className="relative isolate overflow-hidden bg-[#F5F6F8] px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
-            <Image src="/images/Intelligent Telematics/Vehicle telematics.jfif" alt="" fill sizes="100vw" className="object-cover object-center" quality={100} />
+            <Image
+              src="/images/Intelligent Telematics/Vehicle telematics.jfif"
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover object-center"
+              quality={100}
+            />
           </div>
           <div className="relative mx-auto max-w-7xl text-white">
             <SectionHeading
@@ -327,11 +424,16 @@ export default function IntelligentTelematicsPage() {
               {industriesServed.map((industry) => {
                 const Icon = industry.icon;
                 return (
-                  <div key={industry.title} className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-[#E8FFF9] text-[#00C4B3]">
+                  <div
+                    key={industry.title}
+                    className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm"
+                  >
+                    <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-[#F5F6F8] text-[#00A651]">
                       <Icon className="h-6 w-6" />
                     </div>
-                    <h3 className="mt-6 text-xl font-semibold text-[#071A2F]">{industry.title}</h3>
+                    <h3 className="mt-6 text-xl font-semibold text-[#0B1F3A]">
+                      {industry.title}
+                    </h3>
                   </div>
                 );
               })}
@@ -348,27 +450,43 @@ export default function IntelligentTelematicsPage() {
                 description="We combine secure deployment, active monitoring, and practical service design to make telematics reliable."
               />
               <div className="mt-12 grid gap-6 md:grid-cols-2">
-              {[
-                "Security-first deployment",
-                "Operational onboarding and support",
-                "Scalable rollout planning",
-                "Data-driven insights for fleet managers",
-              ].map((item) => (
-                <div key={item} className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm">
-                  <p className="font-semibold text-[#071A2F]">{item}</p>
-                </div>
-              ))}
-            </div>
+                {[
+                  "Security-first deployment",
+                  "Operational onboarding and support",
+                  "Scalable rollout planning",
+                  "Data-driven insights for fleet managers",
+                ].map((item) => (
+                  <div
+                    key={item}
+                    className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm"
+                  >
+                    <p className="font-semibold text-[#0B1F3A]">{item}</p>
+                  </div>
+                ))}
+              </div>
             </div>
             <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
-              <Image src="/images/Intelligent Telematics/Fleet monitoring illustration.jfif" alt="Why choose Tidal visual" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
+              <Image
+                src="/images/Intelligent Telematics/Fleet monitoring illustration.jfif"
+                alt="Why choose Tidal visual"
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover"
+              />
             </div>
           </div>
         </section>
 
         <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
-            <Image src="/images/Intelligent Telematics/GPS fleet tracking.jfif" alt="" fill sizes="100vw" className="object-cover object-center" quality={100} />
+            <Image
+              src="/images/Intelligent Telematics/GPS fleet tracking.jfif"
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover object-center"
+              quality={100}
+            />
             <div className="absolute inset-0 bg-slate-950/70" />
           </div>
           <div className="relative mx-auto max-w-7xl text-white">
@@ -381,8 +499,11 @@ export default function IntelligentTelematicsPage() {
             />
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
               {processSteps.map((step) => (
-                <div key={step} className="rounded-[2rem] border border-slate-200 bg-[#F8FBFC] p-8 text-center shadow-sm">
-                  <p className="text-lg font-semibold text-[#071A2F]">{step}</p>
+                <div
+                  key={step}
+                  className="rounded-[2rem] border border-slate-200 bg-[#F5F6F8] p-8 text-center shadow-sm"
+                >
+                  <p className="text-lg font-semibold text-[#0B1F3A]">{step}</p>
                 </div>
               ))}
             </div>
@@ -391,26 +512,47 @@ export default function IntelligentTelematicsPage() {
 
         <section className="px-6 py-24 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-7xl grid gap-10 lg:grid-cols-[0.95fr_1.05fr] items-center">
-            <div className="rounded-[2rem] border border-slate-200 bg-[#071A2F] p-10 text-white shadow-xl">
-              <p className="text-sm uppercase tracking-[0.3em] text-[#5DE6D6]">Featured case study</p>
-              <h2 className="mt-5 text-3xl font-semibold">Regional distributor gains real-time fleet control.</h2>
+            <div className="rounded-[2rem] border border-slate-200 bg-[#0B1F3A] p-10 text-white shadow-xl">
+              <p className="text-sm uppercase tracking-[0.3em] text-[#00A651]">
+                Featured case study
+              </p>
+              <h2 className="mt-5 text-3xl font-semibold">
+                Regional distributor gains real-time fleet control.
+              </h2>
               <div className="mt-8 space-y-6 text-slate-300">
                 <div>
                   <p className="font-semibold text-white">Challenge</p>
-                  <p className="mt-3">A multi-branch logistics operator struggled with delayed delivery visibility and high fuel waste.</p>
+                  <p className="mt-3">
+                    A multi-branch logistics operator struggled with delayed
+                    delivery visibility and high fuel waste.
+                  </p>
                 </div>
                 <div>
                   <p className="font-semibold text-white">Solution</p>
-                  <p className="mt-3">We deployed telematics devices across 120 vehicles, implemented route alerts, and built a central operations dashboard.</p>
+                  <p className="mt-3">
+                    We deployed telematics devices across 120 vehicles,
+                    implemented route alerts, and built a central operations
+                    dashboard.
+                  </p>
                 </div>
                 <div>
                   <p className="font-semibold text-white">Results</p>
-                  <p className="mt-3">They reduced fuel spend by 18%, improved route adherence, and achieved faster customer updates.</p>
+                  <p className="mt-3">
+                    They reduced fuel spend by 18%, improved route adherence,
+                    and achieved faster customer updates.
+                  </p>
                 </div>
               </div>
             </div>
             <div className="rounded-[2rem] border border-slate-200 bg-white p-10 shadow-sm">
-              <Image src="/images/deployment-photo.png" alt="Telematics field deployment" width={640} height={520} className="rounded-[1.75rem] object-cover" priority />
+              <Image
+                src="/images/deployment-photo.png"
+                alt="Telematics field deployment"
+                width={640}
+                height={520}
+                className="rounded-[1.75rem] object-cover"
+                priority
+              />
             </div>
           </div>
         </section>
@@ -426,14 +568,19 @@ export default function IntelligentTelematicsPage() {
             />
             <div className="mt-12 space-y-4">
               {faqs.map((faq, index) => (
-                <div key={faq.question} className="overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-950 shadow-[0_20px_60px_rgba(15,23,42,0.35)]">
+                <div
+                  key={faq.question}
+                  className="overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-950 shadow-[0_20px_60px_rgba(15,23,42,0.35)]"
+                >
                   <button
                     type="button"
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
                     className="flex w-full items-center justify-between gap-4 px-6 py-6 text-left text-lg font-semibold text-white"
                   >
                     <span>{faq.question}</span>
-                    <span className="text-cyan-300">{openFaq === index ? "−" : "+"}</span>
+                    <span className="text-cyan-300">
+                      {openFaq === index ? "−" : "+"}
+                    </span>
                   </button>
                   {openFaq === index ? (
                     <div className="border-t border-slate-800 bg-slate-900 px-6 py-6 text-slate-300">
@@ -462,8 +609,13 @@ export default function IntelligentTelematicsPage() {
                   href={solution.href}
                   className="rounded-[2rem] bg-gradient-to-br from-white via-slate-50 to-slate-100 p-8 shadow-[0_25px_50px_rgba(15,23,42,0.12)] transition-transform hover:-translate-y-1 hover:shadow-[0_35px_80px_rgba(15,23,42,0.18)]"
                 >
-                  <p className="font-semibold text-slate-950">{solution.title}</p>
-                  <p className="mt-4 text-slate-600">Explore the capabilities that reinforce fleet performance and operational continuity.</p>
+                  <p className="font-semibold text-slate-950">
+                    {solution.title}
+                  </p>
+                  <p className="mt-4 text-slate-600">
+                    Explore the capabilities that reinforce fleet performance
+                    and operational continuity.
+                  </p>
                   <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan-700">
                     View solution
                     <ArrowRight className="h-4 w-4" />
@@ -474,16 +626,23 @@ export default function IntelligentTelematicsPage() {
           </div>
         </section>
 
-        <section className="bg-[#071A2F] px-6 py-24 text-white sm:px-8 lg:px-12">
-          <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[#102A45] p-14 text-center shadow-[0_30px_80px_rgba(7,26,47,0.22)]">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#5DE6D6]">Ready to modernize</p>
-            <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">Request fleet consultation and improve visibility today.</h2>
+        <section className="bg-[#0B1F3A] px-6 py-24 text-white sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[#6E1E2D] p-14 text-center shadow-[0_30px_80px_rgba(7,26,47,0.22)]">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#00A651]">
+              Ready to modernize
+            </p>
+            <h2 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
+              Request fleet consultation and improve visibility today.
+            </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-              Our team helps you design a telematics deployment that drives efficiency, safety, and confidence across every route.
+              Our team helps you design a telematics deployment that drives
+              efficiency, safety, and confidence across every route.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button href="/contact">Request Fleet Consultation</Button>
-              <Button href="/solutions" variant="secondary">Explore other solutions</Button>
+              <Button href="/solutions" variant="secondary">
+                Explore other solutions
+              </Button>
             </div>
           </div>
         </section>
