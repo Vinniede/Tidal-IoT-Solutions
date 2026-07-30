@@ -21,9 +21,12 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: "/Tidal Favicon.jpg",
-    shortcut: "/Tidal Favicon.jpg",
-    apple: "/Tidal Favicon.jpg",
+    icon: [
+      { url: "/Tidal Favicon.svg", type: "image/svg+xml" },
+      { url: "/Tidal Favicon.ico", type: "image/x-icon" },
+    ],
+    shortcut: "/Tidal Favicon.svg",
+    apple: "/Tidal Favicon.ico",
   },
   openGraph: {
     title: "Tidal IoT Solutions",
