@@ -240,7 +240,7 @@ export function Navbar() {
               </div>
             ))}
             <Link href="/contact" className="mobile-cta" onClick={() => setMenuOpen(false)}>
-              Contact us
+              Request consultation
             </Link>
           </div>
         </div>

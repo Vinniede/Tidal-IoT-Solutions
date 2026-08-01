@@ -15,10 +15,46 @@ import {
   industries,
   insights,
   metrics,
+  partnerNames,
   processSteps,
   solutions,
   technologies,
 } from "@/constants/site";
+
+const partnerLogos: Record<string, string> = {
+  Teltonika: "/images/Our%20Partners/Teltonika.jfif",
+  MettaX: "/images/Our%20Partners/MettaX.jfif",
+  JimiioT: "/images/Our%20Partners/JimiioT.jfif",
+  Tramigo: "/images/Our%20Partners/Tramigo.png",
+  Inrico: "/images/Our%20Partners/Inrico.png",
+  Belfone: "/images/Our%20Partners/Belfone.jfif",
+  Concox: "/images/Our%20Partners/Concox.png",
+  Hytera: "/images/Our%20Partners/Hytera.jfif",
+  Streamax: "/images/Our%20Partners/Streamax.jfif",
+  Kenwood: "/images/Our%20Partners/Kenwood.png",
+  Dahua: "/images/Our%20Partners/Dahua.png",
+  Huawei: "/images/Our%20Partners/Huawei.jfif",
+  HIkvision: "/images/Our%20Partners/HIkvision.png",
+  ZkTeco: "/images/Our%20Partners/ZkTeco.png",
+  Hisense: "/images/Our%20Partners/Hisense.jfif",
+  Ploywall: "/images/Our%20Partners/Ploywall.png",
+  Escort: "/images/Our%20Partners/Escort.png",
+  Baofeng: "/images/Our%20Partners/Baofeng.jfif",
+  Wialon: "/images/Our%20Partners/Wialon.jfif",
+  "Pilot Telematics": "/images/Our%20Partners/Pilot.png",
+  LookCam: "/images/Our%20Partners/LookCam.png",
+  Protrack: "/images/Our%20Partners/Protrack.png",
+  Iridium: "/images/Our%20Partners/Iridium.png",
+  Thuraya: "/images/Our%20Partners/Thuraya.png",
+  Garmin: "/images/Our%20Partners/Garmin.png",
+  Orbcomm: "/images/Our%20Partners/Orbcomm.png",
+  Xerafy: "/images/Our%20Partners/Xerafy.png",
+  SEEWORLD: "/images/Our%20Partners/SEEWORLD.png",
+  BSJ: "/images/Our%20Partners/BSJ.png",
+  Ruptela: "/images/Our%20Partners/Ruptela.png",
+  Quectel: "/images/Our%20Partners/Quectel.png",
+  Matrix: "/images/Our%20Partners/Matrix.png",
+};
 
 export default function Home() {
   return (
@@ -387,6 +423,36 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 py-16 sm:px-8 sm:py-20 lg:px-12">
+          <div className="mx-auto max-w-7xl rounded-[2rem] border border-slate-200 bg-[#0B1F3A] p-8 shadow-xl sm:p-10 lg:p-12">
+            <SectionHeading
+              eyebrow="Technology partners"
+              title="Trusted partners that strengthen every deployment."
+              description="We collaborate with established technology providers to deliver dependable systems that fit real operating environments."
+              titleClassName="!text-white"
+              descriptionClassName="!text-slate-300"
+            />
+            <div className="mt-10 overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/5 p-4">
+              <div className="marquee-track flex w-max items-center gap-4">
+                {[...partnerNames, ...partnerNames].map((partner, index) => (
+                  <div
+                    key={`${partner}-${index}`}
+                    className="flex h-[110px] min-w-[220px] items-center justify-center rounded-[1.5rem] border border-white/10 bg-white/95 p-6 shadow-sm backdrop-blur"
+                  >
+                    <Image
+                      src={partnerLogos[partner]}
+                      alt={partner}
+                      width={180}
+                      height={44}
+                      className="max-h-10 w-auto object-contain"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>

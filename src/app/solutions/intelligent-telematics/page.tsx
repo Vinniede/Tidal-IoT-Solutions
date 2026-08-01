@@ -26,11 +26,13 @@ const challenges = [
   "Driver safety and compliance gaps",
   "Delayed delivery visibility for customers",
   "Manual reporting and disconnected systems",
+  "Insufficient event evidence for incidents and driver disputes",
 ];
 
 const workflow = [
   { label: "Vehicle", icon: CarFront },
   { label: "GPS Device", icon: Wifi },
+  { label: "AI Dash Cam", icon: ShieldCheck },
   { label: "Cloud Platform", icon: Globe2 },
   { label: "Analytics", icon: BarChart3 },
   { label: "Business Decisions", icon: CheckCircle2 },
@@ -40,11 +42,13 @@ const features = [
   "Real-time GPS tracking",
   "Fleet monitoring and health alerts",
   "Driver behaviour analytics",
+  "AI dash cams with live incident capture",
   "Fuel and efficiency monitoring",
   "Asset status and location tracking",
   "Geofencing and route alerts",
   "Route optimization guidance",
   "Maintenance scheduling notifications",
+  "Safety coaching based on driver event data",
 ];
 
 const benefits = [
@@ -329,6 +333,43 @@ export default function IntelligentTelematicsPage() {
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 className="object-cover"
               />
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#F5F6F8] px-6 py-24 sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-7xl">
+            <SectionHeading
+              eyebrow="AI Dash Cams"
+              title="Turn every trip into safer, more accountable fleet operations."
+              description="AI dash cams capture video intelligence that complements GPS and driver analytics, giving teams immediate clarity during incidents, coaching moments, and route deviations."
+            />
+            <div className="mt-12 grid gap-6 md:grid-cols-3">
+              {[
+                {
+                  title: "Event detection",
+                  text: "Automatic alerts for harsh braking, speeding, distraction, and route deviations.",
+                },
+                {
+                  title: "Incident evidence",
+                  text: "Review driver-facing footage to resolve disputes and support safer operational decisions.",
+                },
+                {
+                  title: "Coaching and compliance",
+                  text: "Use AI-driven insights to coach better behaviour and improve safety performance over time.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm"
+                >
+                  <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#D4AF37]/12 text-[#D4AF37]">
+                    <ShieldCheck className="h-6 w-6" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-[#0B1F3A]">{item.title}</h3>
+                  <p className="mt-3 text-slate-600">{item.text}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
