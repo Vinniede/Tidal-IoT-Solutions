@@ -411,7 +411,6 @@ h3 {
   position: absolute;
   left: 0;
   top: calc(100% + 1rem);
-  min-width: 720px;
   border: 1px solid rgba(15, 23, 42, 0.08);
   background: rgba(255, 255, 255, 0.96);
   border-radius: 1.5rem;
@@ -424,11 +423,49 @@ h3 {
   pointer-events: none;
 }
 
+.navbar-dropdown-compact {
+  min-width: 260px;
+}
+
+.navbar-dropdown-mega {
+  min-width: 720px;
+}
+
 .navbar-dropdown.visible {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
   pointer-events: auto;
+}
+
+.navbar-submenu {
+  display: grid;
+  gap: 0.55rem;
+  min-width: 240px;
+}
+
+.navbar-submenu-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(255, 255, 255, 0.92);
+  padding: 0.8rem 0.9rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #0b1f3a;
+  transition: all 220ms ease;
+  box-shadow: 0 6px 18px rgba(11, 31, 58, 0.03);
+  border-left: 3px solid transparent;
+}
+
+.navbar-submenu-item:hover {
+  color: #0b1f3a;
+  background: rgba(245, 246, 248, 0.92);
+  border-left-color: #6e1e2d;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(11, 31, 58, 0.06);
 }
 
 .navbar-mega-grid {

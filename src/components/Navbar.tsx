@@ -2,15 +2,18 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import {
   ArrowRight,
   BatteryCharging,
   Blocks,
+  BriefcaseBusiness,
   Building2,
   CarFront,
   ChevronDown,
+  FileText,
+  FolderOpen,
   Globe2,
   KeyRound,
   LockKeyhole,
@@ -96,17 +99,54 @@ const megaMenus = {
   ],
 } as const;
 
+const insightsMenu = [
+  {
+    title: "Blog",
+    description: "Insights, practical thinking, and infrastructure commentary.",
+    href: "/insights/blog",
+    icon: FileText,
+  },
+  {
+    title: "Case Studies",
+    description: "Real deployments demonstrating measurable operational outcomes.",
+    href: "/insights/case-studies",
+    icon: BriefcaseBusiness,
+  },
+  {
+    title: "Resources",
+    description: "Tools, guides, and strategic assets for smarter planning.",
+    href: "/insights/resources",
+    icon: FolderOpen,
+  },
+];
+
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [hoveredDropdown, setHoveredDropdown] = useState<string | null>(null);
   const pathname = usePathname();
+  const hideDropdownTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const clearDropdownTimer = () => {
+    if (hideDropdownTimeout.current) {
+      clearTimeout(hideDropdownTimeout.current);
+      hideDropdownTimeout.current = null;
+    }
+  };
+
+  const scheduleDropdownClose = () => {
+    clearDropdownTimer();
+    hideDropdownTimeout.current = setTimeout(() => setHoveredDropdown(null), 180);
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 24);
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearDropdownTimer();
+    };
   }, []);
 
   return (
@@ -144,15 +184,17 @@ export function Navbar() {
                 : pathname?.startsWith(item.href) ||
                   item.subItems?.some((subItem) => pathname?.startsWith(subItem.href));
 
-            const visibleMega = item.label === "Solutions" || item.label === "Industries";
-            const menuList = visibleMega ? megaMenus[item.label as keyof typeof megaMenus] : [];
+            const isMegaMenu = item.label === "Solutions" || item.label === "Industries";
+            const isInsightsDropdown = item.label === "Insights";
+            const megaMenuItems = isMegaMenu ? megaMenus[item.label as keyof typeof megaMenus] : [];
+            const insightsMenuItems = isInsightsDropdown ? insightsMenu : [];
 
             return (
               <div
                 key={item.href}
                 className="relative"
                 onMouseEnter={() => item.subItems && setHoveredDropdown(item.href)}
-                onMouseLeave={() => item.subItems && setHoveredDropdown(null)}
+                onMouseLeave={() => item.subItems && scheduleDropdownClose()}
               >
                 <Link
                   href={item.href}
@@ -166,28 +208,65 @@ export function Navbar() {
 
                 {item.subItems ? (
                   <div
-                    className={`navbar-dropdown ${hoveredDropdown === item.href ? "visible" : ""}`}
+                    className={`navbar-dropdown ${isMegaMenu || isInsightsDropdown ? "navbar-dropdown-mega" : "navbar-dropdown-compact"} ${hoveredDropdown === item.href ? "visible" : ""}`}
+                    onMouseEnter={clearDropdownTimer}
+                    onMouseLeave={scheduleDropdownClose}
                   >
-                    <div className="navbar-mega-grid">
-                      {menuList.map((entry) => {
-                        const Icon = entry.icon;
-                        return (
+                    {isMegaMenu ? (
+                      <div className="navbar-mega-grid">
+                        {megaMenuItems.map((entry) => {
+                          const Icon = entry.icon;
+                          return (
+                            <Link
+                              key={entry.href}
+                              href={entry.href}
+                              className="navbar-mega-item"
+                            >
+                              <span className="navbar-mega-icon">
+                                <Icon className="h-4 w-4" />
+                              </span>
+                              <span className="navbar-mega-content">
+                                <span className="navbar-mega-title">{entry.title}</span>
+                                <span className="navbar-mega-description">{entry.description}</span>
+                              </span>
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    ) : isInsightsDropdown ? (
+                      <div className="navbar-mega-grid insights-grid">
+                        {insightsMenuItems.map((entry) => {
+                          const Icon = entry.icon;
+                          return (
+                            <Link
+                              key={entry.href}
+                              href={entry.href}
+                              className="navbar-mega-item"
+                            >
+                              <span className="navbar-mega-icon">
+                                <Icon className="h-4 w-4" />
+                              </span>
+                              <span className="navbar-mega-content">
+                                <span className="navbar-mega-title">{entry.title}</span>
+                                <span className="navbar-mega-description">{entry.description}</span>
+                              </span>
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    ) : (
+                      <div className="navbar-submenu">
+                        {item.subItems.map((entry) => (
                           <Link
                             key={entry.href}
                             href={entry.href}
-                            className="navbar-mega-item"
+                            className="navbar-submenu-item"
                           >
-                            <span className="navbar-mega-icon">
-                              <Icon className="h-4 w-4" />
-                            </span>
-                            <span className="navbar-mega-content">
-                              <span className="navbar-mega-title">{entry.title}</span>
-                              <span className="navbar-mega-description">{entry.description}</span>
-                            </span>
+                            {entry.label}
                           </Link>
-                        );
-                      })}
-                    </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ) : null}
               </div>
