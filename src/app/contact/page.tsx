@@ -40,7 +40,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h2 className="text-lg font-semibold text-white">Email</h2>
-                      <p className="mt-1 text-slate-300">hello@tidal-iot.com</p>
+                      <p className="mt-1 text-slate-300">info@tidal-iot.com</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">

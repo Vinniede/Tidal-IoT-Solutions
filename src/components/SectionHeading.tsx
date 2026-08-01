@@ -19,16 +19,16 @@ export function SectionHeading({
 
   return (
     <div className={`max-w-2xl ${alignment}`}>
-      <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-[#00A651] sm:text-sm sm:tracking-[0.32em]">
+      <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-[var(--brand-success)] sm:text-sm sm:tracking-[0.32em]">
         {eyebrow}
       </p>
       <h2
-        className={`text-2xl font-semibold tracking-tight text-inherit sm:text-3xl lg:text-4xl ${titleClassName}`}
+        className={`text-2xl font-semibold tracking-tight text-[var(--text-primary)] sm:text-3xl lg:text-4xl ${titleClassName}`}
       >
         {title}
       </h2>
       <p
-        className={`mt-4 text-base leading-7 text-inherit opacity-90 sm:text-lg sm:leading-8 ${descriptionClassName}`}
+        className={`mt-4 text-base leading-7 text-[var(--text-secondary)] opacity-90 sm:text-lg sm:leading-8 ${descriptionClassName}`}
       >
         {description}
       </p>

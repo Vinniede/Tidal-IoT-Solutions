@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
+  BatteryCharging,
   Blocks,
   Globe2,
   RadioTower,
@@ -15,7 +16,7 @@ import { Button } from "@/components/Button";
 const solutions = [
   {
     slug: "intelligent-telematics",
-    title: "Fleet visibility",
+    title: "Fleet Management",
     description: "Live tracking, route insight, and control center clarity.",
     icon: Blocks,
     points: [
@@ -37,6 +38,18 @@ const solutions = [
       "Low-latency communications",
     ],
     image: "/images/solution-secure-communications-illustration.jpg",
+  },
+  {
+    slug: "e-mobility",
+    title: "E-Mobility Solutions",
+    description: "Connected charging, fleet electrification, and smarter mobility operations.",
+    icon: BatteryCharging,
+    points: [
+      "Smart charging visibility",
+      "Fleet electrification support",
+      "Operational control",
+    ],
+    image: "/images/E-Mobility/emobility-background.jpg",
   },
   {
     slug: "resilient-networks",
@@ -85,8 +98,10 @@ export default function SolutionsPage() {
                   eyebrow="Solutions"
                   title="Purpose-built infrastructure for intelligent operations."
                   description="Every solution is designed to combine secure performance, measurable business value, and long-term scalability."
+                  titleClassName="!text-[#0B1F3A] !font-bold"
+                  descriptionClassName="!text-[#0B1F3A] !font-semibold"
                 />
-                <p className="mt-5 max-w-2xl text-slate-600">
+                <p className="mt-5 max-w-2xl text-[#0B1F3A] font-semibold">
                   From fleet telemetry to secure communications, our solutions
                   create operational clarity and resilience for demanding
                   enterprise environments.

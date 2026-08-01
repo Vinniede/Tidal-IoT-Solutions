@@ -208,7 +208,7 @@ const faqs = [
   {
     question: "How can we request a consultation?",
     answer:
-      "Use the contact form, email hello@tidal-iot.com, or schedule a call through our contact page.",
+      "Use the contact form, email info@tidal-iot.com, or schedule a call through our contact page.",
   },
 ];
 
@@ -222,12 +222,38 @@ const industrySlug = (title: string) =>
 export default function AboutPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const partnerLogos: Record<string, string> = {
-    Safaricom: "/images/Safaricom.jfif",
-    "Kenya Power": "/images/Kenya%20Power.jfif",
-    Airtel: "/images/Airtel.png",
-    "Nairobi Metro": "/images/Nairobi%20Metro.jfif",
-    "M-PESA": "/images/M-PESA.png",
-    Sokowatch: "/images/Sokowatch.jfif",
+    Teltonika: "/images/Our Partners/Teltonika.jfif",
+    MettaX: "/images/Our Partners/MettaX.jfif",
+    JimiioT: "/images/Our Partners/JimiioT.jfif",
+    Tramigo: "/images/Our Partners/Tramigo.png",
+    Inrico: "/images/Our Partners/Inrico.png",
+    Belfone: "/images/Our Partners/Belfone.jfif",
+    Concox: "/images/Our Partners/Concox.png",
+    Hytera: "/images/Our Partners/Hytera.jfif",
+    Streamax: "/images/Our Partners/Streamax.jfif",
+    Kenwood: "/images/Our Partners/Kenwood.png",
+    Dahua: "/images/Our Partners/Dahua.png",
+    Huawei: "/images/Our Partners/Huawei.jfif",
+    HIkvision: "/images/Our Partners/HIkvision.png",
+    ZkTeco: "/images/Our Partners/ZkTeco.png",
+    Hisense: "/images/Our Partners/Hisense.jfif",
+    Ploywall: "/images/Our Partners/Ploywall.png",
+    Escort: "/images/Our Partners/Escort.png",
+    Baofeng: "/images/Our Partners/Baofeng.jfif",
+    Wialon: "/images/Our Partners/Wialon.jfif",
+    "Pilot Telematics": "/images/Our Partners/Pilot.png",
+    LookCam: "/images/Our Partners/LookCam.png",
+    Protrack: "/images/Our Partners/Protrack.png",
+    Iridium: "/images/Our Partners/Iridium.png",
+    Thuraya: "/images/Our Partners/Thuraya.png",
+    Garmin: "/images/Our Partners/Garmin.png",
+    Orbcomm: "/images/Our Partners/Orbcomm.png",
+    Xerafy: "/images/Our Partners/Xerafy.png",
+    SEEWORLD: "/images/Our Partners/SEEWORLD.png",
+    BSJ: "/images/Our Partners/BSJ.png",
+    Ruptela: "/images/Our Partners/Ruptela.png",
+    Quectel: "/images/Our Partners/Quectel.png",
+    Matrix: "/images/Our Partners/Matrix.png",
   };
 
   return (
@@ -504,29 +530,32 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="bg-[#0B1F3A] px-6 py-16 text-white sm:px-8 sm:py-20 lg:px-12">
-          <div className="mx-auto max-w-7xl">
+        <section className="px-6 py-16 sm:px-8 sm:py-20 lg:px-12">
+          <div className="mx-auto max-w-7xl rounded-[2rem] border border-slate-200 bg-[#0B1F3A] p-8 shadow-xl sm:p-10 lg:p-12">
             <SectionHeading
-              eyebrow="Technology partnerships"
-              title="A broad ecosystem that strengthens our delivery."
-              description="We work with trusted partners to deliver better integration, resilience, and ongoing support."
-              align="center"
+              eyebrow="Technology partners"
+              title="Trusted partners that strengthen every deployment."
+              description="We collaborate with established technology providers to deliver dependable systems that fit real operating environments."
+              titleClassName="!text-white"
+              descriptionClassName="!text-slate-300"
             />
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-              {partnerNames.map((partner) => (
-                <div
-                  key={partner}
-                  className="rounded-[2rem] border border-white/10 bg-white/5 p-6 text-center text-lg font-semibold text-white shadow-sm"
-                >
-                  <Image
-                    src={partnerLogos[partner]}
-                    alt={partner}
-                    width={160}
-                    height={40}
-                    className="mx-auto object-contain"
-                  />
-                </div>
-              ))}
+            <div className="mt-10 overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/5 p-4">
+              <div className="marquee-track flex w-max items-center gap-4">
+                {[...partnerNames, ...partnerNames].map((partner, index) => (
+                  <div
+                    key={`${partner}-${index}`}
+                    className="flex h-[110px] min-w-[220px] items-center justify-center rounded-[1.5rem] border border-white/10 bg-white/95 p-6 shadow-sm backdrop-blur"
+                  >
+                    <Image
+                      src={partnerLogos[partner]}
+                      alt={partner}
+                      width={180}
+                      height={44}
+                      className="max-h-10 w-auto object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>

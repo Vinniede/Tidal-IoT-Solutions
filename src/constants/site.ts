@@ -2,6 +2,7 @@ import type { LucideIcon } from "lucide-react";
 import {
   ArrowRight,
   BarChart3,
+  BatteryCharging,
   Blocks,
   Building2,
   CarFront,
@@ -64,7 +65,8 @@ export const navItems: NavItem[] = [
     href: "/solutions",
     subItems: [
       { label: "Intelligent Telematics", href: "/solutions/intelligent-telematics" },
-      { label: "Secure Communications", href: "/solutions/secure-communications" },
+      { label: "Mission Critical Communication", href: "/solutions/secure-communications" },
+      { label: "E-Mobility Solutions", href: "/solutions/e-mobility" },
       { label: "Resilient Networks", href: "/solutions/resilient-networks" },
       { label: "Integrated Cybersecurity", href: "/solutions/integrated-cybersecurity" },
     ],
@@ -104,7 +106,7 @@ export const solutions: Solution[] = [
   {
     title: "Intelligent Telematics",
     description:
-      "Connected fleet visibility, predictive route intelligence, and resilient asset tracking across complex operations.",
+      "Connected Fleet Management, predictive route intelligence, and resilient asset tracking across complex operations.",
     icon: CarFront,
     points: ["Live vehicle telemetry", "Geofencing intelligence", "Operational analytics"],
   },
@@ -114,6 +116,13 @@ export const solutions: Solution[] = [
       "Private, encrypted channels for mission critical voice, data, and control traffic across distributed teams.",
     icon: RadioTower,
     points: ["Encrypted connectivity", "Field-ready mobility", "Low-latency communications"],
+  },
+  {
+    title: "E-Mobility Solutions",
+    description:
+      "Connected charging, electric fleet operations, and smarter management for modern mobility networks.",
+    icon: BatteryCharging,
+    points: ["Smart charging visibility", "Fleet electrification support", "Operational control"],
   },
   {
     title: "Resilient Networks",
@@ -202,7 +211,40 @@ export const insights: Insight[] = [
   },
 ];
 
-export const partnerNames = ["Safaricom", "Kenya Power", "Airtel", "Nairobi Metro", "M-PESA", "Sokowatch"];
+export const partnerNames = [
+  "Teltonika",
+  "MettaX",
+  "JimiioT",
+  "Tramigo",
+  "Inrico",
+  "Belfone",
+  "Concox",
+  "Hytera",
+  "Streamax",
+  "Kenwood",
+  "Dahua",
+  "Huawei",
+  "HIkvision",
+  "ZkTeco",
+  "Hisense",
+  "Ploywall",
+  "Escort",
+  "Baofeng",
+  "Wialon",
+  "Pilot Telematics",
+  "LookCam",
+  "Protrack",
+  "Iridium",
+  "Thuraya",
+  "Garmin",
+  "Orbcomm",
+  "Xerafy",
+  "SEEWORLD",
+  "BSJ",
+  "Ruptela",
+  "Quectel",
+  "Matrix",
+];
 export const featurePoints = [
   {
     title: "Enterprise-grade trust",

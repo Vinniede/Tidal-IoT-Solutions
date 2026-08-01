@@ -181,11 +181,13 @@ export default function SecurityCompaniesPage() {
             />
           </div>
           <div className="relative z-10 mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-stretch">
-            <div className="rounded-[2rem] border border-white/10 bg-transparent p-10 text-white shadow-2xl flex flex-col gap-6">
+            <div className="rounded-[2rem] border border-white/10 bg-[#0B1F3A]/90 p-10 text-white shadow-2xl flex flex-col gap-6">
               <SectionHeading
                 eyebrow="Industry Overview"
                 title="Security operations need visibility, coordination, and secure remote connectivity."
                 description="Teams must stay connected across sites, vehicles, and command centers so incidents resolve quickly."
+                titleClassName="!text-white !font-bold"
+                descriptionClassName="!text-white !font-semibold"
               />
               <p className="mt-2 text-white font-semibold">
                 Our solutions help security providers monitor remote locations,
@@ -200,7 +202,7 @@ export default function SecurityCompaniesPage() {
                 </p>
               </div>
             </div>
-            <div className="rounded-[2rem] border border-white/10 bg-transparent p-8 text-white shadow-xl flex h-full items-center">
+            <div className="rounded-[2rem] border border-white/10 bg-[#6E1E2D]/90 p-8 text-white shadow-xl flex h-full items-center">
               <div className="w-full">
                 <div className="flex flex-col justify-center h-full gap-6">
                   <div>
@@ -271,6 +273,8 @@ export default function SecurityCompaniesPage() {
               eyebrow="Industry Trends"
               title="Security operations are evolving toward connected command and field intelligence."
               description="Real-time visibility and encrypted mobile communications are becoming essential."
+              titleClassName="!text-[var(--brand-gold)] !font-bold"
+              descriptionClassName="!text-[var(--brand-gold)] !font-semibold"
             />
             <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {trends.map((trend) => (
@@ -325,6 +329,8 @@ export default function SecurityCompaniesPage() {
                   eyebrow="Benefits"
                   title="The security outcomes that matter most."
                   description="Faster response, safer teams, and stronger site assurance help companies stay ahead of threats."
+                  titleClassName="!text-white !font-bold"
+                  descriptionClassName="!text-white !font-semibold"
                 />
                 <p className="max-w-2xl text-slate-300">
                   Secure communications and operational visibility reduce risk,
@@ -451,13 +457,13 @@ export default function SecurityCompaniesPage() {
             quality={100}
           />
           <div className="absolute inset-0 bg-[#0B1F3A]/30" />
-          <div className="relative z-10 mx-auto max-w-7xl">
+          <div className="relative z-10 mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-slate-950/75 p-8 shadow-[0_30px_80px_rgba(7,26,47,0.22)] backdrop-blur-sm sm:p-10 lg:p-12">
             <SectionHeading
               eyebrow="Our Implementation Approach"
               title="A secure security deployment path built for field readiness."
               description="We deliver reliable infrastructure, training, and support for remote operations."
-              titleClassName="text-white font-bold"
-              descriptionClassName="text-white font-semibold"
+              titleClassName="!text-white !font-bold"
+              descriptionClassName="!text-white !font-semibold"
             />
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
               {[
@@ -528,6 +534,8 @@ export default function SecurityCompaniesPage() {
               eyebrow="Related Industries"
               title="Other sectors that rely on secure operations and visibility."
               description="These industries also benefit from connected teams, remote monitoring, and resilient infrastructure."
+              titleClassName="!text-white !font-bold"
+              descriptionClassName="!text-white !font-semibold"
             />
             <div className="mt-12 grid gap-6 md:grid-cols-3">
               {relatedIndustries.map((industry) => (
@@ -536,10 +544,10 @@ export default function SecurityCompaniesPage() {
                   href={industry.href}
                   className="rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 text-white shadow-sm transition hover:border-[#00A651] hover:bg-slate-900/90"
                 >
-                  <p className="font-bold text-white text-lg transition-colors hover:text-[#00A651]">
+                  <p className="text-lg font-semibold text-white transition-colors hover:text-[#00A651]">
                     {industry.title}
                   </p>
-                  <p className="mt-4 text-slate-200 font-medium">
+                  <p className="mt-4 text-white/90 font-medium">
                     Explore how Tidal supports related operational environments.
                   </p>
                 </Link>

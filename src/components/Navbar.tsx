@@ -36,10 +36,10 @@ export function Navbar() {
             />
           </div>
           <div>
-            <p className="brand-color-flow text-lg font-black tracking-tight min-[380px]:text-2xl sm:text-3xl">
+            <p className="brand-3d text-lg font-black tracking-tight min-[380px]:text-2xl sm:text-3xl">
               Tidal IoT Solutions
             </p>
-            <p className="hidden text-xs uppercase tracking-[0.3em] text-slate-500 min-[380px]:block">
+            <p className="hidden text-xs uppercase tracking-[0.3em] text-[var(--brand-secondary)]/80 min-[380px]:block">
               Intelligent infrastructure
             </p>
           </div>
@@ -69,14 +69,14 @@ export function Navbar() {
               >
                 <Link
                   href={item.href}
-                  className={`group relative inline-flex items-center gap-1 rounded-full px-2.5 py-1.5 text-sm font-medium transition duration-200 ${itemActive ? "text-[var(--primary-navy)]" : "text-slate-600 hover:text-[var(--primary-navy)]"} hover:bg-slate-100/80 hover:shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--iot-green-accent)]/50`}
+                  className={`group relative inline-flex items-center gap-1 rounded-full px-2.5 py-1.5 text-sm font-semibold transition duration-200 ${itemActive ? "text-[var(--brand-primary)]" : "text-[var(--text-secondary)] hover:text-[var(--brand-primary)]"} hover:bg-[var(--brand-primary)]/5 hover:shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-gold)]/50`}
                 >
                   {item.label}
                   {item.subItems ? (
                     <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:-rotate-180" />
                   ) : null}
                   <span
-                    className={`absolute left-0 bottom-0 h-[2px] rounded-full bg-[var(--iot-green-accent)] transition-all duration-200 ${itemActive ? "w-full" : "w-0 group-hover:w-full"}`}
+                    className={`absolute left-0 bottom-0 h-[2px] rounded-full bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] transition-all duration-200 ${itemActive ? "w-full" : "w-0 group-hover:w-full"}`}
                   />
                 </Link>
                 {item.subItems ? (
@@ -102,7 +102,7 @@ export function Navbar() {
         <div className="hidden items-center gap-4 lg:flex">
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#6E1E2D] to-[var(--primary-navy)] px-3 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--iot-green-accent)]/50"
+            className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[var(--brand-primary)] via-[var(--brand-secondary)] to-[var(--brand-gold)] px-3 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-gold)]/50"
           >
             Request consultation
             <ArrowRight className="ml-2 h-4 w-4" />
@@ -112,7 +112,7 @@ export function Navbar() {
         <button
           type="button"
           aria-label="Toggle menu"
-          className="ml-3 shrink-0 rounded-full border border-slate-200 p-2 text-slate-700 lg:hidden"
+          className="ml-3 shrink-0 rounded-full border border-[var(--brand-gold)]/30 bg-[var(--brand-primary)]/5 p-2 text-[var(--brand-primary)] lg:hidden"
           onClick={() => setMenuOpen((current) => !current)}
         >
           {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -149,7 +149,7 @@ export function Navbar() {
             ))}
             <Link
               href="/contact"
-              className="inline-flex w-full items-center justify-center rounded-full bg-[var(--primary-navy)] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#6E1E2D]"
+              className="inline-flex w-full items-center justify-center rounded-full bg-[var(--brand-primary)] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[var(--brand-secondary)]"
               onClick={() => setMenuOpen(false)}
             >
               Contact us

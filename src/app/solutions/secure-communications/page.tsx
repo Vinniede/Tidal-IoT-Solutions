@@ -37,6 +37,11 @@ const workflow = [
 ];
 
 const features = [
+  "PoC Push to Talk radios",
+  "VoIP",
+  "PABX",
+  "Satellite",
+  "Control Rooms",
   "Digital radio and push-to-talk",
   "Encrypted voice and data channels",
   "Group communications and dispatch control",
@@ -127,9 +132,9 @@ export default function SecureCommunicationsPage() {
               </p>
               <ul className="space-y-3 text-slate-700">
                 {[
-                  "Encrypted team communications for field and control rooms",
-                  "Group dispatch and emergency broadcast workflows",
-                  "Coverage optimization with redundant backhaul",
+                  "PoC Push to Talk radios for fast field coordination",
+                  "VoIP and PABX support for dispatch and office continuity",
+                  "Satellite connectivity and control room communications for remote operations",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#00A651]" />
@@ -142,18 +147,19 @@ export default function SecureCommunicationsPage() {
                   Secure communication
                 </p>
                 <h2 className="mt-5 text-3xl font-semibold text-[#0B1F3A]">
-                  Reliable connectivity for teams that must stay in contact.
+                  From field radios to voice platforms and control rooms.
                 </h2>
                 <p className="mt-4 text-slate-600">
                   Designed for mission-critical operations, our communications
-                  solution keeps field teams connected, informed, and secure.
+                  solution connects PoC radios, VoIP, PABX, satellite links,
+                  and control room workflows in one secure environment.
                 </p>
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">
                   {[
-                    "Dispatch visibility",
-                    "Encrypted channels",
-                    "Push-to-talk mobility",
-                    "Emergency alerts",
+                    "PoC PTT radios",
+                    "VoIP & PABX",
+                    "Satellite links",
+                    "Control room operations",
                   ].map((tile) => (
                     <div
                       key={tile}
@@ -192,11 +198,14 @@ export default function SecureCommunicationsPage() {
                 eyebrow="Overview"
                 title="A communications platform built for dependable operations."
                 description="Our secure communications combine radio, data, and mobile access so teams can collaborate across the most challenging conditions."
+                titleClassName="!text-white !font-bold"
+                descriptionClassName="!text-white !font-semibold"
               />
               <p className="mt-6 max-w-2xl text-slate-200 font-semibold">
                 The solution is designed to reduce dropped messages, ensure
                 encrypted traffic, and deliver consistent communications across
-                remote and urban deployments.
+                remote and urban deployments through PoC radios, VoIP, PABX,
+                satellite backhaul, and control room coordination.
               </p>
             </div>
             <div className="rounded-[2rem] border border-white/15 bg-slate-950/80 p-10 text-white shadow-2xl shadow-slate-950/25 backdrop-blur-sm">
@@ -270,8 +279,8 @@ export default function SecureCommunicationsPage() {
               title="A secure communication architecture that brings users, devices, and command together."
               description="Every stage supports the flow from individuals in the field to centralized operational control."
               align="left"
-              titleClassName="lg:text-5xl"
-              descriptionClassName="text-lg sm:text-xl"
+              titleClassName="!text-white !font-bold lg:text-5xl"
+              descriptionClassName="!text-white !font-semibold text-lg sm:text-xl"
             />
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
               {workflow.map((step) => {
@@ -299,8 +308,8 @@ export default function SecureCommunicationsPage() {
             <div>
               <SectionHeading
                 eyebrow="Key Features"
-                title="Core capabilities that make communications dependable and secure."
-                description="Features built for operations teams, dispatch centers, and security-conscious enterprises."
+                title="Core capabilities for PTT, voice, data, and control room communications."
+                description="Features built for operations teams, dispatch centers, control rooms, and security-conscious enterprises."
               />
               <div className="mt-12 grid gap-6 md:grid-cols-2">
                 {features.map((feature) => (
@@ -332,6 +341,8 @@ export default function SecureCommunicationsPage() {
                 eyebrow="Benefits"
                 title="Communications that improve coordination, response, and continuity."
                 description="These outcomes help teams move faster and reduce the risk of missed or unreliable messages."
+                titleClassName="!text-white !font-bold"
+                descriptionClassName="!text-white !font-semibold"
               />
               <p className="max-w-2xl text-slate-300">
                 Better communications reduce downtime, improve safety, and give
@@ -407,13 +418,15 @@ export default function SecureCommunicationsPage() {
             />
           </div>
           <div className="relative mx-auto max-w-7xl text-white">
-            <SectionHeading
-              eyebrow="Industries"
-              title="Secure communications for operations with high reliability requirements."
-              description="These sectors benefit from consistent coverage, group coordination, and emergency-ready channels."
-              titleClassName="text-white"
-              descriptionClassName="text-slate-200"
-            />
+            <div className="max-w-2xl rounded-[1.5rem] border border-white/15 bg-white/10 p-5 shadow-lg backdrop-blur-sm min-h-[140px]">
+              <SectionHeading
+                eyebrow="Industries"
+                title="Secure communications for operations with high reliability requirements."
+                description="These sectors benefit from consistent coverage, group coordination, and emergency-ready channels."
+                titleClassName="text-white"
+                descriptionClassName="text-slate-200"
+              />
+            </div>
             <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {industriesServed.map((industry) => {
                 const Icon = industry.icon;

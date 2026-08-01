@@ -183,11 +183,13 @@ export default function UtilitiesPage() {
             />
           </div>
           <div className="relative z-10 mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-stretch">
-            <div className="rounded-[2rem] border border-white/10 bg-transparent p-10 text-white shadow-2xl flex flex-col gap-6">
+            <div className="rounded-[2rem] border border-white/10 bg-[#0B1F3A]/90 p-10 text-white shadow-2xl flex flex-col gap-6">
               <SectionHeading
                 eyebrow="Industry Overview"
                 title="Utilities need visibility, safety, and reliability across distributed systems."
                 description="Field teams, control centers, and assets must stay connected through all conditions."
+                titleClassName="!text-white !font-bold"
+                descriptionClassName="!text-white !font-semibold"
               />
               <p className="mt-2 text-white font-semibold">
                 Our work helps utilities monitor remote assets, coordinate
@@ -203,7 +205,7 @@ export default function UtilitiesPage() {
                 </p>
               </div>
             </div>
-            <div className="rounded-[2rem] border border-white/10 bg-transparent p-8 text-white shadow-xl flex h-full items-center">
+            <div className="rounded-[2rem] border border-white/10 bg-[#6E1E2D]/90 p-8 text-white shadow-xl flex h-full items-center">
               <div className="w-full">
                 <div className="flex flex-col justify-center h-full gap-6">
                   <div>
@@ -273,6 +275,8 @@ export default function UtilitiesPage() {
               eyebrow="Industry Trends"
               title="Utilities are adopting smart telemetry, safer field operations, and resilient networking."
               description="These trends help providers manage assets, crews, and outages more effectively."
+              titleClassName="!text-[var(--brand-gold)] !font-bold"
+              descriptionClassName="!text-[var(--brand-gold)] !font-semibold"
             />
             <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {trends.map((trend) => (
@@ -327,6 +331,8 @@ export default function UtilitiesPage() {
                   eyebrow="Benefits"
                   title="Reliable utilities depend on secure, monitored networks."
                   description="When your systems are connected and resilient, service reliability improves across the board."
+                  titleClassName="!text-white !font-bold"
+                  descriptionClassName="!text-white !font-semibold"
                 />
                 <p className="max-w-2xl text-slate-300">
                   Better outage response, safer crews, and improved asset
@@ -462,8 +468,8 @@ export default function UtilitiesPage() {
               eyebrow="Our Implementation Approach"
               title="A utility deployment path built for reliability and safety."
               description="We deliver phased rollout, training, and support so your teams can operate with confidence."
-              titleClassName="text-[#0B1F3A] font-bold"
-              descriptionClassName="text-[#0B1F3A] font-semibold"
+              titleClassName="!text-white !font-bold"
+              descriptionClassName="!text-white !font-semibold"
             />
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
               {[
@@ -534,6 +540,8 @@ export default function UtilitiesPage() {
               eyebrow="Related Industries"
               title="Other sectors that value resilient networks and field communications."
               description="These industries also rely on secure operations and real-time monitoring."
+              titleClassName="!text-white !font-bold"
+              descriptionClassName="!text-white !font-semibold"
             />
             <div className="mt-12 grid gap-6 md:grid-cols-3">
               {relatedIndustries.map((industry) => (
@@ -542,10 +550,10 @@ export default function UtilitiesPage() {
                   href={industry.href}
                   className="rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 text-white shadow-sm transition hover:border-[#00A651] hover:bg-slate-900/90"
                 >
-                  <p className="font-bold text-white text-lg transition-colors hover:text-[#00A651]">
+                  <p className="text-lg font-semibold text-white transition-colors hover:text-[#00A651]">
                     {industry.title}
                   </p>
-                  <p className="mt-4 text-slate-200 font-medium">
+                  <p className="mt-4 text-white/90 font-medium">
                     Explore how Tidal supports related essential services.
                   </p>
                 </Link>

@@ -183,11 +183,13 @@ export default function BankingFinancialServicesPage() {
             />
           </div>
           <div className="relative mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-stretch">
-            <div className="rounded-[2rem] border border-white/10 bg-transparent p-10 text-white shadow-2xl flex flex-col gap-6">
+            <div className="rounded-[2rem] border border-white/10 bg-[#0B1F3A]/90 p-10 text-white shadow-2xl flex flex-col gap-6">
               <SectionHeading
                 eyebrow="Industry Overview"
                 title="Financial institutions need secure, reliable systems that can scale with customer demand."
                 description="Availability, privacy, and operational trust are essential for every banking network."
+                titleClassName="!text-white !font-bold"
+                descriptionClassName="!text-white !font-semibold"
               />
               <p className="mt-2 text-white font-semibold">
                 Tidal builds infrastructure that helps banks stay online,
@@ -204,7 +206,7 @@ export default function BankingFinancialServicesPage() {
                 </p>
               </div>
             </div>
-            <div className="rounded-[2rem] border border-white/10 bg-transparent p-8 text-white shadow-xl flex h-full items-center">
+            <div className="rounded-[2rem] border border-white/10 bg-[#6E1E2D]/90 p-8 text-white shadow-xl flex h-full items-center">
               <div className="w-full">
                 <div className="flex flex-col justify-center h-full gap-6">
                   <div>
@@ -278,6 +280,8 @@ export default function BankingFinancialServicesPage() {
               eyebrow="Industry Trends"
               title="Banking is balancing digital convenience with secure, resilient infrastructure."
               description="The next wave of financial services demands seamless security and operational visibility."
+              titleClassName="!text-[var(--brand-gold)] !font-bold"
+              descriptionClassName="!text-[var(--brand-gold)] !font-semibold"
             />
             <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {trends.map((trend) => (
@@ -332,6 +336,8 @@ export default function BankingFinancialServicesPage() {
                   eyebrow="Benefits"
                   title="The benefits of resilient financial infrastructure."
                   description="Stronger uptime, security, and compliance help institutions move forward with confidence."
+                  titleClassName="!text-white !font-bold"
+                  descriptionClassName="!text-white !font-semibold"
                 />
                 <p className="max-w-2xl text-slate-300">
                   Better availability and stronger protection mean fewer
@@ -462,13 +468,13 @@ export default function BankingFinancialServicesPage() {
               quality={100}
             />
           </div>
-          <div className="relative mx-auto max-w-7xl">
+          <div className="relative mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-slate-950/75 p-8 shadow-[0_30px_80px_rgba(7,26,47,0.22)] backdrop-blur-sm sm:p-10 lg:p-12">
             <SectionHeading
               eyebrow="Our Implementation Approach"
               title="A secure rollout for financial network modernization."
               description="We introduce resilience and compliance in phases that minimize disruption."
-              titleClassName="text-[#0B1F3A] font-bold"
-              descriptionClassName="text-[#0B1F3A] font-semibold"
+              titleClassName="!text-white !font-bold"
+              descriptionClassName="!text-white !font-semibold"
             />
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
               {[
@@ -540,6 +546,8 @@ export default function BankingFinancialServicesPage() {
               eyebrow="Related Industries"
               title="Other sectors with shared infrastructure needs."
               description="These industries also require secure operations, reliable communications, and strong service continuity."
+              titleClassName="!text-white !font-bold"
+              descriptionClassName="!text-white !font-semibold"
             />
             <div className="mt-12 grid gap-6 md:grid-cols-3">
               {relatedIndustries.map((industry) => (
@@ -548,10 +556,10 @@ export default function BankingFinancialServicesPage() {
                   href={industry.href}
                   className="rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 text-white shadow-sm transition hover:border-[#00A651] hover:bg-slate-900/90"
                 >
-                  <p className="font-bold text-white text-lg transition-colors hover:text-[#00A651]">
+                  <p className="text-lg font-semibold text-white transition-colors hover:text-[#00A651]">
                     {industry.title}
                   </p>
-                  <p className="mt-4 text-slate-200 font-medium">
+                  <p className="mt-4 text-white/90 font-medium">
                     Explore how Tidal supports related operational needs.
                   </p>
                 </Link>

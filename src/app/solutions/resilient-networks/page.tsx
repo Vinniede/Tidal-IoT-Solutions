@@ -187,6 +187,8 @@ export default function ResilientNetworksPage() {
                 eyebrow="Overview"
                 title="Networks that keep your operations moving without surprise outages."
                 description="We design and deploy resilient networking for the full stack from transport to access and monitoring."
+                titleClassName="!text-white !font-bold"
+                descriptionClassName="!text-white !font-semibold"
               />
               <p className="mt-6 max-w-2xl text-slate-200 font-semibold">
                 Our approach balances redundancy, performance, and security so
@@ -265,8 +267,8 @@ export default function ResilientNetworksPage() {
               title="A layered topology that supports uptime, security, and scale."
               description="From external transport to local access, every layer is designed for resilient operations."
               align="left"
-              titleClassName="lg:text-5xl"
-              descriptionClassName="text-lg sm:text-xl"
+              titleClassName="!text-white !font-bold lg:text-5xl"
+              descriptionClassName="!text-white !font-semibold text-lg sm:text-xl"
             />
             <div className="mt-12 grid gap-6 md:grid-cols-6">
               {workflow.map((step) => {
@@ -327,6 +329,8 @@ export default function ResilientNetworksPage() {
                 eyebrow="Benefits"
                 title="The outcomes your operations need from a resilient network."
                 description="We focus on availability, performance, and infrastructure that supports enterprise growth."
+                titleClassName="!text-white !font-bold"
+                descriptionClassName="!text-white !font-semibold"
               />
               <p className="max-w-2xl text-slate-300">
                 Teams gain confidence in their network, with fewer outages,
@@ -400,13 +404,15 @@ export default function ResilientNetworksPage() {
             />
           </div>
           <div className="relative mx-auto max-w-7xl text-white">
-            <SectionHeading
-              eyebrow="Industries"
-              title="Networks that support mission-critical teams and services."
-              description="These industries rely on high availability, security, and performance from their network infrastructure."
-              titleClassName="text-white"
-              descriptionClassName="text-slate-200"
-            />
+            <div className="max-w-3xl rounded-[1.5rem] border border-white/10 bg-slate-950/70 p-6 shadow-[0_20px_50px_rgba(7,26,47,0.2)] backdrop-blur-sm sm:p-8">
+              <SectionHeading
+                eyebrow="Industries"
+                title="Networks that support mission-critical teams and services."
+                description="These industries rely on high availability, security, and performance from their network infrastructure."
+                titleClassName="!text-white !font-bold"
+                descriptionClassName="!text-white !font-semibold"
+              />
+            </div>
             <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {industriesServed.map((industry) => {
                 const Icon = industry.icon;

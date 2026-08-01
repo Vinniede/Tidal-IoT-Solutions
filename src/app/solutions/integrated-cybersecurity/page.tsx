@@ -181,6 +181,8 @@ export default function IntegratedCybersecurityPage() {
                 eyebrow="Overview"
                 title="Security designed around people, systems, and risk."
                 description="We help enterprises move beyond point tools to a cohesive cybersecurity program that protects mission-critical operations."
+                titleClassName="!text-white !font-bold"
+                descriptionClassName="!text-white !font-semibold"
               />
               <p className="mt-6 max-w-2xl text-slate-200 font-semibold">
                 Our integrated approach brings together assessments, protection,
@@ -258,8 +260,8 @@ export default function IntegratedCybersecurityPage() {
               title="A practical progression from prevention to improvement."
               description="Our security lifecycle supports defense, detection, response, recovery, and continuous improvement."
               align="left"
-              titleClassName="lg:text-5xl"
-              descriptionClassName="text-lg sm:text-xl"
+              titleClassName="!text-white !font-bold lg:text-5xl"
+              descriptionClassName="!text-white !font-semibold text-lg sm:text-xl"
             />
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
               {workflow.map((step) => {
@@ -320,6 +322,8 @@ export default function IntegratedCybersecurityPage() {
                 eyebrow="Benefits"
                 title="Security outcomes that support continuity and trust."
                 description="Protecting your systems means less disruption, better compliance, and higher confidence for stakeholders."
+                titleClassName="!text-white !font-bold"
+                descriptionClassName="!text-white !font-semibold"
               />
               <p className="max-w-2xl text-slate-300">
                 Our customers strengthen resilience, reduce exposure, and make

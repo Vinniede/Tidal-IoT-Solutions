@@ -20,7 +20,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/Button";
 
 const challenges = [
-  "Limited fleet visibility across operations",
+  "Limited Fleet Management across operations",
   "Unpredictable fuel and maintenance costs",
   "Asset misuse and inefficient route planning",
   "Driver safety and compliance gaps",
@@ -135,7 +135,7 @@ export default function IntelligentTelematicsPage() {
               </div>
               <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm mt-8">
                 <p className="text-sm uppercase tracking-[0.3em] text-[#00A651]">
-                  Fleet visibility
+                  Fleet Management
                 </p>
                 <h2 className="mt-5 text-3xl font-semibold text-[#0B1F3A]">
                   Live tracking, route insight, and control center clarity.
@@ -199,8 +199,10 @@ export default function IntelligentTelematicsPage() {
                 eyebrow="Overview"
                 title="A telematics solution designed for operational teams, not just reporting."
                 description="We help businesses move from disconnected asset data to a single source of truth that improves uptime, safety, and customer performance."
+                titleClassName="!text-white !font-bold"
+                descriptionClassName="!text-white !font-semibold"
               />
-              <p className="mt-6 max-w-2xl text-slate-200 font-semibold">
+              <p className="mt-6 max-w-2xl text-white font-semibold">
                 Intelligent Telematics is built for fleets and field operations
                 that need secure tracking, automated alerts, and analytics that
                 support faster execution across every route.
@@ -339,6 +341,8 @@ export default function IntelligentTelematicsPage() {
                 title="Operational improvements that can change the way your fleet performs."
                 description="These outcomes reflect the real value teams gain from connected telematics and stronger route intelligence."
                 align="left"
+                titleClassName="!text-white !font-bold"
+                descriptionClassName="!text-white !font-semibold"
               />
               <p className="max-w-2xl text-slate-300">
                 Our customers see faster decision cycles, better cost control,

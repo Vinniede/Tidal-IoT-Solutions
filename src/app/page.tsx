@@ -15,21 +15,12 @@ import {
   industries,
   insights,
   metrics,
-  partnerNames,
   processSteps,
   solutions,
   technologies,
 } from "@/constants/site";
 
 export default function Home() {
-  const partnerLogos: Record<string, string> = {
-    Safaricom: "/images/Safaricom.jfif",
-    "Kenya Power": "/images/Kenya%20Power.jfif",
-    Airtel: "/images/Airtel.png",
-    "Nairobi Metro": "/images/Nairobi%20Metro.jfif",
-    "M-PESA": "/images/M-PESA.png",
-    Sokowatch: "/images/Sokowatch.jfif",
-  };
   return (
     <div className="min-h-screen bg-[#F5F6F8] text-slate-700">
       <Navbar />
@@ -58,45 +49,6 @@ export default function Home() {
           secondaryCta={{ label: "Request Consultation", href: "/contact" }}
           bgSrc="/images/home-hero-background.jpg"
         />
-
-        <section className="relative isolate overflow-hidden border-b border-slate-200 bg-white px-6 py-12 sm:px-8 lg:px-12">
-          <Image
-            src="/images/home-why-choose-panel-pattern.jfif"
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-white/10" />
-          <div className="relative mx-auto grid max-w-7xl gap-7 lg:grid-cols-[0.72fr_1.28fr] lg:items-center">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#00A651]">
-                Trusted by
-              </p>
-              <h2 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950 sm:text-3xl">
-                Ambitious operators across East Africa.
-              </h2>
-            </div>
-            <div className="relative overflow-hidden lg:justify-end">
-              <div className="marquee-track flex w-max items-center gap-3">
-                {[...partnerNames, ...partnerNames].map((name, index) => (
-                  <div
-                    key={`${name}-${index}`}
-                    className="flex h-14 min-w-[132px] items-center justify-center rounded-2xl border border-slate-200 bg-white/90 px-4 shadow-[0_12px_28px_rgba(37,99,235,0.08)] backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-[#D4AF37]/40 hover:shadow-[0_16px_32px_rgba(37,99,235,0.14)]"
-                  >
-                    <Image
-                      src={partnerLogos[name]}
-                      alt={name}
-                      width={110}
-                      height={30}
-                      className="h-auto max-h-8 w-auto object-contain"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
 
         <section
           id="overview"
@@ -152,11 +104,15 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-white/5" />
           <div className="relative mx-auto max-w-7xl">
-            <SectionHeading
-              eyebrow="Solutions"
-              title="Purpose-built systems for intelligent operations."
-              description="From connected assets to secure communications, our solutions are shaped around real-world operational needs."
-            />
+            <div className="inline-block max-w-3xl rounded-[1.25rem] border border-slate-200 bg-white/90 p-5 shadow-sm backdrop-blur-md sm:p-6">
+              <SectionHeading
+                eyebrow="Solutions"
+                title="Purpose-built systems for intelligent operations."
+                description="From connected assets to secure communications, our solutions are shaped around real-world operational needs."
+                titleClassName="!text-[#0B1F3A] !font-bold"
+                descriptionClassName="!text-[#4B5563] !font-medium"
+              />
+            </div>
             <div className="mt-12 grid gap-6 lg:grid-cols-2">
               {solutions.map((solution, index) => {
                 const Icon = solution.icon;
@@ -334,32 +290,32 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <div className="relative isolate min-h-[340px] overflow-hidden rounded-[2rem] bg-[#0B1F3A] p-3 shadow-[0_24px_60px_rgba(7,26,47,0.22)] sm:p-5">
-                <Image
-                  src="/images/home-process-graphic.jpg"
-                  alt="Tidal's delivery process from discovery through support"
-                  fill
-                  sizes="(min-width: 640px) 55vw, 100vw"
-                  className="hidden object-cover object-center sm:block"
-                />
-                <Image
-                  src="/images/home-process-graphic.jfif"
-                  alt="Tidal's delivery process stages"
-                  fill
-                  sizes="100vw"
-                  className="object-cover object-center sm:hidden"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F3A]/25 via-transparent to-transparent" />
-                <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4 text-white sm:bottom-7 sm:left-7 sm:right-7">
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#00A651]">
-                      One connected method
-                    </p>
-                    <p className="mt-2 text-lg font-semibold">
-                      Clear progress at every stage.
-                    </p>
-                  </div>
-                  <span className="hidden rounded-full border border-white/20 bg-white/10 px-3 py-2 text-xs font-semibold backdrop-blur sm:inline-block">
+              <div className="flex flex-col gap-4">
+                <div className="relative isolate min-h-[340px] overflow-hidden rounded-[2rem] bg-[#0B1F3A] p-3 shadow-[0_24px_60px_rgba(7,26,47,0.22)] sm:p-5">
+                  <Image
+                    src="/images/home-process-graphic.jpg"
+                    alt="Tidal's delivery process from discovery through support"
+                    fill
+                    sizes="(min-width: 640px) 55vw, 100vw"
+                    className="hidden object-cover object-center sm:block"
+                  />
+                  <Image
+                    src="/images/home-process-graphic.jfif"
+                    alt="Tidal's delivery process stages"
+                    fill
+                    sizes="100vw"
+                    className="object-cover object-center sm:hidden"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F3A]/25 via-transparent to-transparent" />
+                </div>
+                <div className="rounded-[1.5rem] border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#00A651]">
+                    One connected method
+                  </p>
+                  <p className="mt-2 text-lg font-semibold text-[#0B1F3A]">
+                    Clear progress at every stage.
+                  </p>
+                  <span className="mt-3 inline-flex rounded-full border border-slate-200 bg-[#F5F6F8] px-3 py-2 text-xs font-semibold text-[#4B5563]">
                     Discover → Support
                   </span>
                 </div>

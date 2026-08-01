@@ -159,11 +159,13 @@ export default function GovernmentPage() {
             />
           </div>
           <div className="relative mx-auto max-w-7xl grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-stretch">
-            <div className="rounded-[2rem] border border-white/10 bg-transparent p-10 text-white shadow-2xl flex flex-col gap-6">
+            <div className="rounded-[2rem] border border-white/10 bg-[#0B1F3A]/90 p-10 text-white shadow-2xl flex flex-col gap-6">
               <SectionHeading
                 eyebrow="Industry Overview"
                 title="Public systems need resilience, security, and service continuity."
                 description="Government agencies operate under pressure to deliver services and protect critical infrastructure simultaneously."
+                titleClassName="!text-white !font-bold"
+                descriptionClassName="!text-white !font-semibold"
               />
               <p className="mt-2 text-white font-semibold">
                 Our solutions ensure secure connections between agencies, field
@@ -180,7 +182,7 @@ export default function GovernmentPage() {
                 </p>
               </div>
             </div>
-            <div className="rounded-[2rem] border border-white/10 bg-transparent p-8 text-white shadow-xl flex h-full items-center">
+            <div className="rounded-[2rem] border border-white/10 bg-[#6E1E2D]/90 p-8 text-white shadow-xl flex h-full items-center">
               <div className="w-full">
                 <div className="flex flex-col justify-center h-full gap-6">
                   <div>
@@ -254,6 +256,8 @@ export default function GovernmentPage() {
               eyebrow="Industry Trends"
               title="Public-sector services are becoming more connected and resilient."
               description="Modern government depends on smart infrastructure, redundant communications, and service automation."
+              titleClassName="!text-[var(--brand-gold)] !font-bold"
+              descriptionClassName="!text-[var(--brand-gold)] !font-semibold"
             />
             <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {trends.map((trend) => (
@@ -308,6 +312,8 @@ export default function GovernmentPage() {
                   eyebrow="Benefits"
                   title="The public-sector benefits of secure resilience."
                   description="Improved coordination, safer services, and stronger citizen trust are the outcomes we build toward."
+                  titleClassName="!text-white !font-bold"
+                  descriptionClassName="!text-white !font-semibold"
                 />
                 <p className="max-w-2xl text-slate-300">
                   Secure infrastructure and communications support reliable
@@ -439,13 +445,13 @@ export default function GovernmentPage() {
               quality={100}
             />
           </div>
-          <div className="relative mx-auto max-w-7xl">
+          <div className="relative mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-slate-950/75 p-8 shadow-[0_30px_80px_rgba(7,26,47,0.22)] backdrop-blur-sm sm:p-10 lg:p-12">
             <SectionHeading
               eyebrow="Our Implementation Approach"
               title="A phased rollout for secure public-sector modernization."
               description="We move from assessment to deployment to long-term support with minimal disruption."
-              titleClassName="text-[#0B1F3A] font-bold"
-              descriptionClassName="text-[#0B1F3A] font-semibold"
+              titleClassName="!text-white !font-bold"
+              descriptionClassName="!text-white !font-semibold"
             />
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
               {[
@@ -517,6 +523,8 @@ export default function GovernmentPage() {
               eyebrow="Related Industries"
               title="Other sectors with similar resilience needs."
               description="These industries also require secure networks, reliable operations, and strong monitoring."
+              titleClassName="!text-white !font-bold"
+              descriptionClassName="!text-white !font-semibold"
             />
             <div className="mt-12 grid gap-6 md:grid-cols-3">
               {relatedIndustries.map((industry) => (
@@ -525,10 +533,10 @@ export default function GovernmentPage() {
                   href={industry.href}
                   className="rounded-[2rem] border border-white/10 bg-slate-950/80 p-8 text-white shadow-sm transition hover:border-[#00A651] hover:bg-slate-900/90"
                 >
-                  <p className="font-bold text-white text-lg transition-colors hover:text-[#00A651]">
+                  <p className="text-lg font-semibold text-white transition-colors hover:text-[#00A651]">
                     {industry.title}
                   </p>
-                  <p className="mt-4 text-slate-200 font-medium">
+                  <p className="mt-4 text-white/90 font-medium">
                     Explore how Tidal supports related operational environments.
                   </p>
                 </Link>

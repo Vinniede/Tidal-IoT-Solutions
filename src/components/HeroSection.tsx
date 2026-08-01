@@ -32,7 +32,7 @@ export function HeroSection({
   return (
     <section
       id="home"
-      className="relative isolate overflow-hidden bg-[linear-gradient(135deg,#0B1F3A_0%,#D4AF37_45%,#D4AF37_100%)] px-4 py-0 sm:px-8 lg:px-12"
+      className="relative isolate overflow-hidden bg-[linear-gradient(135deg,var(--brand-primary)_0%,_#1A2F52_45%,_var(--brand-secondary)_100%)] px-4 py-0 sm:px-8 lg:px-12"
     >
       {bgSrc ? (
         <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
@@ -45,8 +45,8 @@ export function HeroSection({
             priority
             quality={100}
           />
-          <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(95deg,rgba(11,31,58,0.9)_0%,rgba(11,31,58,0.75)_35%,rgba(37,99,235,0.2)_100%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(6,182,212,0.14),_transparent_35%)]" />
+          <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(95deg,rgba(11,31,58,0.92)_0%,rgba(11,31,58,0.78)_35%,rgba(110,30,45,0.18)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(212,175,55,0.18),_transparent_35%)]" />
         </div>
       ) : null}
       {fgSrc ? (
@@ -112,7 +112,7 @@ export function HeroSection({
             <div className="rounded-[1.5rem] bg-[#0B1F3A] p-5 text-white">
               <div className="flex items-center justify-between rounded-full bg-white/10 px-4 py-2 text-sm">
                 <span>Operations intelligence</span>
-                <span className="rounded-full bg-[#00A651] px-3 py-1 text-xs font-semibold text-[#0B1F3A]">
+                <span className="rounded-full bg-[var(--brand-success)] px-3 py-1 text-xs font-semibold text-[var(--brand-primary)]">
                   Live
                 </span>
               </div>
@@ -148,7 +148,7 @@ export function HeroSection({
           </div>
           <div className="absolute -bottom-6 left-6 rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-lg">
             <div className="flex items-center gap-3">
-              <div className="rounded-full bg-[#F5F6F8] p-2 text-[#00A651]">
+              <div className="rounded-full bg-[var(--surface-muted)] p-2 text-[var(--brand-success)]">
                 <ArrowRight className="h-4 w-4" />
               </div>
               <div>
