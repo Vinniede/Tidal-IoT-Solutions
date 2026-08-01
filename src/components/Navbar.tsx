@@ -4,8 +4,97 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
+import {
+  ArrowRight,
+  BatteryCharging,
+  Blocks,
+  Building2,
+  CarFront,
+  ChevronDown,
+  Globe2,
+  KeyRound,
+  LockKeyhole,
+  Menu,
+  RadioTower,
+  ShieldCheck,
+  Sparkles,
+  Wifi,
+  X,
+} from "lucide-react";
 import { navItems } from "@/constants/site";
+
+const megaMenus = {
+  Solutions: [
+    {
+      title: "Intelligent Telematics",
+      description: "Connected fleet visibility and route intelligence.",
+      href: "/solutions/intelligent-telematics",
+      icon: CarFront,
+    },
+    {
+      title: "Mission Critical Communication",
+      description: "Secure voice, data, and control systems for the field.",
+      href: "/solutions/secure-communications",
+      icon: RadioTower,
+    },
+    {
+      title: "E-Mobility Solutions",
+      description: "Connected charging and smarter electric mobility operations.",
+      href: "/solutions/e-mobility",
+      icon: BatteryCharging,
+    },
+    {
+      title: "Resilient Networks",
+      description: "Reliable infrastructure engineered for continuity and scale.",
+      href: "/solutions/resilient-networks",
+      icon: Globe2,
+    },
+    {
+      title: "Integrated Cybersecurity",
+      description: "Zero-trust protection, monitoring, and governance.",
+      href: "/solutions/integrated-cybersecurity",
+      icon: ShieldCheck,
+    },
+  ],
+  Industries: [
+    {
+      title: "Logistics & Transport",
+      description: "Fleet visibility and resilient distribution operations.",
+      href: "/industries/logistics-transport",
+      icon: Blocks,
+    },
+    {
+      title: "Government",
+      description: "Secure systems built for public accountability and continuity.",
+      href: "/industries/government",
+      icon: Building2,
+    },
+    {
+      title: "Banking & Finance",
+      description: "Protected infrastructure for branch and enterprise operations.",
+      href: "/industries/banking-financial-services",
+      icon: LockKeyhole,
+    },
+    {
+      title: "Utilities",
+      description: "Field operations that need resilient monitoring and uptime.",
+      href: "/industries/utilities",
+      icon: Wifi,
+    },
+    {
+      title: "Security Companies",
+      description: "Always-on systems for coordinated response and control.",
+      href: "/industries/security-companies",
+      icon: KeyRound,
+    },
+    {
+      title: "SMEs",
+      description: "Practical digital modernization designed to grow with you.",
+      href: "/industries/smes",
+      icon: Sparkles,
+    },
+  ],
+} as const;
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,77 +110,84 @@ export function Navbar() {
   }, []);
 
   return (
-    <header
-      className={`sticky top-0 z-50 border-b transition duration-300 ${scrolled ? "border-slate-200/80 bg-white/90 backdrop-blur-xl shadow-sm" : "border-transparent bg-transparent"}`}
-    >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-3 lg:px-10">
-        <Link href="/" className="flex min-w-0 items-center gap-2 sm:gap-3">
-          <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-full border border-slate-200 bg-white shadow-sm sm:h-14 sm:w-14">
+    <header className={`navbar-shell ${scrolled ? "scrolled" : ""}`}>
+      <div className="nav-glass mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-10">
+        <Link href="/" className="nav-branding flex min-w-0 items-center gap-2 sm:gap-3">
+          <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-full border border-slate-200 bg-white shadow-sm sm:h-12 sm:w-12">
             <Image
               src="/images/Company%20Logo.jpeg"
               alt="Tidal IoT Solutions"
-              width={56}
-              height={56}
+              width={48}
+              height={48}
               className="h-full w-full object-contain p-1"
             />
           </div>
-          <div>
-            <p className="brand-3d text-lg font-black tracking-tight min-[380px]:text-2xl sm:text-3xl">
+          <div className="flex flex-col items-start">
+            <p className="brand-3d text-lg font-black tracking-tight min-[380px]:text-[1.5rem] sm:text-[1.75rem]">
               Tidal IoT Solutions
             </p>
-            <p className="hidden text-xs uppercase tracking-[0.3em] text-[var(--brand-secondary)]/80 min-[380px]:block">
-              Intelligent infrastructure
+            <p className="brand-tagline hidden min-[380px]:flex">
+              <span>Connect</span>
+              <span className="brand-tagline-separator">•</span>
+              <span>Secure</span>
+              <span className="brand-tagline-separator">•</span>
+              <span>Optimize</span>
             </p>
           </div>
         </Link>
 
-        <nav
-          className="hidden items-center gap-4 lg:flex"
-          aria-label="Primary navigation"
-        >
+        <nav className="hidden items-center gap-2 lg:flex" aria-label="Primary navigation">
           {navItems.map((item) => {
             const itemActive =
               item.href === "/"
                 ? pathname === "/"
                 : pathname?.startsWith(item.href) ||
-                  item.subItems?.some((subItem) =>
-                    pathname?.startsWith(subItem.href),
-                  );
+                  item.subItems?.some((subItem) => pathname?.startsWith(subItem.href));
+
+            const visibleMega = item.label === "Solutions" || item.label === "Industries";
+            const menuList = visibleMega ? megaMenus[item.label as keyof typeof megaMenus] : [];
 
             return (
               <div
                 key={item.href}
                 className="relative"
-                onMouseEnter={() =>
-                  item.subItems && setHoveredDropdown(item.href)
-                }
+                onMouseEnter={() => item.subItems && setHoveredDropdown(item.href)}
                 onMouseLeave={() => item.subItems && setHoveredDropdown(null)}
               >
                 <Link
                   href={item.href}
-                  className={`group relative inline-flex items-center gap-1 rounded-full px-2.5 py-1.5 text-sm font-semibold transition duration-200 ${itemActive ? "text-[var(--brand-primary)]" : "text-[var(--text-secondary)] hover:text-[var(--brand-primary)]"} hover:bg-[var(--brand-primary)]/5 hover:shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-gold)]/50`}
+                  className={`navbar-link ${itemActive ? "active" : ""}`}
                 >
                   {item.label}
                   {item.subItems ? (
                     <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:-rotate-180" />
                   ) : null}
-                  <span
-                    className={`absolute left-0 bottom-0 h-[2px] rounded-full bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] transition-all duration-200 ${itemActive ? "w-full" : "w-0 group-hover:w-full"}`}
-                  />
                 </Link>
+
                 {item.subItems ? (
                   <div
-                    className={`absolute left-0 top-full z-20 min-w-[240px] rounded-3xl border border-slate-200 bg-white/95 p-3 shadow-2xl backdrop-blur-xl transition-all duration-200 transform ${hoveredDropdown === item.href ? "visible opacity-100 translate-y-0" : "invisible opacity-0 translate-y-2 pointer-events-none"}`}
+                    className={`navbar-dropdown ${hoveredDropdown === item.href ? "visible" : ""}`}
                   >
-                    {item.subItems.map((subItem) => (
-                      <Link
-                        key={subItem.href}
-                        href={subItem.href}
-                        className="block rounded-3xl px-4 py-3 text-sm text-slate-600 transition hover:bg-slate-50 hover:text-[#0B1F3A]"
-                      >
-                        {subItem.label}
-                      </Link>
-                    ))}
+                    <div className="navbar-mega-grid">
+                      {menuList.map((entry) => {
+                        const Icon = entry.icon;
+                        return (
+                          <Link
+                            key={entry.href}
+                            href={entry.href}
+                            className="navbar-mega-item"
+                          >
+                            <span className="navbar-mega-icon">
+                              <Icon className="h-4 w-4" />
+                            </span>
+                            <span className="navbar-mega-content">
+                              <span className="navbar-mega-title">{entry.title}</span>
+                              <span className="navbar-mega-description">{entry.description}</span>
+                            </span>
+                          </Link>
+                        );
+                      })}
+                    </div>
                   </div>
                 ) : null}
               </div>
@@ -100,10 +196,7 @@ export function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-4 lg:flex">
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[var(--brand-primary)] via-[var(--brand-secondary)] to-[var(--brand-gold)] px-3 py-2 text-sm font-semibold text-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-gold)]/50"
-          >
+          <Link href="/contact" className="navbar-cta">
             Request consultation
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
@@ -120,24 +213,23 @@ export function Navbar() {
       </div>
 
       {menuOpen ? (
-        <div className="border-t border-slate-200 bg-white/95 px-4 py-5 sm:px-6 sm:py-6 lg:hidden backdrop-blur-xl shadow-2xl transition-all duration-300">
+        <div className="mobile-nav px-4 py-5 sm:px-6 lg:hidden">
           <div className="space-y-4">
             {navItems.map((item) => (
               <div key={item.href} className="space-y-2">
                 <Link
                   href={item.href}
-                  className="block text-base font-semibold text-slate-700"
+                  className="mobile-nav-item"
                   onClick={() => setMenuOpen(false)}
                 >
                   {item.label}
                 </Link>
                 {item.subItems ? (
-                  <div className="space-y-2 rounded-3xl border border-slate-200 bg-slate-50 p-4">
+                  <div className="mobile-subnav space-y-2">
                     {item.subItems.map((subItem) => (
                       <Link
                         key={subItem.href}
                         href={subItem.href}
-                        className="block rounded-2xl px-4 py-2 text-sm text-slate-600 transition hover:bg-white hover:text-[#0B1F3A]"
                         onClick={() => setMenuOpen(false)}
                       >
                         {subItem.label}
@@ -147,11 +239,7 @@ export function Navbar() {
                 ) : null}
               </div>
             ))}
-            <Link
-              href="/contact"
-              className="inline-flex w-full items-center justify-center rounded-full bg-[var(--brand-primary)] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[var(--brand-secondary)]"
-              onClick={() => setMenuOpen(false)}
-            >
+            <Link href="/contact" className="mobile-cta" onClick={() => setMenuOpen(false)}>
               Contact us
             </Link>
           </div>
