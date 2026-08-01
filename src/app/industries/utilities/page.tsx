@@ -66,25 +66,25 @@ const workflow = [
 
 const galleryImages = [
   {
-    src: "/images/Utilities/Utility infrastructure.jfif",
+    src: "/images/Utilities/Utility%20infrastructure.jfif",
     title: "Utility infrastructure",
     description:
       "Reliable infrastructure that supports essential services and continuity.",
   },
   {
-    src: "/images/Utilities/Smart grid.jfif",
+    src: "/images/Utilities/Smart%20grid.jfif",
     title: "Smart grid",
     description:
       "Connected systems for better visibility, control, and operational insight.",
   },
   {
-    src: "/images/Utilities/Energy network.jfif",
+    src: "/images/Utilities/Energy%20network.jfif",
     title: "Energy network",
     description:
       "Distributed assets and energy flows presented in a clear operational view.",
   },
   {
-    src: "/images/Utilities/Utility monitoring.jfif",
+    src: "/images/Utilities/Utility%20monitoring.jfif",
     title: "Utility monitoring",
     description:
       "A strong visual foundation for monitoring and rapid response workflows.",
@@ -158,7 +158,7 @@ export default function UtilitiesPage() {
             </div>
             <div className="relative h-full min-h-[420px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
               <Image
-                src="/images/Utilities/Energy network.jfif"
+                src="/images/Utilities/Energy%20network.jfif"
                 alt="Utility operations"
                 fill
                 sizes="(min-width: 1024px) 45vw, 100vw"
@@ -173,7 +173,7 @@ export default function UtilitiesPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/images/Utilities/Power transmission.jfif"
+              src="/images/Utilities/Power%20transmission.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -247,7 +247,7 @@ export default function UtilitiesPage() {
             </div>
             <div className="relative min-h-[480px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
               <Image
-                src="/images/Utilities/Utility infrastructure.jfif"
+                src="/images/Utilities/Utility%20infrastructure.jfif"
                 alt="Utility challenges visual"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -261,7 +261,7 @@ export default function UtilitiesPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/images/Utilities/Power transmission.jfif"
+              src="/images/Utilities/Power%20transmission.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -312,7 +312,7 @@ export default function UtilitiesPage() {
             </div>
             <div className="relative h-full min-h-[420px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
               <Image
-                src="/images/Utilities/Smart grid.jfif"
+                src="/images/Utilities/Smart%20grid.jfif"
                 alt="Utilities key features visual"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -395,7 +395,7 @@ export default function UtilitiesPage() {
             </div>
             <div className="rounded-[2rem] border border-slate-200 bg-[#F5F6F8] p-10 shadow-sm h-full min-h-[420px] relative overflow-hidden">
               <Image
-                src="/images/Utilities/Power transmission.jfif"
+                src="/images/Utilities/Power%20transmission.jfif"
                 alt="Utility technology"
                 fill
                 className="object-cover object-center"
@@ -455,7 +455,7 @@ export default function UtilitiesPage() {
         <section className="relative isolate overflow-hidden bg-[#F5F6F8] px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/images/Utilities/Utility infrastructure.jfif"
+              src="/images/Utilities/Utility%20infrastructure.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -527,7 +527,7 @@ export default function UtilitiesPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/images/Utilities/Power transmission.jfif"
+              src="/images/Utilities/Power%20transmission.jfif"
               alt=""
               fill
               sizes="100vw"

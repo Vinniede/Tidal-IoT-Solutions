@@ -66,24 +66,24 @@ const workflow = [
 
 const galleryImages = [
   {
-    src: "/images/Security/Security command center.jfif",
+    src: "/images/Security/Security%20command%20center.jfif",
     title: "Security command center",
     description:
       "A clear view of coordinated monitoring and fast operational response.",
   },
   {
-    src: "/images/Security/Surveillance dashboard.jfif",
+    src: "/images/Security/Surveillance%20dashboard.jfif",
     title: "Surveillance dashboard",
     description: "Real-time visibility for sites, teams, and active incidents.",
   },
   {
-    src: "/images/Security/CCTV monitoring.jfif",
+    src: "/images/Security/CCTV%20monitoring.jfif",
     title: "CCTV monitoring",
     description:
       "Mission-ready monitoring that supports situational awareness and control.",
   },
   {
-    src: "/images/Security/Access control.jfif",
+    src: "/images/Security/Access%20control.jfif",
     title: "Access control",
     description:
       "Secure access management for modern, distributed environments.",
@@ -157,7 +157,7 @@ export default function SecurityCompaniesPage() {
             </div>
             <div className="relative h-full min-h-[420px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
               <Image
-                src="/images/Security/Security command center.jfif"
+                src="/images/Security/Security%20command%20center.jfif"
                 alt="Security command center"
                 fill
                 sizes="(min-width: 1024px) 45vw, 100vw"
@@ -172,7 +172,7 @@ export default function SecurityCompaniesPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/images/Security/Security control room.jfif"
+              src="/images/Security/Security%20control%20room.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -246,7 +246,7 @@ export default function SecurityCompaniesPage() {
             </div>
             <div className="relative min-h-[480px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
               <Image
-                src="/images/Security/CCTV monitoring.jfif"
+                src="/images/Security/CCTV%20monitoring.jfif"
                 alt="Security challenges visual"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -260,7 +260,7 @@ export default function SecurityCompaniesPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/images/Security/Access control.jfif"
+              src="/images/Security/Access%20control.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -310,7 +310,7 @@ export default function SecurityCompaniesPage() {
             </div>
             <div className="relative h-full min-h-[420px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
               <Image
-                src="/images/Security/Surveillance dashboard.jfif"
+                src="/images/Security/Surveillance%20dashboard.jfif"
                 alt="Security key features visual"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -390,7 +390,7 @@ export default function SecurityCompaniesPage() {
             </div>
             <div className="rounded-[2rem] border border-slate-200 bg-[#F5F6F8] p-10 shadow-sm h-full min-h-[420px] relative overflow-hidden">
               <Image
-                src="/images/Security/Security command center.jfif"
+                src="/images/Security/Security%20command%20center.jfif"
                 alt="Security technology"
                 fill
                 className="object-cover object-center rounded-[1.75rem]"
@@ -449,7 +449,7 @@ export default function SecurityCompaniesPage() {
 
         <section className="relative isolate overflow-hidden bg-[#0B1F3A] px-6 py-24 text-white sm:px-8 lg:px-12">
           <Image
-            src="/images/Security/Security control room.jfif"
+            src="/images/Security/Security%20control%20room.jfif"
             alt="Security control room"
             fill
             sizes="100vw"
@@ -521,7 +521,7 @@ export default function SecurityCompaniesPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/images/Security/Access control.jfif"
+              src="/images/Security/Access%20control.jfif"
               alt=""
               fill
               sizes="100vw"

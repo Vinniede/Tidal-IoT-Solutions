@@ -68,25 +68,25 @@ const workflow = [
 
 const galleryImages = [
   {
-    src: "/images/Logistics/Connected warehouse.jfif",
+    src: "/images/Logistics/Connected%20warehouse.jfif",
     title: "Connected warehouse",
     description:
       "Operational visibility that supports modern logistics and inventory flow.",
   },
   {
-    src: "/images/Logistics/Distribution center.jfif",
+    src: "/images/Logistics/Distribution%20center.jfif",
     title: "Distribution center",
     description:
       "A high-clarity view of the movement and coordination behind fulfillment.",
   },
   {
-    src: "/images/Logistics/Logistics dashboard.jfif",
+    src: "/images/Logistics/Logistics%20dashboard.jfif",
     title: "Logistics dashboard",
     description:
       "Real-time data that helps teams make faster, smarter decisions.",
   },
   {
-    src: "/images/Logistics/Route optimization.jfif",
+    src: "/images/Logistics/Route%20optimization.jfif",
     title: "Route optimization",
     description:
       "Smarter routing and planning for stronger service performance.",
@@ -160,7 +160,7 @@ export default function LogisticsTransportPage() {
             </div>
             <div className="relative h-full min-h-[420px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
               <Image
-                src="/images/Logistics/Logistics fleet.jfif"
+                src="/images/Logistics/Logistics%20fleet.jfif"
                 alt="Logistics operations"
                 fill
                 sizes="(min-width: 1024px) 45vw, 100vw"
@@ -175,7 +175,7 @@ export default function LogisticsTransportPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Logistics/Fleet monitoring.jfif"
+              src="/images/Logistics/Fleet%20monitoring.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -253,7 +253,7 @@ export default function LogisticsTransportPage() {
             </div>
             <div className="relative min-h-[480px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
               <Image
-                src="/images/Logistics/Connected warehouse.jfif"
+                src="/images/Logistics/Connected%20warehouse.jfif"
                 alt="Logistics challenges visual"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -267,7 +267,7 @@ export default function LogisticsTransportPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Logistics/Fleet monitoring.jfif"
+              src="/images/Logistics/Fleet%20monitoring.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -318,7 +318,7 @@ export default function LogisticsTransportPage() {
             </div>
             <div className="relative h-full min-h-[420px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
               <Image
-                src="/images/Logistics/Route optimization.jfif"
+                src="/images/Logistics/Route%20optimization.jfif"
                 alt="Logistics key features visual"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -364,7 +364,7 @@ export default function LogisticsTransportPage() {
             </div>
             <div className="relative h-full min-h-[420px] overflow-hidden rounded-[2rem] border border-white/10 shadow-xl">
               <Image
-                src="/images/Logistics/Fleet analytics.jfif"
+                src="/images/Logistics/Fleet%20analytics.jfif"
                 alt="Logistics benefits visual"
                 fill
                 className="object-cover object-center"
@@ -402,7 +402,7 @@ export default function LogisticsTransportPage() {
             </div>
             <div className="rounded-[2rem] border border-slate-200 bg-[#F5F6F8] p-10 shadow-sm h-full min-h-[420px]">
               <Image
-                src="/images/Logistics/Logistics dashboard.jfif"
+                src="/images/Logistics/Logistics%20dashboard.jfif"
                 alt="Logistics technology"
                 width={640}
                 height={520}
@@ -462,7 +462,7 @@ export default function LogisticsTransportPage() {
         <section className="relative isolate overflow-hidden bg-[#F5F6F8] px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Logistics/Distribution center.jfif"
+              src="/images/Logistics/Distribution%20center.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -534,7 +534,7 @@ export default function LogisticsTransportPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Logistics/Route optimization.jfif"
+              src="/images/Logistics/Route%20optimization.jfif"
               alt=""
               fill
               sizes="100vw"

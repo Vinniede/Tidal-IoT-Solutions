@@ -166,7 +166,7 @@ export default function IntegratedCybersecurityPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Integrated Cybersecurity/Cybersecurity dashboard.jfif"
+              src="/images/Integrated%20Cybersecurity/Cybersecurity%20dashboard.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -201,7 +201,7 @@ export default function IntegratedCybersecurityPage() {
               </p>
               <div className="mt-8 overflow-hidden rounded-[1.75rem] border border-white/15">
                 <Image
-                  src="/images/Integrated Cybersecurity/Threat monitoring.jfif"
+                  src="/images/Integrated%20Cybersecurity/Threat%20monitoring.jfif"
                   alt="Cybersecurity overview"
                   width={640}
                   height={420}
@@ -233,7 +233,7 @@ export default function IntegratedCybersecurityPage() {
             </div>
             <div className="relative min-h-[560px] h-full overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[680px]">
               <Image
-                src="/images/Integrated Cybersecurity/Digital security shield.jfif"
+                src="/images/Integrated%20Cybersecurity/Digital%20security%20shield.jfif"
                 alt="Security challenges visual"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -246,7 +246,7 @@ export default function IntegratedCybersecurityPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Integrated Cybersecurity/Firewall visualization.jfif"
+              src="/images/Integrated%20Cybersecurity/Firewall%20visualization.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -305,7 +305,7 @@ export default function IntegratedCybersecurityPage() {
             </div>
             <div className="relative min-h-[520px] h-full overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[640px]">
               <Image
-                src="/images/Integrated Cybersecurity/Security operations center.jfif"
+                src="/images/Integrated%20Cybersecurity/Security%20operations%20center.jfif"
                 alt="Security services visual"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -388,7 +388,7 @@ export default function IntegratedCybersecurityPage() {
         <section className="relative isolate overflow-hidden bg-[#F5F6F8] px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Integrated Cybersecurity/Threat monitoring.jfif"
+              src="/images/Integrated%20Cybersecurity/Threat%20monitoring.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -446,7 +446,7 @@ export default function IntegratedCybersecurityPage() {
             </div>
             <div className="relative min-h-[360px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
               <Image
-                src="/images/Integrated Cybersecurity/Threat monitoring.jfif"
+                src="/images/Integrated%20Cybersecurity/Threat%20monitoring.jfif"
                 alt="Compliance visual"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -459,7 +459,7 @@ export default function IntegratedCybersecurityPage() {
         <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Integrated Cybersecurity/Cybersecurity dashboard.jfif"
+              src="/images/Integrated%20Cybersecurity/Cybersecurity%20dashboard.jfif"
               alt=""
               fill
               sizes="100vw"

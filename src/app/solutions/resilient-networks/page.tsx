@@ -172,7 +172,7 @@ export default function ResilientNetworksPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Resilient Networks/Fiber optic network.jfif"
+              src="/images/Resilient%20Networks/Fiber%20optic%20network.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -208,7 +208,7 @@ export default function ResilientNetworksPage() {
               </p>
               <div className="mt-8 overflow-hidden rounded-[1.75rem] border border-slate-200">
                 <Image
-                  src="/images/Resilient Networks/Network infrastructure.jfif"
+                  src="/images/Resilient%20Networks/Network%20infrastructure.jfif"
                   alt="Network overview"
                   width={640}
                   height={420}
@@ -240,7 +240,7 @@ export default function ResilientNetworksPage() {
             </div>
             <div className="relative min-h-[560px] h-full overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[680px]">
               <Image
-                src="/images/Resilient Networks/Cloud networking.jfif"
+                src="/images/Resilient%20Networks/Cloud%20networking.jfif"
                 alt="Resilient network visual"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -253,7 +253,7 @@ export default function ResilientNetworksPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Resilient Networks/Enterprise data center.jfif"
+              src="/images/Resilient%20Networks/Enterprise%20data%20center.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -312,7 +312,7 @@ export default function ResilientNetworksPage() {
             </div>
             <div className="relative min-h-[520px] h-full overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[640px]">
               <Image
-                src="/images/Resilient Networks/Server racks.jfif"
+                src="/images/Resilient%20Networks/Server%20racks.jfif"
                 alt="Data center services visual"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -395,7 +395,7 @@ export default function ResilientNetworksPage() {
         <section className="relative isolate overflow-hidden bg-[#F5F6F8] px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Resilient Networks/Network infrastructure.jfif"
+              src="/images/Resilient%20Networks/Network%20infrastructure.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -460,7 +460,7 @@ export default function ResilientNetworksPage() {
             </div>
             <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
               <Image
-                src="/images/Resilient Networks/Fiber optic network.jfif"
+                src="/images/Resilient%20Networks/Fiber%20optic%20network.jfif"
                 alt="Why choose Tidal visual"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -473,7 +473,7 @@ export default function ResilientNetworksPage() {
         <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Resilient Networks/Cloud networking.jfif"
+              src="/images/Resilient%20Networks/Cloud%20networking.jfif"
               alt=""
               fill
               sizes="100vw"

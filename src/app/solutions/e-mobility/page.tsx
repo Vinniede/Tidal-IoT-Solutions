@@ -41,10 +41,25 @@ const capabilities = [
 ];
 
 const useCases = [
-  { title: "Fleet operators", description: "Manage depot charging, utilization, and vehicle readiness." },
-  { title: "Charge point operators", description: "Monitor uptime, dispatch support, and customer access seamlessly." },
-  { title: "Municipal and smart city teams", description: "Support public EV infrastructure with better visibility and control." },
-  { title: "Commercial properties", description: "Offer reliable charging as part of modern tenant and visitor services." },
+  {
+    title: "Fleet operators",
+    description: "Manage depot charging, utilization, and vehicle readiness.",
+  },
+  {
+    title: "Charge point operators",
+    description:
+      "Monitor uptime, dispatch support, and customer access seamlessly.",
+  },
+  {
+    title: "Municipal and smart city teams",
+    description:
+      "Support public EV infrastructure with better visibility and control.",
+  },
+  {
+    title: "Commercial properties",
+    description:
+      "Offer reliable charging as part of modern tenant and visitor services.",
+  },
 ];
 
 const benefits = [
@@ -73,46 +88,52 @@ const faqs = [
 ];
 
 const relatedSolutions = [
-  { title: "Intelligent Telematics", href: "/solutions/intelligent-telematics" },
+  {
+    title: "Intelligent Telematics",
+    href: "/solutions/intelligent-telematics",
+  },
   { title: "Resilient Networks", href: "/solutions/resilient-networks" },
-  { title: "Mission Critical Communication", href: "/solutions/secure-communications" },
+  {
+    title: "Mission Critical Communication",
+    href: "/solutions/secure-communications",
+  },
 ];
 
 export default function EMobilityPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const partnerLogos: Record<string, string> = {
-    Teltonika: "/images/Our Partners/Teltonika.jfif",
-    MettaX: "/images/Our Partners/MettaX.jfif",
-    JimiioT: "/images/Our Partners/JimiioT.jfif",
-    Tramigo: "/images/Our Partners/Tramigo.png",
-    Inrico: "/images/Our Partners/Inrico.png",
-    Belfone: "/images/Our Partners/Belfone.jfif",
-    Concox: "/images/Our Partners/Concox.png",
-    Hytera: "/images/Our Partners/Hytera.jfif",
-    Streamax: "/images/Our Partners/Streamax.jfif",
-    Kenwood: "/images/Our Partners/Kenwood.png",
-    Dahua: "/images/Our Partners/Dahua.png",
-    Huawei: "/images/Our Partners/Huawei.jfif",
-    HIkvision: "/images/Our Partners/HIkvision.png",
-    ZkTeco: "/images/Our Partners/ZkTeco.png",
-    Hisense: "/images/Our Partners/Hisense.jfif",
-    Ploywall: "/images/Our Partners/Ploywall.png",
-    Escort: "/images/Our Partners/Escort.png",
-    Baofeng: "/images/Our Partners/Baofeng.jfif",
-    Wialon: "/images/Our Partners/Wialon.jfif",
-    "Pilot Telematics": "/images/Our Partners/Pilot.png",
-    LookCam: "/images/Our Partners/LookCam.png",
-    Protrack: "/images/Our Partners/Protrack.png",
-    Iridium: "/images/Our Partners/Iridium.png",
-    Thuraya: "/images/Our Partners/Thuraya.png",
-    Garmin: "/images/Our Partners/Garmin.png",
-    Orbcomm: "/images/Our Partners/Orbcomm.png",
-    Xerafy: "/images/Our Partners/Xerafy.png",
-    SEEWORLD: "/images/Our Partners/SEEWORLD.png",
-    BSJ: "/images/Our Partners/BSJ.png",
-    Ruptela: "/images/Our Partners/Ruptela.png",
-    Quectel: "/images/Our Partners/Quectel.png",
-    Matrix: "/images/Our Partners/Matrix.png",
+    Teltonika: "/images/Our%20Partners/Teltonika.jfif",
+    MettaX: "/images/Our%20Partners/MettaX.jfif",
+    JimiioT: "/images/Our%20Partners/JimiioT.jfif",
+    Tramigo: "/images/Our%20Partners/Tramigo.png",
+    Inrico: "/images/Our%20Partners/Inrico.png",
+    Belfone: "/images/Our%20Partners/Belfone.jfif",
+    Concox: "/images/Our%20Partners/Concox.png",
+    Hytera: "/images/Our%20Partners/Hytera.jfif",
+    Streamax: "/images/Our%20Partners/Streamax.jfif",
+    Kenwood: "/images/Our%20Partners/Kenwood.png",
+    Dahua: "/images/Our%20Partners/Dahua.png",
+    Huawei: "/images/Our%20Partners/Huawei.jfif",
+    HIkvision: "/images/Our%20Partners/HIkvision.png",
+    ZkTeco: "/images/Our%20Partners/ZkTeco.png",
+    Hisense: "/images/Our%20Partners/Hisense.jfif",
+    Ploywall: "/images/Our%20Partners/Ploywall.png",
+    Escort: "/images/Our%20Partners/Escort.png",
+    Baofeng: "/images/Our%20Partners/Baofeng.jfif",
+    Wialon: "/images/Our%20Partners/Wialon.jfif",
+    "Pilot Telematics": "/images/Our%20Partners/Pilot.png",
+    LookCam: "/images/Our%20Partners/LookCam.png",
+    Protrack: "/images/Our%20Partners/Protrack.png",
+    Iridium: "/images/Our%20Partners/Iridium.png",
+    Thuraya: "/images/Our%20Partners/Thuraya.png",
+    Garmin: "/images/Our%20Partners/Garmin.png",
+    Orbcomm: "/images/Our%20Partners/Orbcomm.png",
+    Xerafy: "/images/Our%20Partners/Xerafy.png",
+    SEEWORLD: "/images/Our%20Partners/SEEWORLD.png",
+    BSJ: "/images/Our%20Partners/BSJ.png",
+    Ruptela: "/images/Our%20Partners/Ruptela.png",
+    Quectel: "/images/Our%20Partners/Quectel.png",
+    Matrix: "/images/Our%20Partners/Matrix.png",
   };
 
   return (
@@ -138,7 +159,9 @@ export default function EMobilityPage() {
                 description="Modern infrastructure for charging networks, fleet electrification, and connected mobility services."
               />
               <p className="max-w-2xl text-slate-700">
-                Tidal helps organizations design and operate electric mobility systems that are reliable, visible, and ready to scale across growing fleets and public infrastructure.
+                Tidal helps organizations design and operate electric mobility
+                systems that are reliable, visible, and ready to scale across
+                growing fleets and public infrastructure.
               </p>
               <div className="grid gap-4 sm:grid-cols-2">
                 {[
@@ -163,7 +186,9 @@ export default function EMobilityPage() {
                   A practical path from deployment to dependable operations.
                 </h2>
                 <p className="mt-4 text-slate-600">
-                  Our approach combines charging intelligence, connected monitoring, and field-ready support to keep EV operations moving.
+                  Our approach combines charging intelligence, connected
+                  monitoring, and field-ready support to keep EV operations
+                  moving.
                 </p>
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">
                   {[
@@ -194,7 +219,7 @@ export default function EMobilityPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/E-Mobility/Modern EV Charging Station.jfif"
+              src="/images/E-Mobility/Modern%20EV%20Charging%20Station.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -213,7 +238,9 @@ export default function EMobilityPage() {
                 descriptionClassName="!text-white !font-semibold"
               />
               <p className="mt-6 max-w-2xl text-slate-200 font-semibold">
-                From depot charging to public stations, our solution brings operational clarity and control to the systems that keep EV services available.
+                From depot charging to public stations, our solution brings
+                operational clarity and control to the systems that keep EV
+                services available.
               </p>
             </div>
             <div className="rounded-[2rem] border border-white/15 bg-slate-950/80 p-10 text-white shadow-2xl shadow-slate-950/25 backdrop-blur-sm">
@@ -222,11 +249,13 @@ export default function EMobilityPage() {
                 Solution focus
               </div>
               <p className="mt-6 text-slate-300">
-                We connect charging operations, fleet planning, and management workflows in a way that improves uptime, user experience, and dependable service delivery.
+                We connect charging operations, fleet planning, and management
+                workflows in a way that improves uptime, user experience, and
+                dependable service delivery.
               </p>
               <div className="mt-8 overflow-hidden rounded-[1.75rem] border border-white/15">
                 <Image
-                  src="/images/E-Mobility/Smart Charging Dashboard.png"
+                  src="/images/E-Mobility/Smart%20Charging%20Dashboard.png"
                   alt="Charging dashboard overview"
                   width={640}
                   height={420}
@@ -258,7 +287,7 @@ export default function EMobilityPage() {
             </div>
             <div className="relative h-full min-h-[560px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[680px]">
               <Image
-                src="/images/E-Mobility/Future city transportation.jfif"
+                src="/images/E-Mobility/Future%20city%20transportation.jfif"
                 alt="Electric mobility visual"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -271,7 +300,7 @@ export default function EMobilityPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/E-Mobility/EV Charging Technician.jfif"
+              src="/images/E-Mobility/EV%20Charging%20Technician.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -299,7 +328,9 @@ export default function EMobilityPage() {
                     <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-3xl bg-[#F5F6F8] text-[#00A651]">
                       <Icon className="h-6 w-6" />
                     </div>
-                    <p className="mt-6 font-semibold text-[#0B1F3A]">{step.label}</p>
+                    <p className="mt-6 font-semibold text-[#0B1F3A]">
+                      {step.label}
+                    </p>
                   </div>
                 );
               })}
@@ -328,7 +359,7 @@ export default function EMobilityPage() {
             </div>
             <div className="relative min-h-[520px] h-full overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[640px]">
               <Image
-                src="/images/E-Mobility/Corporate EV Parking.jfif"
+                src="/images/E-Mobility/Corporate%20EV%20Parking.jfif"
                 alt="EV charging infrastructure"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -341,7 +372,7 @@ export default function EMobilityPage() {
         <section className="relative isolate overflow-hidden bg-[#0B1F3A] px-6 py-24 text-white sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/E-Mobility/Fleet Charging Depot.jfif"
+              src="/images/E-Mobility/Fleet%20Charging%20Depot.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -360,7 +391,9 @@ export default function EMobilityPage() {
                 descriptionClassName="!text-white !font-semibold"
               />
               <p className="max-w-2xl text-slate-300">
-                Better visibility and stronger control help teams improve charging reliability, automate support, and deliver a smoother experience for users.
+                Better visibility and stronger control help teams improve
+                charging reliability, automate support, and deliver a smoother
+                experience for users.
               </p>
             </div>
             <div className="grid h-full items-stretch gap-4 sm:grid-cols-2">
@@ -380,7 +413,7 @@ export default function EMobilityPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/E-Mobility/smart background.jfif"
+              src="/images/E-Mobility/smart%20background.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -416,7 +449,9 @@ export default function EMobilityPage() {
                       <Zap className="h-6 w-6" />
                     )}
                   </div>
-                  <h3 className="mt-6 text-xl font-semibold text-white">{useCase.title}</h3>
+                  <h3 className="mt-6 text-xl font-semibold text-white">
+                    {useCase.title}
+                  </h3>
                   <p className="mt-3 text-slate-200">{useCase.description}</p>
                 </div>
               ))}
@@ -445,7 +480,9 @@ export default function EMobilityPage() {
                     className="flex w-full items-center justify-between gap-4 px-6 py-6 text-left text-lg font-semibold text-white"
                   >
                     <span>{faq.question}</span>
-                    <span className="text-[#00A651]">{openFaq === index ? "−" : "+"}</span>
+                    <span className="text-[#00A651]">
+                      {openFaq === index ? "−" : "+"}
+                    </span>
                   </button>
                   {openFaq === index ? (
                     <div className="border-t border-slate-800 bg-slate-900 px-6 py-6 text-slate-300">
@@ -472,9 +509,12 @@ export default function EMobilityPage() {
                   href={solution.href}
                   className="rounded-[2rem] bg-gradient-to-br from-white via-slate-50 to-slate-100 p-8 shadow-[0_25px_50px_rgba(15,23,42,0.12)] transition-transform hover:-translate-y-1 hover:shadow-[0_35px_80px_rgba(15,23,42,0.18)]"
                 >
-                  <p className="font-semibold text-slate-950">{solution.title}</p>
+                  <p className="font-semibold text-slate-950">
+                    {solution.title}
+                  </p>
                   <p className="mt-4 text-slate-600">
-                    Explore the services that reinforce your connected mobility strategy.
+                    Explore the services that reinforce your connected mobility
+                    strategy.
                   </p>
                   <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#00A651]">
                     View solution

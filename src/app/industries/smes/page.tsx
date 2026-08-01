@@ -66,25 +66,25 @@ const workflow = [
 
 const galleryImages = [
   {
-    src: "/images/SMEs/Modern business office.jfif",
+    src: "/images/SMEs/Modern%20business%20office.jfif",
     title: "Modern business office",
     description:
       "A polished, connected workspace built for secure collaboration.",
   },
   {
-    src: "/images/SMEs/Startup workspace.jfif",
+    src: "/images/SMEs/Startup%20workspace.jfif",
     title: "Startup workspace",
     description:
       "Flexible infrastructure that supports fast-growing teams and evolving needs.",
   },
   {
-    src: "/images/SMEs/Cloud collaboration.jfif",
+    src: "/images/SMEs/Cloud%20collaboration.jfif",
     title: "Cloud collaboration",
     description:
       "Simplified access and collaboration for remote and hybrid teams.",
   },
   {
-    src: "/images/SMEs/Small business technology.jfif",
+    src: "/images/SMEs/Small%20business%20technology.jfif",
     title: "Small business technology",
     description:
       "Practical technology design that keeps operations efficient and dependable.",
@@ -160,7 +160,7 @@ export default function SMEsPage() {
             </div>
             <div className="relative h-full min-h-[420px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
               <Image
-                src="/images/SMEs/Startup workspace.jfif"
+                src="/images/SMEs/Startup%20workspace.jfif"
                 alt="SME operations"
                 fill
                 sizes="(min-width: 1024px) 45vw, 100vw"
@@ -175,7 +175,7 @@ export default function SMEsPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/SMEs/Cloud collaboration.jfif"
+              src="/images/SMEs/Cloud%20collaboration.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -229,7 +229,7 @@ export default function SMEsPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/SMEs/Small business technology.jfif"
+              src="/images/SMEs/Small%20business%20technology.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -280,7 +280,7 @@ export default function SMEsPage() {
             </div>
             <div className="relative h-full min-h-[420px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
               <Image
-                src="/images/SMEs/Cloud collaboration.jfif"
+                src="/images/SMEs/Cloud%20collaboration.jfif"
                 alt="SME key features visual"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -363,7 +363,7 @@ export default function SMEsPage() {
             </div>
             <div className="rounded-[2rem] border border-slate-200 bg-[#F5F6F8] p-10 shadow-sm h-full min-h-[420px]">
               <Image
-                src="/images/SMEs/Modern business office.jfif"
+                src="/images/SMEs/Modern%20business%20office.jfif"
                 alt="SME technology"
                 width={640}
                 height={520}
@@ -423,7 +423,7 @@ export default function SMEsPage() {
         <section className="relative isolate overflow-hidden bg-[#F5F6F8] px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/SMEs/Cloud collaboration.jfif"
+              src="/images/SMEs/Cloud%20collaboration.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -495,7 +495,7 @@ export default function SMEsPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/SMEs/Small business technology.jfif"
+              src="/images/SMEs/Small%20business%20technology.jfif"
               alt=""
               fill
               sizes="100vw"

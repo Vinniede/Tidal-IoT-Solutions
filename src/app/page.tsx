@@ -29,7 +29,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl">
             <div className="overflow-hidden bg-black/20">
               <video
-                src="/images/Tidal IoT Solutions.mp4"
+                src="/images/Tidal%20IoT%20Solutions.mp4"
                 autoPlay
                 loop
                 muted

@@ -67,25 +67,25 @@ const workflow = [
 
 const galleryImages = [
   {
-    src: "/images/Banking/Digital banking.jfif",
+    src: "/images/Banking/Digital%20banking.jfif",
     title: "Digital banking",
     description:
       "A modern view of secure digital financial experiences and branch connectivity.",
   },
   {
-    src: "/images/Banking/Financial technology.jfif",
+    src: "/images/Banking/Financial%20technology.jfif",
     title: "Financial technology",
     description:
       "Technology built to support resilient services and trusted transactions.",
   },
   {
-    src: "/images/Banking/Secure banking.jfif",
+    src: "/images/Banking/Secure%20banking.jfif",
     title: "Secure banking",
     description:
       "Security-first infrastructure designed for compliance and continuity.",
   },
   {
-    src: "/images/Banking/Secure transactions.jfif",
+    src: "/images/Banking/Secure%20transactions.jfif",
     title: "Secure transactions",
     description:
       "A clear visual for the integrity and protection of high-value financial flows.",
@@ -159,7 +159,7 @@ export default function BankingFinancialServicesPage() {
             </div>
             <div className="relative h-full min-h-[420px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
               <Image
-                src="/images/Banking/Secure banking.jfif"
+                src="/images/Banking/Secure%20banking.jfif"
                 alt="Financial operations"
                 fill
                 sizes="(min-width: 1024px) 45vw, 100vw"
@@ -174,7 +174,7 @@ export default function BankingFinancialServicesPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Banking/Secure banking.jfif"
+              src="/images/Banking/Secure%20banking.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -252,7 +252,7 @@ export default function BankingFinancialServicesPage() {
             </div>
             <div className="relative min-h-[480px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
               <Image
-                src="/images/Banking/Secure transactions.jfif"
+                src="/images/Banking/Secure%20transactions.jfif"
                 alt="Banking challenges visual"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -266,7 +266,7 @@ export default function BankingFinancialServicesPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Banking/Financial technology.jfif"
+              src="/images/Banking/Financial%20technology.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -317,7 +317,7 @@ export default function BankingFinancialServicesPage() {
             </div>
             <div className="relative h-full min-h-[420px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
               <Image
-                src="/images/Banking/Financial technology.jfif"
+                src="/images/Banking/Financial%20technology.jfif"
                 alt="Banking key features visual"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -400,7 +400,7 @@ export default function BankingFinancialServicesPage() {
             </div>
             <div className="rounded-[2rem] border border-slate-200 bg-[#F5F6F8] p-10 shadow-sm h-full min-h-[420px]">
               <Image
-                src="/images/Banking/Secure banking.jfif"
+                src="/images/Banking/Secure%20banking.jfif"
                 alt="Financial technology"
                 width={640}
                 height={520}
@@ -460,7 +460,7 @@ export default function BankingFinancialServicesPage() {
         <section className="relative isolate overflow-hidden bg-[#F5F6F8] px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Banking/Financial technology.jfif"
+              src="/images/Banking/Financial%20technology.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -532,7 +532,7 @@ export default function BankingFinancialServicesPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Banking/Secure transactions.jfif"
+              src="/images/Banking/Secure%20transactions.jfif"
               alt=""
               fill
               sizes="100vw"

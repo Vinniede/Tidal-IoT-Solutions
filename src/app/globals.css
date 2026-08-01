@@ -92,13 +92,21 @@ h3 {
 .section-shell {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, var(--background-secondary) 0%, var(--background-primary) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--background-secondary) 0%,
+    var(--background-primary) 100%
+  );
 }
 
 .section-shell-alt {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, var(--background-primary) 0%, var(--background-secondary) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--background-primary) 0%,
+    var(--background-secondary) 100%
+  );
 }
 
 .glass-panel {
@@ -142,30 +150,36 @@ h3 {
 @keyframes metallic-sweep {
   0% {
     background-position: 100% 50%;
-    filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.18)) drop-shadow(0 6px 10px rgba(11, 31, 58, 0.08));
+    filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.18))
+      drop-shadow(0 6px 10px rgba(11, 31, 58, 0.08));
   }
   50% {
     background-position: 50% 50%;
-    filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.22)) drop-shadow(0 10px 16px rgba(110, 30, 45, 0.12));
+    filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.22))
+      drop-shadow(0 10px 16px rgba(110, 30, 45, 0.12));
   }
   100% {
     background-position: 0% 50%;
-    filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.18)) drop-shadow(0 6px 10px rgba(11, 31, 58, 0.08));
+    filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.18))
+      drop-shadow(0 6px 10px rgba(11, 31, 58, 0.08));
   }
 }
 
 @keyframes brand-3d-sweep {
   0% {
     background-position: 0% 50%;
-    filter: drop-shadow(0 2px 0 rgba(11, 31, 58, 0.3)) drop-shadow(0 6px 10px rgba(11, 31, 58, 0.12));
+    filter: drop-shadow(0 2px 0 rgba(11, 31, 58, 0.3))
+      drop-shadow(0 6px 10px rgba(11, 31, 58, 0.12));
   }
   50% {
     background-position: 50% 50%;
-    filter: drop-shadow(0 2px 0 rgba(11, 31, 58, 0.38)) drop-shadow(0 10px 16px rgba(110, 30, 45, 0.16));
+    filter: drop-shadow(0 2px 0 rgba(11, 31, 58, 0.38))
+      drop-shadow(0 10px 16px rgba(110, 30, 45, 0.16));
   }
   100% {
     background-position: 100% 50%;
-    filter: drop-shadow(0 2px 0 rgba(11, 31, 58, 0.3)) drop-shadow(0 6px 10px rgba(11, 31, 58, 0.12));
+    filter: drop-shadow(0 2px 0 rgba(11, 31, 58, 0.3))
+      drop-shadow(0 6px 10px rgba(11, 31, 58, 0.12));
   }
 }
 
@@ -213,7 +227,9 @@ h3 {
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.28), 0 10px 16px rgba(11, 31, 58, 0.12);
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.28),
+    0 10px 16px rgba(11, 31, 58, 0.12);
   animation: metallic-sweep 5s linear infinite;
 }
 

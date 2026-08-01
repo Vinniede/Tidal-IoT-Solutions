@@ -184,7 +184,7 @@ export default function IntelligentTelematicsPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Intelligent Telematics/Fleet monitoring illustration.jfif"
+              src="/images/Intelligent%20Telematics/Fleet%20monitoring%20illustration.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -220,7 +220,7 @@ export default function IntelligentTelematicsPage() {
               </p>
               <div className="mt-8 overflow-hidden rounded-[1.75rem] border border-white/15">
                 <Image
-                  src="/images/Intelligent Telematics/Vehicle telematics.jfif"
+                  src="/images/Intelligent%20Telematics/Vehicle%20telematics.jfif"
                   alt="Fleet monitoring overview"
                   width={640}
                   height={420}
@@ -252,7 +252,7 @@ export default function IntelligentTelematicsPage() {
             </div>
             <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl h-full sm:min-h-[620px]">
               <Image
-                src="/images/Intelligent Telematics/GPS fleet tracking.jfif"
+                src="/images/Intelligent%20Telematics/GPS%20fleet%20tracking.jfif"
                 alt="Fleet management visual"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -266,7 +266,7 @@ export default function IntelligentTelematicsPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Intelligent Telematics/Connected logistics.jfif"
+              src="/images/Intelligent%20Telematics/Connected%20logistics.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -323,7 +323,7 @@ export default function IntelligentTelematicsPage() {
             </div>
             <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl h-full sm:min-h-[620px]">
               <Image
-                src="/images/Intelligent Telematics/Fleet management dashboard.jfif"
+                src="/images/Intelligent%20Telematics/Fleet%20management%20dashboard.jfif"
                 alt="Fleet dashboard visual"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -408,7 +408,7 @@ export default function IntelligentTelematicsPage() {
         <section className="relative isolate overflow-hidden bg-[#F5F6F8] px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Intelligent Telematics/Vehicle telematics.jfif"
+              src="/images/Intelligent%20Telematics/Vehicle%20telematics.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -471,7 +471,7 @@ export default function IntelligentTelematicsPage() {
             </div>
             <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
               <Image
-                src="/images/Intelligent Telematics/Fleet monitoring illustration.jfif"
+                src="/images/Intelligent%20Telematics/Fleet%20monitoring%20illustration.jfif"
                 alt="Why choose Tidal visual"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -484,7 +484,7 @@ export default function IntelligentTelematicsPage() {
         <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Intelligent Telematics/GPS fleet tracking.jfif"
+              src="/images/Intelligent%20Telematics/GPS%20fleet%20tracking.jfif"
               alt=""
               fill
               sizes="100vw"

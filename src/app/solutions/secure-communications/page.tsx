@@ -183,7 +183,7 @@ export default function SecureCommunicationsPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Secure Communications/Command center.jfif"
+              src="/images/Secure%20Communications/Command%20center.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -220,7 +220,7 @@ export default function SecureCommunicationsPage() {
               </p>
               <div className="mt-8 overflow-hidden rounded-[1.75rem] border border-white/15">
                 <Image
-                  src="/images/Secure Communications/Enterprise communications.jpg"
+                  src="/images/Secure%20Communications/Enterprise%20communications.jpg"
                   alt="Secure communication overview"
                   width={640}
                   height={420}
@@ -252,7 +252,7 @@ export default function SecureCommunicationsPage() {
             </div>
             <div className="relative min-h-[560px] h-full overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[680px]">
               <Image
-                src="/images/Secure Communications/Radio communication system.jfif"
+                src="/images/Secure%20Communications/Radio%20communication%20system.jfif"
                 alt="Communication visual"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -265,7 +265,7 @@ export default function SecureCommunicationsPage() {
         <section className="relative isolate overflow-hidden px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Secure Communications/Communication tower.jfif"
+              src="/images/Secure%20Communications/Communication%20tower.jfif"
               alt=""
               fill
               sizes="100vw"
@@ -324,7 +324,7 @@ export default function SecureCommunicationsPage() {
             </div>
             <div className="relative min-h-[520px] h-full overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl sm:min-h-[640px]">
               <Image
-                src="/images/Secure Communications/Push to talk network.jfif"
+                src="/images/Secure%20Communications/Push%20to%20talk%20network.jfif"
                 alt="Push-to-talk network visual"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -395,7 +395,7 @@ export default function SecureCommunicationsPage() {
             </div>
             <div className="rounded-[2rem] border border-slate-200 bg-white p-10 shadow-sm">
               <Image
-                src="/images/Secure Communications/Push to talk network.jfif"
+                src="/images/Secure%20Communications/Push%20to%20talk%20network.jfif"
                 alt="Secure push-to-talk network"
                 width={640}
                 height={520}
@@ -409,7 +409,7 @@ export default function SecureCommunicationsPage() {
         <section className="relative isolate overflow-hidden bg-[#F5F6F8] px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Secure Communications/Enterprise communications.jpg"
+              src="/images/Secure%20Communications/Enterprise%20communications.jpg"
               alt=""
               fill
               sizes="100vw"
@@ -474,7 +474,7 @@ export default function SecureCommunicationsPage() {
             </div>
             <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] border border-slate-200 shadow-xl">
               <Image
-                src="/images/Secure Communications/Command center.jfif"
+                src="/images/Secure%20Communications/Command%20center.jfif"
                 alt="Why choose Tidal visual"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
@@ -487,7 +487,7 @@ export default function SecureCommunicationsPage() {
         <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:px-8 lg:px-12">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/Secure Communications/Communication tower.jfif"
+              src="/images/Secure%20Communications/Communication%20tower.jfif"
               alt=""
               fill
               sizes="100vw"
