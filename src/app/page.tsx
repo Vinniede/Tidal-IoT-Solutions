@@ -82,7 +82,7 @@ export default function Home() {
           title="Beyond Connectivity. Building Intelligent Infrastructure."
           description="We design resilient digital infrastructure for organizations that need to move faster, operate safer, and scale with confidence."
           primaryCta={{ label: "Explore Solutions", href: "/solutions" }}
-          secondaryCta={{ label: "Request Consultation", href: "/contact" }}
+          secondaryCta={{ label: "Request Consultation", href: "/request-consultation" }}
           bgSrc="/images/home-hero-background.jpg"
         />
 

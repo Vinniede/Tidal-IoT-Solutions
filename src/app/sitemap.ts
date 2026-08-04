@@ -1,4 +1,4 @@
-import { MetadataRoute } from "next";
+﻿import { MetadataRoute } from "next";
 
 const rootUrl = "https://tidal-iot.com";
 const routes = [
@@ -21,6 +21,7 @@ const routes = [
   "/solutions/intelligent-telematics",
   "/solutions/resilient-networks",
   "/solutions/secure-communications",
+  "/request-consultation"
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -29,3 +30,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 }
+

@@ -18,9 +18,9 @@ export function Footer() {
   return (
     <footer
       id="contact"
-      className="border-t border-slate-200 bg-[var(--brand-primary)] px-4 py-10 text-white sm:px-8 sm:py-12 lg:px-12"
+      className="border-t border-slate-200 bg-[var(--brand-primary)] px-4 py-8 text-white sm:px-8 sm:py-10 lg:px-12"
     >
-      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+      <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
           <p className="brand-color-flow text-sm font-black uppercase tracking-[0.3em]">
             Tidal IoT Solutions
@@ -28,12 +28,12 @@ export function Footer() {
           <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">
             Build intelligent infrastructure with confidence.
           </h2>
-          <p className="mt-5 max-w-xl text-lg leading-8 text-slate-300">
+          <p className="mt-4 max-w-xl text-base leading-7 text-slate-300">
             We help organizations across East Africa deploy secure, scalable,
             and dependable systems that support growth and resilience.
           </p>
         </div>
-        <div className="rounded-[1.5rem] border border-white/10 bg-white/10 p-5 sm:rounded-[2rem] sm:p-6">
+        <div className="rounded-[1.5rem] border border-white/10 bg-white/10 p-4 sm:rounded-[2rem] sm:p-5">
           <h3 className="text-xl font-semibold">
             Let&apos;s talk about your next deployment
           </h3>
@@ -55,7 +55,7 @@ export function Footer() {
               </span>
             </Link>
             <Link
-              href="tel:+254700000000"
+              href="tel:+254108661811"
               aria-label="Call Tidal IoT Solutions"
               className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 p-3 transition hover:border-[var(--brand-success)]/50 hover:bg-white/10"
             >
@@ -109,7 +109,7 @@ export function Footer() {
 export function FloatingWhatsAppButton() {
   return (
     <Link
-      href="https://wa.me/254700000000"
+      href="https://wa.me/254108661811"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contact Tidal IoT Solutions on WhatsApp"

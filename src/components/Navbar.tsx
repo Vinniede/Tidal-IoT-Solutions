@@ -275,7 +275,7 @@ export function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-4 lg:flex">
-          <Link href="/contact" className="navbar-cta">
+          <Link href="/request-consultation" className="navbar-cta">
             Request consultation
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
@@ -318,7 +318,7 @@ export function Navbar() {
                 ) : null}
               </div>
             ))}
-            <Link href="/contact" className="mobile-cta" onClick={() => setMenuOpen(false)}>
+            <Link href="/request-consultation" className="mobile-cta" onClick={() => setMenuOpen(false)}>
               Request consultation
             </Link>
           </div>
